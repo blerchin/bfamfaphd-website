@@ -1,0 +1,177 @@
+// http://paulirish.com/2012/box-sizing-border-box-ftw
+* { box-sizing: border-box; }
+
+//FONTS
+body-copy = 'Monotype Bodoni W01'
+//body-copy = Georgia
+sans-bold = 'OCR A Extended W01'
+
+//COLORS
+dark-grey = #111111
+light-blue = #62C7EF
+gold = #EFC060
+
+
+
+body,
+input
+    font-family sans-bold
+    font-weight 100
+		color: dark-grey
+    text-rendering optimizeLegibility
+p
+	font-family sans-bold
+	font-size: 20px
+	max-width: 30em
+	strong
+		font-family sans-bold
+	
+#wrapper
+	width 100%
+	min-width 400px
+	margin 0 auto 200px auto
+
+#container
+	margin-top 10%
+	margin-bottom 200px
+
+
+header.main.bar.top
+	font-size 1.3em
+	position fixed
+	top 0
+	left 0
+	width 100%
+	padding 0
+	background-color dark-grey
+	z-index 1000
+
+	ul.nav
+		margin: 1em auto
+		width: 70%
+		padding 0
+
+	.nav li
+		float left
+		list-style none
+		margin 0 1em .5em 0
+		color white
+
+	.nav li a:hover
+		color gold
+
+	.nav li:nth-child(even) a:hover
+			color light-blue
+	
+	a
+		color white
+		text-decoration none
+
+.slide
+	width 70%
+	margin 1em auto
+	min-width 400px
+	position relative
+
+	.background.graphic
+		position relative
+		width 100%
+		height 100%
+		z-index 0
+		iframe
+			z-index 0
+
+.aside
+	width 100%
+	position relative
+	.caption	
+		padding .5em 2em
+	a.embiggen
+		display block
+		width 100%
+		height 100%
+	a.action
+		p
+			position absolute
+			right 30px
+			bottom 0px
+			background-color dark-grey
+			color white
+			padding 1em
+			opacity .7
+		p:hover
+			opacity 1
+	a.download
+		p
+			left 30px
+			right auto
+img.graph
+	width 100%
+	height auto
+
+
+h1.lead 
+	font-weight 400
+	font-size 2.5em
+	line-height: 1.0em
+	width: 100%
+	background-size cover
+	background-repeat no-repeat
+	p
+		font-size inherit
+		font-weight inherit
+		margin 5px
+
+#container > h2
+	margin 1em 15%
+
+h2
+	font-size 2em
+
+h3
+	font-weight 100
+	overflow auto
+	margin-top 2em
+	p
+		font-size inherit
+
+form
+	display block
+	overflow hidden
+	dd, dt
+		font-family sans-bold
+		font-size 16px
+		margin .25em 1em .25em 0
+		float left
+		width: 10em
+	dt
+		clear left
+
+
+
+	
+
+.blue
+	color light-blue
+.gold
+	color gold
+
+
+footer
+	width 70%
+	margin 1em auto
+	min-width 400px
+
+/***************
+SLIDE SPECIFIC
+***************/
+.slide-2
+	background-image url('../images/bfamfaphd.png')
+	background-repeat no-repeat
+	height: 300px
+.slide-3
+	font-size 18px
+.slide-5.aside
+	background-image url('../images/bfamfaphd.png')
+	background-repeat no-repeat
+	height: 300px
