@@ -103,6 +103,7 @@
 				</div><! --slide 3 -->
 
 				<div id="about-data" class="about-data slide slide-6">
+					<h2>*</h2>
 					<p class="small">The data was collected by the National Center for Educational Statistics’ Integrated Postsecondary Education Data System
 					(<a href="http://nces.ed.gov/about/">IPEDS</a>), was downloaded by Jackie Armstrong, corrected for
 					population growth by Agnes Szanyi and organized in an excel
@@ -113,7 +114,6 @@
 					and Stagecraft, Film/Video and Photographic Arts, Music, Fine and
 					Studio Arts.</p>
 
-					<h2>*</h2>
 
 					<p class="small">How many of “us” are there? The question seems simple. The
 					National Endowment for the Arts uses U.S. Census data that
@@ -338,28 +338,14 @@
 					will join us.</p>
 
 					<h3>Request an invite:</h3>
-					<form action="#rsvp" method="post">
-						<dl>
-							<dt>Name:</dt><dd><input type="text" name="name"></dd>
-							<dt>Email:</dt><dd><input type="text" name="email"></dd>
-							<dt>Did you get a: (check any/all that apply)</dt>
-							<dd>
-								<input type="checkbox" name="bfa" value="x">BFA</input>
-								<input type="checkbox" name="mfa" value="x">MFA</input>
-								<input type="checkbox" name="phd" value="x">PhD</input>
-							</dd>
-							<dt>Current Zip / Postal Code:</dt>
-							<dd><input type="text" name="zipcode"></input></dd>
-
-							<dt><input type="submit" value="Join" name="Join"></input></dt>
-						</dl>
-						
-					</form>
 <?php
 if(isset($_POST["name"])){
 	$userdata = $_POST["name"] . ", " 
-	. $_POST["email"] . ", " . $_POST["bfa"] . ", "
-	. $_POST["mfa"] . ", " . $_POST["phd"] . ", " . $_POST["zipcode"] . "\n";
+	. $_POST["email"] . ", " . $_POST["inschool"] . ", " . $_POST["as"]
+	. ", " . $_POST["bfa"] . ", "
+	. $_POST["mfa"] . ", " . $_POST["phd"] . ", "
+	. ", " . $_POST["self-taught"] . ", " .$_POST["apprenticeship"]
+	. ", " . $_POST["zipcode"] . "\n";
 	//echo $userdata;
 
 	$addresses = fopen('addresses.csv','a');
@@ -373,6 +359,28 @@ if(isset($_POST["name"])){
 }
 
 ?>
+					<form action="#rsvp" method="post">
+						<dl>
+							<dt>Name:</dt><dd><input type="text" name="name"></dd>
+							<dt>Email:</dt><dd><input type="text" name="email"></dd>
+							<dt>Do you have a degree?</dt>
+							<dd>
+								<input type="checkbox" name="inschool" value="x">Currently in school</input>
+								<input type="checkbox" name="as" value="x">Associates</input>
+								<input type="checkbox" name="bfa" value="x">BFA</input>
+								<input type="checkbox" name="mfa" value="x">MFA</input>
+								<input type="checkbox" name="phd" value="x">PhD</input>
+<br />
+								<input type="checkbox" name="self-taught" value="x">self-taught</input>
+								<input type="checkbox" name="apprenticeship" value="x">apprenticeship</input>
+							</dd>
+							<dt>Current Zip / Postal Code:</dt>
+							<dd><input type="text" name="zipcode"></input></dd>
+
+							<dt><input type="submit" value="Join" name="Join"></input></dt>
+						</dl>
+						
+					</form>
 
 					<p>To organize a talk outside of New York City, email us
 						and we	will put you in touch with a group or space in your
