@@ -1,0 +1,52 @@
+
+svg.ind-axis {
+
+	.axis path,
+	.axis line {
+		fill: none;
+		stroke: gray;
+		shape-rendering: crispEdges;
+	}
+	.axis text {
+		font-size: 8px;
+	}
+
+}
+
+#arts {
+	z-index:1;
+	svg {
+		z-index: 0;
+	}
+
+	.labels text{
+		font:10px;
+	}
+
+#keyToggle{
+		 z-index: 1001;
+		color: #FCFCFC;
+		margin-left: 5%;
+		float:left;
+		background: rgba(0,0,0,.6);
+		font-size: 12px;
+		width: 2.5%;
+	}
+#keyToggle:hover{
+			cursor: pointer;
+			opacity: 0.5;
+	}
+#key{
+	margin: 0;
+	padding: 0;
+	height: 0px;
+	background: rgba(0,0,0,.6);
+	position: absolute !important;
+	left: 28% !important;
+	top: -20%; 
+	margin-top: -0px !important;
+	margin-left: -0px !important;
+	z-index: 1001;
+	}
+
+}
