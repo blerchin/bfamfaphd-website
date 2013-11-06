@@ -98,26 +98,11 @@ header.main.bar.top
 	width 100%
 	position relative
 	.caption	
+		position absolute
+		right 40px
+		bottom 160px
 		padding .5em 2em
-	a.embiggen
-		display block
-		width 100%
-		height 100%
-	a.action
-		p
-			position absolute
-			right 30px
-			bottom 0px
-			background-color dark-grey
-			color white
-			padding 1em
-			opacity .7
-		p:hover
-			opacity 1
-	a.download
-		p
-			left 30px
-			right auto
+		width 13em
 img.graph
 	width 100%
 	height auto
@@ -127,6 +112,9 @@ h1.lead
 	font-weight 400
 	font-size 2.5em
 	width: 100%
+	position absolute
+	left 0
+	top 0
 	background-size cover
 	background-repeat no-repeat
 	p
@@ -158,12 +146,14 @@ form
 		font-size 16px
 		margin .25em 1em .25em 0
 		float left
-		width: 10em
 	dt
 		clear left
+		width: 10em
 	input
 		padding-left .3em
 
+p.small.confirmation 
+	color gold
 
 
 	
@@ -182,10 +172,16 @@ footer
 /***************
 SLIDE SPECIFIC
 ***************/
-.slide-2
-	background-image url('../images/bfamfaphd.png')
-	background-repeat no-repeat
-	height: 300px
+#arts
+	width 100%
+	svg.graph
+		opacity .8
+		margin-top 220px	
+	
+a.download
+	display block
+	margin-left 15%
+
 .slide-3
 	font-size 18px
 .slide-5.aside
@@ -222,5 +218,17 @@ SLIDE SPECIFIC
 		dt, dl
 			float none
 			margin-bottom .2em
-		
-	
+
+@media (max-width: 480px)	
+
+	.slide-2 .caption
+		right auto
+		bottom 140px
+	#arts svg.graph
+		margin-top 400px
+	.slide-2 svg.ind-axis
+		bottom 60px
+	.slide-2 svg .axis g text
+		font-size 0
+	.slide-2 svg .axis g:nth-child(3n) text
+		font-size 8px

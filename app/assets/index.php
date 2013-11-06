@@ -51,24 +51,18 @@
 					</header>
 						
 				</div><!-- slide1 -->
-				<div class="slide aside slide-2"
-					data-stellar-background-ratio=".5">
+				<div class="slide aside slide-2">
+					<div id="arts">
+					</div>
 						<div class="caption">
 							<p>Art Degree Recipients per year, 1987 - 2012</p>
+							<p class="small">Height of bar indicates increase or decrease
+							in graduates each year.</p>
 						</div>
 						<a
-							href="https://googledrive.com/host/0B5OUvX22JtVcQjd4OW1SbXNnZTQ/index.html" 
-							class="action embiggen">
-							<p>
-								Full Screen
-							</p>
-						</a>
-						<a
-							href="#"
+							href="images/bfamfaphd.png"
 							class="action download">
-							<p>
-								Download this image
-							</p>
+								Download as image
 						</a>
 				</div>
 				<div class="slide slide-3" >
@@ -344,23 +338,41 @@
 					will join us.</p>
 
 					<h3>Request an invite:</h3>
-					<form>
+					<form action="#rsvp" method="post">
 						<dl>
 							<dt>Name:</dt><dd><input type="text" name="name"></dd>
 							<dt>Email:</dt><dd><input type="text" name="email"></dd>
 							<dt>Did you get a:</dt>
 							<dd>
-								<input type="checkbox" name="bfa">BFA</input>
-								<input type="checkbox" name="mfa">MFA</input>
-								<input type="checkbox" name="phd">PhD</input>
+								<input type="checkbox" name="bfa" value="x">BFA</input>
+								<input type="checkbox" name="mfa" value="x">MFA</input>
+								<input type="checkbox" name="phd" value="x">PhD</input>
 							</dd>
 							<dt>Current Zip / Postal Code:</dt>
 							<dd><input type="text" name="zipcode"></input></dd>
 
-							<dt><input type="submit" name="Join"></input></dt>
+							<dt><input type="submit" value="Join" name="Join"></input></dt>
 						</dl>
 						
 					</form>
+<?php
+if(isset($_POST["name"])){
+	$userdata = $_POST["name"] . ", " 
+	. $_POST["email"] . ", " . $_POST["bfa"] . ", "
+	. $_POST["mfa"] . ", " . $_POST["phd"] . ", " . $_POST["zipcode"] . "\n";
+	//echo $userdata;
+
+	$addresses = fopen('addresses.csv','a');
+	$status = fwrite($addresses, $userdata);
+	if ($status == FALSE) {
+		echo "Sorry, your registration didn't go through. Try again or e-mail 
+			info@bfamfaphd.com to request an invitation.";
+	} else {
+		echo "<p class='small confirmation'>Thanks! Mark your calendar and we'll be in touch.</p>";
+	}
+}
+
+?>
 
 					<p>To organize a talk outside of New York City, email us
 						and we	will put you in touch with a group or space in your
@@ -389,7 +401,7 @@
 					<h2>Apply</h2>
 					<p>If, this September, instead of matriculating at a traditional
 					4-year school, prospective freshmen and first-year MFA students
-					pool the money they would otherwise spend on tuition. The class
+					pool the money they would otherwise spend on tuition, the class
 					of 2018 (around 100,000 students) would have $2,157,600,000 to
 					work with. If only 1/2000th of the class of 2018 pools money, say
 					if only fifty prospective students band together, this group

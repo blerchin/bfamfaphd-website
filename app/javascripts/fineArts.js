@@ -7,14 +7,14 @@ console.log("hello");
 
 var maxTotal = 91222;
 var margin = 100;
-var width = 1400;
-var height = 650;
+var width = $('#arts').width();
+var height = 550;
 var maStroke = 10;
 var baStroke = 10;
 var blue = "#000099";
 var gold = "#A89358";
 var lmargin = 80;
-var axisHeight = 100;
+var axisHeight = 30;
 // var lastOne;
 
 var graphView = d3.select("#arts").append("svg")
@@ -27,7 +27,8 @@ var graphView = d3.select("#arts").append("svg")
   // });
   // .attr("viewBox", "0 0 " + width + " " + height )
   // .attr("preserveAspectRatio", "xMinYMin");
- .attr("pointer-events", "all")
+ //.attr("pointer-events", "all")
+ .attr("class","graph")
 .attr("width", width)
 .attr("height", height);
 
@@ -396,7 +397,7 @@ var text = graphView.selectAll("text")
 .text(function(d){
 	if (d.Year == 1992 || d.Year == 1987 || d.Year == 2002 || d.Year == 2012){
 		var newNum = Math.round((d.BA) / 1000);
-	return numberWithCommas(newNum)+" k";
+	return numberWithCommas(newNum)+"k";
 }
 })
 
@@ -500,7 +501,7 @@ var xAxis = d3.svg.axis()
 	.scale(xaxisy)
 	.orient("bottom");
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#arts").append("svg")
   // .attr({
   //   "width": "100%",
   //   "height": "100%"
@@ -511,6 +512,7 @@ var svg = d3.select("body").append("svg")
 
 	.attr("width", width) 
 	.attr("height", axisHeight) //axis bottom
+	.attr("class", "ind-axis")
 	.append("g")
 	.attr("transform", "translate(" + 0 +","+0+")");
 
