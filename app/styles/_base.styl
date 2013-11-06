@@ -3,7 +3,6 @@
 
 //FONTS
 body-copy = 'Monotype Bodoni W01'
-//body-copy = Georgia
 sans-bold = 'OCR A Extended W01'
 
 //COLORS
@@ -11,7 +10,8 @@ dark-grey = #111111
 light-blue = #62C7EF
 gold = #EFC060
 
-
+//WIDTHS
+col-width = 550px
 
 body,
 input
@@ -21,10 +21,19 @@ input
     text-rendering optimizeLegibility
 p
 	font-family sans-bold
-	font-size: 20px
-	max-width: 30em
-	strong
-		font-family sans-bold
+	font-size: 19px
+	max-width: col-width
+	line-height 1.4em
+	&.small
+		font-size 16px
+		line-height 1.2em
+
+ul 
+	max-width col-width
+	li
+		line-height 1.3em
+		
+		
 	
 #wrapper
 	width 100%
@@ -47,18 +56,22 @@ header.main.bar.top
 	z-index 1000
 
 	ul.nav
-		margin: 1em auto
-		width: 70%
+		margin: .5em auto 0 auto
+		width 70%
+		max-width none
 		padding 0
 
 	.nav li
-		float left
+		display inline-block
 		list-style none
-		margin 0 1em .5em 0
+		margin 0 .5em .5em 0
 		color white
 
 	.nav li a:hover
 		color gold
+
+	.nav li.active a
+		color: gold
 
 	.nav li:nth-child(even) a:hover
 			color light-blue
@@ -113,14 +126,15 @@ img.graph
 h1.lead 
 	font-weight 400
 	font-size 2.5em
-	line-height: 1.0em
 	width: 100%
 	background-size cover
 	background-repeat no-repeat
 	p
+		line-height 1.1em
 		font-size inherit
 		font-weight inherit
 		margin 5px
+		max-width none
 
 #container > h2
 	margin 1em 15%
@@ -138,6 +152,7 @@ h3
 form
 	display block
 	overflow hidden
+	margin-bottom 4em
 	dd, dt
 		font-family sans-bold
 		font-size 16px
@@ -146,6 +161,8 @@ form
 		width: 10em
 	dt
 		clear left
+	input
+		padding-left .3em
 
 
 
@@ -175,3 +192,35 @@ SLIDE SPECIFIC
 	background-image url('../images/bfamfaphd.png')
 	background-repeat no-repeat
 	height: 300px
+.slide-11
+	ul dd
+		margin-bottom .5em
+
+
+@media (max-width: 945px)
+	h1
+		max-width 450px
+
+@media (max-width: 768px)
+	header.main.bar.top ul.nav
+		margin-left 15%
+		max-width none
+		width auto
+		overflow hidden
+		display block
+
+@media (max-width: 722px)
+	#container
+		margin-top 150px
+	header.main.bar.top ul.nav
+		margin-left 20px
+		margin-right 20px
+	p, h2, h3, form dl
+		margin-left 20px
+		margin-right 20px
+	form
+		dt, dl
+			float none
+			margin-bottom .2em
+		
+	
