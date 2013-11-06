@@ -28,11 +28,11 @@
 					<h1 class="lead">
 						<p>Every ten years,</p>
 						<p>in the United States alone,</p>
-						<p><span class="blue">one million</span> students</p>
+						<p><span class="gold">one million</span> students</p>
 						<p>graduate with a </p>
-						<p><span class="gold">BFA</span>, 
-							<span class="blue">MFA</span>, or <span
-								class="gold">PhD</span> in the visual and performing arts.*
+						<p><span class="blue">BFA</span>, 
+							<span class="grey">MFA</span>, or <span
+								class="orange">PhD</span> in the visual and performing arts.*
 						</p>
 					</h1>
 					<header class="main header bar top">
@@ -342,7 +342,7 @@
 						<dl>
 							<dt>Name:</dt><dd><input type="text" name="name"></dd>
 							<dt>Email:</dt><dd><input type="text" name="email"></dd>
-							<dt>Did you get a:</dt>
+							<dt>Did you get a: (check any/all that apply)</dt>
 							<dd>
 								<input type="checkbox" name="bfa" value="x">BFA</input>
 								<input type="checkbox" name="mfa" value="x">MFA</input>
@@ -432,7 +432,7 @@ if(isset($_POST["name"])){
 
          <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            var _gaq=[['_setAccount','UA-32545267-2'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
