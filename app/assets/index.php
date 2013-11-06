@@ -103,7 +103,7 @@
 				</div><! --slide 3 -->
 
 				<div id="about-data" class="about-data slide slide-6">
-					<p class="small">Statistics’ Integrated Postsecondary Education Data System
+					<p class="small">The data was collected by the National Center for Educational Statistics’ Integrated Postsecondary Education Data System
 					(<a href="http://nces.ed.gov/about/">IPEDS</a>), was downloaded by Jackie Armstrong, corrected for
 					population growth by Agnes Szanyi and organized in an excel
 					spreadsheet, and visualized by Annelie Berner. IPEDS tracks BAs
@@ -139,7 +139,7 @@
 					at the Queens Museum of Art, Mark	McGurl, author of 
 					<u>The Program Era</u>, will join us for a conversation about his
 					work and our collective potential. On April 13th, from 3-5pm at
-					the Queens Museum, James Elkins, author of Artists with PhDs,
+					the Queens Museum, James Elkins, author of <u>Artists with PhDs</u>,
 					will join us.</p>
 
 					<p><a href="#rsvp">RSVP</a> to join us.</p>
@@ -334,7 +334,7 @@
 					at the Queens Museum of Art, Mark	McGurl, author of 
 					<u>The Program Era</u>, will join us for a conversation about his
 					work and our collective potential. On April 13th, from 3-5pm at
-					the Queens Museum, James Elkins, author of Artists with PhDs,
+					the Queens Museum, James Elkins, author of <u>Artists with PhDs</u>,
 					will join us.</p>
 
 					<h3>Request an invite:</h3>
