@@ -322,7 +322,7 @@ var rectPD = graphView.selectAll("rectBA rect").select("rect pd")
         title: function() {
           var d = this.__data__;
 		var newNum = Math.round((d.cumuMA) / 1000);
-		var niceNum = numberWithCommas(newNum)+" k";
+		var niceNum = numberWithCommas(newNum)+"k";
       	return d.Year+": "+numberWithCommas(d.MA)+" MAs"+", Since 1987: "+niceNum;         
         }
       });
@@ -336,22 +336,38 @@ var rectPD = graphView.selectAll("rectBA rect").select("rect pd")
         title: function() {
           var d = this.__data__;
        		var newNum = Math.round((d.cumuPhD) / 1000);
-			var niceNum = numberWithCommas(newNum)+" k";
+			var niceNum = numberWithCommas(newNum)+"k";
 			          return d.Year+": "+numberWithCommas(d.PhD)+" PhDs"+", Since 1987: "+niceNum;         
         }
       });
 
 
   $('.rectBA').tipsy({ 
-        gravity: 'nw', 
+ gravity: 'nw',
         // gravity: $.fn.tipsy.autoNS,
-        html: true, 
+        html: true,
         //fade: true,
         title: function() {
           var d = this.__data__;
-       		var newNum = Math.round((d.cumuBA) / 1000);
-			var niceNum = numberWithCommas(newNum)+" k";
-          return d.Year+": "+numberWithCommas(d.BA)+" BFAs"+", Since 1987: "+niceNum;         
+          var newNum = Math.round((d.cumuBA) / 1000);
+
+          if (newNum>1000){
+              var newMil = Math.round((d.cumuBA) / 1000000);
+              if (newMil==1){
+                      var niceMil = numberWithCommas(newMil)+"M";
+                      return d.Year+": "+numberWithCommas(d.BA)+" BFAs"+", Since 1987: "+niceMil;
+              }
+              if (newMil>1){
+            var niceMil = "1.5M";
+                      return d.Year+": "+numberWithCommas(d.BA)+" BFAs"+", Since 1987: "+niceMil;
+              }
+
+          }
+          if (newNum<1000){
+            var niceNum = numberWithCommas(newNum)+"k";
+          return d.Year+": "+numberWithCommas(d.BA)+" BFAs"+", Since 1987: "+niceNum;
+          }
+
       }
       });
 

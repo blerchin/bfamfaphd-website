@@ -56,8 +56,7 @@
 					</div>
 						<div class="caption">
 							<p>Art Degree Recipients per year, 1987 - 2012</p>
-							<p class="small">Height of bar indicates increase or decrease
-							in graduates each year.</p>
+							<p class="small">Y-axis shows the number of graduates each year. Height of bar indicates increase or decrease in graduates each year.</p>
 						</div>
 						<a
 							href="images/bfamfaphd.png"
@@ -407,18 +406,8 @@ if(isset($_POST["name"])){
 				</div> <!-- slide 12 -->
 				<div id="apply" class="slide slide-13 apply">
 					<h2>Apply</h2>
-					<p>If, this September, instead of matriculating at a traditional
-					4-year school, prospective freshmen and first-year MFA students
-					pool the money they would otherwise spend on tuition, the class
-					of 2018 (around 100,000 students) would have $2,157,600,000 to
-					work with. If only 1/2000th of the class of 2018 pools money, say
-					if only fifty prospective students band together, this group
-					would have $1,078,800 to spend.</p>
-
-					<p>That is enough to buy a building and own it collectively, into
-					perpetuity, to create a lifelong school and community land trust.
-					Applications for such a lifelong school will open on January 1,
-					2014.</p>
+					<p>Starting January 1, 2015, fifty prospective BFA, MFA, and PhD students will pool $200-2000 a month for four years, generating $2,400,000. Rather than going into debt to belong to a 2-4 year community in a traditional school, this group will use $2.4M to buy a building, create a community land trust, and secure space for place-based art, community organizing, internet activism, and community resilience, in perpetuity. Applications go live on January 1, 2014.
+					</p>
 
 					<p>To inquire about this school in advance, please email
 					<a href="info@bfamfaphd.com">info@bfamfaphd.com</a>.</p>
