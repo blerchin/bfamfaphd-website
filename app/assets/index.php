@@ -139,7 +139,7 @@
 					<u>The Program Era</u>, will join us for a conversation about his
 					work and our collective potential. On April 13th, from 3-5pm at
 					the Queens Museum, James Elkins, author of <u>Artists with PhDs</u>,
-					will join us.</p>
+					will join us. On May 17, Howard Singerman, author of <u>Art Subjects</u>, will join us.</p>
 
 					<p><a href="#rsvp">RSVP</a> to join us.</p>
 
@@ -334,7 +334,7 @@
 					<u>The Program Era</u>, will join us for a conversation about his
 					work and our collective potential. On April 13th, from 3-5pm at
 					the Queens Museum, James Elkins, author of <u>Artists with PhDs</u>,
-					will join us.</p>
+					will join us. On May 17, Howard Singerman, author of Art Subjects, will join us.</p>
 
 					<h3>Request an invite:</h3>
 <?php

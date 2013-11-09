@@ -386,7 +386,7 @@ var rectPD = graphView.selectAll("rectBA rect").select("rect pd")
 
 
 
-
+//Start paste
 
 var text = graphView.selectAll("text")
 .data(function(d){
@@ -395,7 +395,7 @@ var text = graphView.selectAll("text")
 .enter().append("text")
 .attr("class", "textBA")
 .attr("x", function(d,i){
-	if (d.Year == 1992 || d.Year == 1987 || d.Year == 2002 ||d.Year == 2012 ){
+	if (d.Year == 1992 || d.Year == 1987 || d.Year == 2002 ||d.Year == 2012 || d.Year == 2004){
 	return alongWidth(i)+2;
 }
 // 	if (d.Year == 2012){
@@ -403,7 +403,7 @@ var text = graphView.selectAll("text")
 // }
 })
 .attr("y", function(d,i){
-	if (d.Year == 1992 || d.Year == 1987 || d.Year == 2002 || d.Year == 2012){
+	if (d.Year == 1992 || d.Year == 1987 || d.Year == 2002 || d.Year == 2012 || d.Year == 2004){
 	return height-rectScale(d.BA)-1;
 	}
 	else {
@@ -411,7 +411,7 @@ var text = graphView.selectAll("text")
 	}
 })
 .text(function(d){
-	if (d.Year == 1992 || d.Year == 1987 || d.Year == 2002 || d.Year == 2012){
+	if (d.Year == 1992 || d.Year == 1987 || d.Year == 2002 || d.Year == 2012 || d.Year == 2004){
 		var newNum = Math.round((d.BA) / 1000);
 	return numberWithCommas(newNum)+"k";
 }
@@ -446,12 +446,9 @@ var textMA = graphView.selectAll("textBA text").select("text ma")
 .text(function(d){
 	if (d.Year == 1987 || d.Year == 2012){
 		var newNum = Math.round((d.MA) / 1000);
-	return numberWithCommas(newNum)+" k";
+	return numberWithCommas(newNum)+"k";
 }
 })
-
-
-
 
 var textPD = graphView.selectAll("textBA text").select("text pd")
 .data(function(d){
@@ -475,9 +472,9 @@ var textPD = graphView.selectAll("textBA text").select("text pd")
 .text(function(d){
 	if (d.Year == 1987 || d.Year==2012){
 		var newNum = Math.round((d.PhD)/1000);
-	return numberWithCommas(newNum)+" k";
+	return numberWithCommas(newNum)+"k";
 }
-})
+});
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
