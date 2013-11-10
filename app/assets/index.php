@@ -336,7 +336,7 @@
 					the Queens Museum, James Elkins, author of <u>Artists with PhDs</u>,
 					will join us. On May 17, Howard Singerman, author of Art Subjects, will join us.</p>
 
-					<h3>Request an invite:</h3>
+					<h3>Join our mailing list:</h3>
 					<?php require('signup.php');?>
 
 					<p>To organize a talk outside of New York City, email us
