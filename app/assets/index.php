@@ -337,49 +337,7 @@
 					will join us. On May 17, Howard Singerman, author of Art Subjects, will join us.</p>
 
 					<h3>Request an invite:</h3>
-<?php
-if(isset($_POST["name"])){
-	$userdata = $_POST["name"] . ", " 
-	. $_POST["email"] . ", " . $_POST["inschool"] . ", " . $_POST["as"]
-	. ", " . $_POST["bfa"] . ", "
-	. $_POST["mfa"] . ", " . $_POST["phd"] . ", "
-	. ", " . $_POST["self-taught"] . ", " .$_POST["apprenticeship"]
-	. ", " . $_POST["zipcode"] . "\n";
-	//echo $userdata;
-
-	$addresses = fopen('addresses.csv','a');
-	$status = fwrite($addresses, $userdata);
-	if ($status == FALSE) {
-		echo "Sorry, your registration didn't go through. Try again or e-mail 
-			info@bfamfaphd.com to request an invitation.";
-	} else {
-		echo "<p class='small confirmation'>Thanks! Mark your calendar and we'll be in touch.</p>";
-	}
-}
-
-?>
-					<form action="#rsvp" method="post">
-						<dl>
-							<dt>Name:</dt><dd><input type="text" name="name"></dd>
-							<dt>Email:</dt><dd><input type="text" name="email"></dd>
-							<dt>Do you have a degree?</dt>
-							<dd>
-								<input type="checkbox" name="inschool" value="x">Currently in school</input>
-								<input type="checkbox" name="as" value="x">Associates</input>
-								<input type="checkbox" name="bfa" value="x">BFA</input>
-								<input type="checkbox" name="mfa" value="x">MFA</input>
-								<input type="checkbox" name="phd" value="x">PhD</input>
-<br />
-								<input type="checkbox" name="self-taught" value="x">self-taught</input>
-								<input type="checkbox" name="apprenticeship" value="x">apprenticeship</input>
-							</dd>
-							<dt>Current Zip / Postal Code:</dt>
-							<dd><input type="text" name="zipcode"></input></dd>
-
-							<dt><input type="submit" value="Join" name="Join"></input></dt>
-						</dl>
-						
-					</form>
+					<?php require('signup.php');?>
 
 					<p>To organize a talk outside of New York City, email us
 						and we	will put you in touch with a group or space in your
