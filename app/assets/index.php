@@ -269,11 +269,11 @@
 					<ul>
 						<li>COORDINATION: <a href="http://carolinewoolard.com">Caroline
 						Woolard</a>
-						<li>UNIFORMS: <a
+						<li>FUTURIST: <a
 						href="http://www.sans.name/lookbook/ss2008lb.html">Lika
 						Volkova</a>
 						<li>WEB DESIGN: <a href="http://benlerchin.com">Ben Lerchin</a>
-						<li>DATA VIZ: <a href="http://annelieberner.com/">Annellie Berner</a>
+						<li>DATA VIZ: <a href="http://annelieberner.com/">Annelie Berner</a>
 						<li>DATA TEAM: <a
 							href="http://www.newschool.edu/nssr/subpage.aspx?id=24280">Agnes
 							Szanyi</a>,
