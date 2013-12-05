@@ -2,7 +2,7 @@
 * { box-sizing: border-box; }
 
 //FONTS
-body-copy = 'Monotype Bodoni W01'
+body-copy = 'Eurostile LT W01'
 sans-bold = 'OCR A Extended W01'
 
 //COLORS
@@ -17,15 +17,14 @@ col-width = 650px
 
 body,
 input
-    font-family sans-bold
+    font-family body-copy
     font-weight 100
 		color: dark-grey
     text-rendering optimizeLegibility
 p
-	font-family sans-bold
-	font-size: 19px
+	font-size: 18px
 	max-width: col-width
-	line-height 1.4em
+	line-height 1.5em
 	&.small
 		font-size 16px
 		line-height 1.2em
@@ -34,6 +33,7 @@ ul
 	max-width col-width
 	li
 		line-height 1.3em
+		text-transform uppercase
 		
 		
 	
@@ -48,6 +48,7 @@ ul
 
 
 header.main.bar.top
+	font-family sans-bold
 	font-size 1.3em
 	position fixed
 	top 0
@@ -98,18 +99,22 @@ header.main.bar.top
 	width 100%
 	position relative
 	.caption	
+		font-family sans-bold
 		position absolute
 		right 40px
 		bottom 120px
 		padding .5em 2em
 		width 13em
+		.small
+			font-family body-copy
 img.graph
 	width 100%
 	height auto
 
 
 h1.lead 
-	font-weight 400
+	font-family sans-bold
+	font-weight 100
 	font-size 2.5em
 	width: 100%
 	position absolute
@@ -127,22 +132,28 @@ h1.lead
 #container > h2
 	margin 1em 15%
 
+h1
+	font-family sans-bold
 h2
+	font-family sans-bold
+	font-weight 100
 	font-size 2em
 
 h3
+	font-family sans-bold
 	font-weight 100
 	overflow auto
 	margin-top 2em
 	p
-		font-size inherit
+		font-size 26px
+		text-align center
 
 form
 	display block
 	overflow hidden
 	margin-bottom 4em
 	dd, dt
-		font-family sans-bold
+		font-family body-copy
 		font-size 16px
 		margin .25em 1em .25em 0
 		float left

@@ -66,7 +66,10 @@
 				</div>
 				<div class="slide slide-3" >
 					<h3>
-						<p>What might we &mdash; 1,827,087 graduates since 1987 &mdash; do together?</p>
+						<p>What might we<br />
+						&mdash; 1,827,087 graduates since 1987 &mdash;<br />
+						 do together?</p>
+					</h3>
 
 						<p>We already do these things together: we learn about art, go
 						into debt, circulate ideas, support the economy, and
@@ -98,12 +101,11 @@
 						<a href="mailto:info@bfamfaphd.com">info@bfamfaphd.com</a>.</p>
 
 
-					</h3>
 				</div><! --slide 3 -->
 
 				<div id="about-data" class="about-data slide slide-6">
 					<h2>*</h2>
-					<p class="small">The data was collected by the National Center for Educational Statistics’ Integrated Postsecondary Education Data System
+					<p>The data was collected by the National Center for Educational Statistics’ Integrated Postsecondary Education Data System
 					(<a href="http://nces.ed.gov/about/">IPEDS</a>), was downloaded by Jackie Armstrong, corrected for
 					population growth by Agnes Szanyi and organized in an excel
 					spreadsheet, and visualized by Annelie Berner. IPEDS tracks BAs
@@ -114,7 +116,7 @@
 					Studio Arts.</p>
 
 
-					<p class="small">How many of “us” are there? The question seems simple. The
+					<p>How many of “us” are there? The question seems simple. The
 					National Endowment for the Arts uses U.S. Census data that
 					records people who identify their primary occupation and means of
 					generating income as “artist.” We are using graduation data
@@ -136,10 +138,10 @@
 					monthly conversations about what we &mdash; 1,827,087 graduates
 					since 1987 &mdash;	might do together. On March 16th, from 3-5pm
 					at the Queens Museum of Art, Mark	McGurl, author of 
-					<u>The Program Era</u>, will join us for a conversation about his
+					<em>The Program Era</em>, will join us for a conversation about his
 					work and our collective potential. On April 13th, from 3-5pm at
-					the Queens Museum, James Elkins, author of <u>Artists with PhDs</u>,
-					will join us. On May 17, Howard Singerman, author of <u>Art Subjects</u>, will join us.</p>
+					the Queens Museum, James Elkins, author of <em>Artists with PhDs</em>,
+					will join us. On May 17, Howard Singerman, author of <em>Art Subjects</em>, will join us.</p>
 
 					<p><a href="#rsvp">RSVP</a> to join us.</p>
 
