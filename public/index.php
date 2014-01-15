@@ -96,7 +96,7 @@
 						own it collectively, into perpetuity, to create a lifelong
 						school and community land trust.</p>
 
-						<p>Applications for such a lifelong school will open on January 1,
+						<p>Applications for such a lifelong school will open on January 15,
 						2014. To inquire about this school in advance, please email
 						<a href="mailto:info@bfamfaphd.com">info@bfamfaphd.com</a>.</p>
 
@@ -366,8 +366,13 @@
 				</div> <!-- slide 12 -->
 				<div id="apply" class="slide slide-13 apply">
 					<h2>Apply</h2>
-					<p>Starting January 1, 2015, fifty prospective BFA, MFA, and PhD students will pool $200-2000 a month for four years, generating $2,400,000. Rather than going into debt to belong to a 2-4 year community in a traditional school, this group will use $2.4M to buy a building, create a community land trust, and secure space for place-based art, community organizing, internet activism, and community resilience, in perpetuity. Applications go live on January 1, 2014.
+					<p>Starting January 1, 2015, fifty prospective BFA, MFA, and PhD students will pool $200-2000 a month for four years, generating $2,400,000. Rather than going into debt to belong to a 2-4 year community in a traditional school, this group will use $2.4M to buy a building, create a community land trust, and secure space for place-based art, community organizing, internet activism, and community resilience, in perpetuity.
 					</p>
+					<p>Please apply using the fom below. You may prepare your 
+					application using this <a href="bfamfaphd-app.pdf">printable application form</a>.
+
+					<iframe width="100%" height="400px" 
+					src="http://bfamfaphd-app.herokuapp.com"></iframe>
 
 					<p>To inquire about this school in advance, please email
 					<a href="info@bfamfaphd.com">info@bfamfaphd.com</a>.</p>
