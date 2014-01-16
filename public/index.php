@@ -366,10 +366,9 @@
 				</div> <!-- slide 12 -->
 				<div id="apply" class="slide slide-13 apply">
 					<h2>Apply</h2>
-					<p>Starting January 1, 2015, fifty prospective BFA, MFA, and PhD students will pool $200-2000 a month for four years, generating $2,400,000. Rather than going into debt to belong to a 2-4 year community in a traditional school, this group will use $2.4M to buy a building, create a community land trust, and secure space for place-based art, community organizing, internet activism, and community resilience, in perpetuity.
-					</p>
-					<p>Please apply using the fom below. You may prepare your 
-					application using this <a href="bfamfaphd-app.pdf">printable application form</a>.
+					<p>Thank you for your interest in BFA MFA PHD. We offer this 7 question web-based application in hopes that it will make our application process as easy and convenient as possible for you. Applications submitted electronically receive the same consideration as applications submitted on paper. <a href="bfamfaphd-app.pdf" >Download the printable application form.</a> To get started with an online application, click on the button below. All applications must be submitted by March 1, 2014</p>
+
+
 
 					<iframe width="100%" height="400px" 
 					src="http://bfamfaphd-app.herokuapp.com"></iframe>
