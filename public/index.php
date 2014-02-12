@@ -39,7 +39,7 @@
 						<nav class="navbar">
 							<ul class="nav navbar">
 								<li><a href="#data">Data</a></li>
-								<li><a href="#talk">Talk</a></li>
+								<li><a href="#events">Events</a></li>
 								<li><a href="#read">Read</a></li>
 								<li><a href="#act">Act</a></li>
 								<li><a href="#join">Join</a></li>
@@ -71,6 +71,13 @@
 						 do together?</p>
 					</h3>
 
+						<iframe class="media-embed" src="//player.vimeo.com/video/85633749?title=0&amp;byline=0&amp;portrait=0" width="100%" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					<h3>
+						<p>We are tired of working, winning, and losing in isolated competition.</p>
+						<p>Together, we can make a powerful cultural front.</p>
+						<p>We can show up for each other, and for non-arts struggles, en masse.</p>
+					</h3>
+
 						<p>We already do these things together: we learn about art, go
 						into debt, circulate ideas, support the economy, and
 						(re)produce relationships and identities.</p>
@@ -96,9 +103,7 @@
 						own it collectively, into perpetuity, to create a lifelong
 						school and community land trust.</p>
 
-						<p>Applications for such a lifelong school will open on January 15,
-						2014. To inquire about this school in advance, please email
-						<a href="mailto:info@bfamfaphd.com">info@bfamfaphd.com</a>.</p>
+						<p><a href="#apply">Applications are open</a> for such a lifelong school.</p>
 
 
 				</div><! --slide 3 -->
@@ -114,9 +119,13 @@
 					&amp; Artisanry, Dance, Design and Applied Arts, Drama/Theater Arts
 					and Stagecraft, Film/Video and Photographic Arts, Music, Fine and
 					Studio Arts.</p>
+					<h3><p>Graduates by City, 1984-2012</p></h3>
+					<iframe class="media-embed" src="//player.vimeo.com/video/86460433?title=0&amp;byline=0&amp;portrait=0" width="100%" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-					<p>How many of “us” are there? The question seems simple. The
+					<h3><p>How many of “us” are there?</p></h3>
+
+					<p>The question seems simple. The
 					National Endowment for the Arts uses U.S. Census data that
 					records people who identify their primary occupation and means of
 					generating income as “artist.” We are using graduation data
@@ -132,18 +141,14 @@
 					about ourselves?</p>
 					
 				</div> <!-- slide 6 -->
-				<div id="talk" class="slide slide-7 talk">
-					<h2>TALK</h2>
-					<p>Starting February 2nd, join us at the Queens Museum of Art for
-					monthly conversations about what we &mdash; 1,827,087 graduates
-					since 1987 &mdash;	might do together. On March 16th, from 3-5pm
-					at the Queens Museum of Art, Mark	McGurl, author of 
-					<em>The Program Era</em>, will join us for a conversation about his
-					work and our collective potential. On April 13th, from 3-5pm at
-					the Queens Museum, James Elkins, author of <em>Artists with PhDs</em>,
-					will join us. On May 17, Howard Singerman, author of <em>Art Subjects</em>, will join us.</p>
+				<div id="events" class="slide slide-7 events">
+					<h2>EVENTS</h2>
+					<b>Mark McGurl and Leigh Claire La Berge</b>
+					<p>Mark McGurl, author of <em>The Program Era: Postwar Fiction and the Rise of Creative Writing</em>, and Leigh Claire La Berge, author of the forthcoming <em>Scandals and Abstraction: Financial Fictions of the Long 1980s</em>, will join BFAMFAPHD.com for a dialogue about how the nexus between the university and the market has transformed American fiction, given rise to forms of institutional creativity, and produced new sites for creative collectivities.<p>
+					<p><b>Saturday, March 15th from 6-8pm at The Queens Museum</b>
+					<p>On April 13th, from 3-5pm at the Queens Museum, James Elkins, author of <em>Artists with PhDs</em>, will join us. On May 17, Howard Singerman, author of <em>Art Subjects</em>, will join us.</p>
 
-					<p><a href="#rsvp">RSVP</a> to join us.</p>
+					<p><a href="#rsvp">Join our mailing list</a> to be notified of monthly events.</p>
 
 				</div> <!-- slide 7 -->
 				<div id="read" class="slide slide-8 read"	>
@@ -212,6 +217,7 @@
 							Girls</a> (women)
 						<li><a href="http://littlesis.org/">LittleSis</a> (power
 						elites)
+						<li><a href="http://artsandlabor.org/">Art and Labor</a> (visual artists)
 					</ul>
 					<h3>RESIST BAD SYSTEMS</h3>
 					<ul>
@@ -227,7 +233,7 @@
 					<ul>
 						<li><a href="http://596acres.org/">Land</a>
 						<li><a
-							href="http://eyebeam.org/projects/hacker-house-community-land-trust-0"
+							href="http://nyccli.org/"
 							>Community Land Trusts</a>
 						<li><a href="http://solidaritynyc.org">SolidarityNYC</a>
 					</ul>
@@ -331,11 +337,11 @@
 					<h2>RSVP</h2>
 					<p>Starting February 2nd, join us at the Queens Museum of Art for
 					monthly conversations about what we &mdash; 1,827,087 graduates
-					since 1987 &mdash;	might do together. On March 16th, from 3-5pm
+					since 1987 &mdash;	might do together. On March 15th, from 6-8pm
 					at the Queens Museum of Art, Mark	McGurl, author of 
-					<u>The Program Era</u>, will join us for a conversation about his
+					<em>The Program Era</em>, will join us for a conversation about his
 					work and our collective potential. On April 13th, from 3-5pm at
-					the Queens Museum, James Elkins, author of <u>Artists with PhDs</u>,
+					the Queens Museum, James Elkins, author of <em>Artists with PhDs</em>,
 					will join us. On May 17, Howard Singerman, author of Art Subjects, will join us.</p>
 
 					<h3>Join our mailing list:</h3>
@@ -366,7 +372,7 @@
 				</div> <!-- slide 12 -->
 				<div id="apply" class="slide slide-13 apply">
 					<h2>Apply</h2>
-					<p>Thank you for your interest in BFA MFA PHD. We offer this 7 question web-based application in hopes that it will make our application process as easy and convenient as possible for you. Applications submitted electronically receive the same consideration as applications submitted on paper. <a href="bfamfaphd-app.pdf" >Download the printable application form.</a> To get started with an online application, click on the button below. All applications must be submitted by March 1, 2014</p>
+					<p>Thank you for your interest in BFA MFA PHD. We offer this 7 question web-based application in hopes that it will make our application process as easy and convenient as possible for you. Applications submitted electronically receive the same consideration as applications submitted on paper. <a href="bfamfaphd-app.pdf" >Download the printable application form.</a> To get started with an online application, click on the button below. All applications must be submitted by February 15, 2014.</p>
 
 
 
