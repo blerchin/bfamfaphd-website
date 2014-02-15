@@ -28,7 +28,7 @@
 	echo "<tr><th>Name</th><th>Email</th><th>In School</th><th>Associates</th>
 		<th>BFA</th><th>MFA</th><th>PhD</th><th>Self-Taught</th>
 		<th>Apprenticeship</th><th>Alt School</th><th>NDG School</th>
-		<th>Zip/Postal</th></tr>";
+		<th>Zip/Postal</th><th>Freedom School</th></tr>";
 	if (($handle = fopen("../addresses-v2.csv", "r")) !== FALSE) {
 			while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
 					echo "<tr>";

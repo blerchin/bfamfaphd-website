@@ -72,6 +72,7 @@
 					</h3>
 
 						<iframe class="media-embed" src="//player.vimeo.com/video/85633749?title=0&amp;byline=0&amp;portrait=0" width="100%" height="400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					<p>Video by Alex Mallis</p>
 					<h3>
 						<p>We are tired of working, winning, and losing in isolated competition.</p>
 						<p>Together, we can make a powerful cultural front.</p>
@@ -121,6 +122,7 @@
 					Studio Arts.</p>
 					<h3><p>Graduates by City, 1984-2012</p></h3>
 					<iframe class="media-embed" src="//player.vimeo.com/video/86460433?title=0&amp;byline=0&amp;portrait=0" width="100%" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					<p>Visualization of MFA graduates from 1984-2012 by Brian House, Annelie Berner, and Jeffrey Warren (using IPEDS data).</p>
 
 
 					<h3><p>How many of “us” are there?</p></h3>
@@ -229,13 +231,14 @@
 							>Walk out</a>
 						<li><a href="http://cusos.org/">Cooper Union occupation</a>
 					</ul>
-					<h3>SECURE SPACES OF HOPE</h3>
+					<h3>CONNECT SPACES OF HOPE</h3>
 					<ul>
 						<li><a href="http://596acres.org/">Land</a>
 						<li><a
 							href="http://nyccli.org/"
 							>Community Land Trusts</a>
 						<li><a href="http://solidaritynyc.org">SolidarityNYC</a>
+						<li><a href="http://nocdny.org">Preserve Culture</a>
 					</ul>
 					<h3>CREATE OPTIONS FOR COOPERATION</h3>
 					<ul>
@@ -281,13 +284,13 @@
 						href="http://www.sans.name/lookbook/ss2008lb.html">Lika
 						Volkova</a>
 						<li>WEB DESIGN: <a href="http://benlerchin.com">Ben Lerchin</a>
-						<li>DATA VIZ: <a href="http://annelieberner.com/">Annelie Berner</a>
+						<li>DATA VIZ: <a href="http://annelieberner.com/">Annelie Berner</a>, Jeffrey Warren, Brian House, Luis Daniel, Michele Graffieti, Mira Rojanasakul, Jason Arias
 						<li>DATA TEAM: <a
 							href="http://www.newschool.edu/nssr/subpage.aspx?id=24280">Agnes
 							Szanyi</a>,
 							<a
-								href="http://www.moma.org/explore/inside_out/author/jarmstrong">Jackie
-								Armstrong</a>, <a
+								href="http://www.moma.org/explore/inside_out/author/jarmstrong">Jackie Armstrong</a>, Vicky Virgin,
+							<a
 								href="http://nces.ed.gov/ipeds/">IPEDS</a>
 							<li>WRITING: <a href="http://carolinewoolard.com">Caroline
 								Woolard</a>
@@ -379,7 +382,7 @@
 					<iframe width="100%" height="400px" 
 					src="http://bfamfaphd-app.herokuapp.com"></iframe>
 
-					<p>To inquire about this school in advance, please email
+					<p>To inquire about BFAMFAPhD, please email
 					<a href="info@bfamfaphd.com">info@bfamfaphd.com</a>.</p>
 				</div> <!-- slide 13 -->
 

@@ -8,7 +8,8 @@ if(!empty($_POST["email"])){
 	. $_POST["mfa"] . ", " . $_POST["phd"]
 	. ", " . $_POST["self-taught"] . ", " .$_POST["apprenticeship"]
 	. ", " . $_POST["alt"] . ", " . $_POST["ndg"]
-	. ", " . $_POST["zipcode"] . "\n";
+	. ", " . $_POST["zipcode"]
+	. ", " . $_POST["freedom"] . "\n";
 	//echo $userdata;
 
 	$addresses = fopen('../addresses-v2.csv','a');
@@ -44,6 +45,7 @@ if(!empty($_POST["email"])){
 								school</input>
 								<br />
 								<input type="checkbox" name="ndg" value="x">non-degree-granting school</input>
+								<input type="checkbox" name="freedom" value="x">freedom school</input>
 							</dd>
 							<dt>Current Zip / Postal Code:</dt>
 							<dd><input type="text" name="zipcode"></input></dd>
