@@ -145,9 +145,10 @@
 				</div> <!-- slide 6 -->
 				<div id="events" class="slide slide-7 events">
 					<h2>EVENTS</h2>
-					<b>Mark McGurl and Leigh Claire La Berge</b>
+					<p><b>Mark McGurl and Leigh Claire La Berge</b></p>
+					<p>Saturday, March 15th from 6-8pm at The Queens Museum
 					<p>Mark McGurl, author of <em>The Program Era: Postwar Fiction and the Rise of Creative Writing</em>, and Leigh Claire La Berge, author of the forthcoming <em>Scandals and Abstraction: Financial Fictions of the Long 1980s</em>, will join BFAMFAPHD.com for a dialogue about how the nexus between the university and the market has transformed American fiction, given rise to forms of institutional creativity, and produced new sites for creative collectivities.<p>
-					<p><b>Saturday, March 15th from 6-8pm at The Queens Museum</b>
+					<p><b>James Elkins</b></p>
 					<p>On April 13th, from 3-5pm at the Queens Museum, James Elkins, author of <em>Artists with PhDs</em>, will join us. On May 17, Howard Singerman, author of <em>Art Subjects</em>, will join us.</p>
 
 					<p><a href="#rsvp">Join our mailing list</a> to be notified of monthly events.</p>
@@ -375,7 +376,7 @@
 				</div> <!-- slide 12 -->
 				<div id="apply" class="slide slide-13 apply">
 					<h2>Apply</h2>
-					<p>Thank you for your interest in BFA MFA PHD. We offer this 7 question web-based application in hopes that it will make our application process as easy and convenient as possible for you. Applications submitted electronically receive the same consideration as applications submitted on paper. <a href="bfamfaphd-app.pdf" >Download the printable application form.</a> To get started with an online application, click on the button below. All applications must be submitted by February 15, 2014.</p>
+					<p>Thank you for your interest in BFA MFA PHD. We offer this 7 question web-based application in hopes that it will make our application process as easy and convenient as possible for you. Applications submitted electronically receive the same consideration as applications submitted on paper. <a href="bfamfaphd-app.pdf" >Download the printable application form.</a> To get started with an online application, click on the button below. All applications must be submitted by March 8, 2014.</p>
 
 
 
