@@ -18,7 +18,8 @@
     "clean-css-brunch": ">= 1.0 < 1.8",
     "coffeelint-brunch": ">= 1.0 < 1.8",
     "imageoptmizer-brunch": "~0.0.3",
-    "auto-reload-brunch": ">= 1.0 < 1.8"
+    "auto-reload-brunch": ">= 1.0 < 1.8",
+    "less-brunch": "~1.7.2"
   },
   "devDependencies": {
     "karma": "~0.10",

@@ -1,6 +1,6 @@
 $(function() {
 
-d3.json("fineArts.json", function(error, data) {
+d3.json(window.globals.TEMPLATE_URL + "/fineArts.json", function(error, data) {
 
 console.log("hello");
 // console.log(data[0].BA);
