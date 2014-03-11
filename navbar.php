@@ -9,7 +9,7 @@
 		<nav class="navbar">
 			<ul class="nav navbar">
 			<?php while( $navbar->have_posts() ): $navbar->the_post() ?>
-				<li><a href="#<?php the_slug() ?>">
+				<li><a href="<?php bloginfo('url')?>#<?php the_slug() ?>">
 							<?php the_title() ?>
 						</a></li>
 			<?php endwhile; ?>
