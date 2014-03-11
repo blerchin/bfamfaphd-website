@@ -27,4 +27,4 @@
 
     <body data-spy="scroll" data-target="nav" data-offset="70">
 			<div id="wrapper">
-				<div id="container" class="container">
+				<div id="container" >
