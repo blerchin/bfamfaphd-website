@@ -19,7 +19,7 @@
 							<p class="small">Y-axis shows the number of graduates each year. Height of bar indicates increase or decrease in graduates each year.</p>
 						</div>
 						<a
-							href="images/bfamfaphd.png"
+						href="<?php echo get_template_directory_uri() ?>/images/bfamfaphd.png"
 							class="action download">
 								Download as image
 						</a>
