@@ -20,12 +20,12 @@ function bfamfaphd_projects_grid_shortcode($attr){
         $out.="<div class='project project-" . get_the_ID() . "'>";
           $out.="<a href='" . $custom['url'][0] . "'>";
             $out.= get_the_post_thumbnail( get_the_ID(), "thumbnail", true);
-            $out.="<div class='credit'>";
-              $out.="<h4>" . get_the_title() . "</h4>";
-              $out.="<small>". $custom['author'][0] . ", ";
-              $out.= $custom['date'][0] . "</small>";
-            $out.="</div>";
           $out.="</a>";
+          $out.="<div class='credit'>";
+            $out.="<h4>" . get_the_title() . "</h4>";
+            $out.="<small>". $custom['author'][0] . ", ";
+            $out.= $custom['date'][0] . "</small>";
+          $out.="</div>";
         $out.="</div>";
       }
       $out.="</div>"; //.projects-grid

@@ -8388,13 +8388,14 @@ body {
     float: left;
     text-decoration: none; }
     .projects-grid .project a {
-      background-color: white;
       float: left;
       margin-bottom: 5px;
       border: none; }
-    .projects-grid .project a:hover img {
-      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
-      opacity: 0.4; }
+    .projects-grid .project a:hover {
+      background-color: white; }
+      .projects-grid .project a:hover img {
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+        opacity: 0.4; }
     .projects-grid .project img {
       float: left;
       width: 210px;
