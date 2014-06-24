@@ -6,8 +6,7 @@ function bfamfaphd_events_list_shortcode($attr){
 
     $args = array(
         'post_type' => 'bfamfaphd_event',
-        'orderby' => 'meta_value',
-        'meta_key' => 'num_date',
+        'orderby' => 'menu_order',
         'order' => 'DESC'
       );
     $query = new WP_Query( $args );
