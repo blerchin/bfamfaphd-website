@@ -17,7 +17,7 @@ function bfamfaphd_events_list_shortcode($attr){
       while( $query->have_posts()) {
         $query->the_post();
         $custom = get_post_custom(get_the_ID());
-        $past = ( time() - strtotime( $custom['num_date'][0]) ) > 0;
+        $past = strlen($custom['past'][0]) > 0;
         $out.="<div class='event";
         if($past){
             $out.=" past";
