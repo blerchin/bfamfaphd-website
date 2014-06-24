@@ -16,7 +16,13 @@ add_filter('show_admin_bar', '__return_false');
 
 // Create the_slug()
 function the_slug() {
-	    $post_data = get_post($post->ID, ARRAY_A);
-	    $slug = $post_data['post_name'];
-	    echo $slug; 
+	    echo get_the_slug();
 }
+function get_the_slug() {
+	    $post_data = get_post($post->ID, ARRAY_A);
+	    return $post_data['post_name'];
+}
+add_theme_support('post-thumbnails');
+require 'post_type_project.php';
+require 'projects_gallery.php';
+require 'projects_grid.php';

@@ -1,25 +1,29 @@
 {
-  "author": "Your Name",
-  "name": "package-name",
+  "author": "BFAMFAPhD / Ben Lerchin",
+  "name": "wp-bfamfaphd",
   "description": "Package description",
   "version": "0.0.1",
   "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blerchin/bfamfaphd-app.git"
+  },
   "scripts": {
     "test": "cake build:test",
     "start": "brunch watch --server"
   },
   "dependencies": {
-    "javascript-brunch": ">= 1.0 < 1.8",
-    "coffee-script-brunch": ">= 1.0 < 1.8",
-    "css-brunch": ">= 1.0 < 1.8",
-    "stylus-brunch": ">= 1.0 < 1.8",
-    "handlebars-brunch": ">= 1.0 < 1.8",
-    "uglify-js-brunch": "~1.7.3",
-    "clean-css-brunch": ">= 1.0 < 1.8",
-    "coffeelint-brunch": ">= 1.0 < 1.8",
-    "imageoptmizer-brunch": "~0.0.3",
     "auto-reload-brunch": ">= 1.0 < 1.8",
-    "less-brunch": "~1.7.2"
+    "clean-css-brunch": ">= 1.0 < 1.8",
+    "coffee-script-brunch": ">= 1.0 < 1.8",
+    "coffeelint-brunch": ">= 1.0 < 1.8",
+    "css-brunch": ">= 1.0 < 1.8",
+    "handlebars-brunch": ">= 1.0 < 1.8",
+    "imageoptmizer-brunch": "~0.0.3",
+    "javascript-brunch": ">= 1.0 < 1.8",
+    "less-brunch": "~1.7.2",
+    "sass-brunch": "^1.8.1",
+    "uglify-js-brunch": "~1.7.3"
   },
   "devDependencies": {
     "karma": "~0.10",

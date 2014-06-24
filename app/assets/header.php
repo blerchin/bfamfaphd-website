@@ -1,16 +1,15 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BFAMFAPhD</title>
+    <meta content='' name='description'>
+    <meta charset='UTF-8'>
+    <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js' type='text/javascript'></script>
+    <script src='http://use.typekit.net/clf5ohy.js' type='text/javascript'></script>
+    <style>
+      div.nope #work{visibility: hidden;}
+    </style>
 				<script type="text/javascript"
 					src="http://fast.fonts.net/jsapi/8da6cfce-072e-4d64-8bbe-9c8b672b9bc9.js"></script>
         <script>
@@ -21,10 +20,18 @@
 						window.globals.TEMPLATE_URL = '<?= get_bloginfo("template_url"); ?>';
 
         </script>
+				<script>
+					$(document).ready(function() {
+					
+							$( '.projectSlideshow' ).cycle();
+							
+							$('.navigation').smint({
+								'scrollSpeed' : 1000
+							});
+					});
+				</script>
 
 			  <?php wp_head() ?>			
     </head>
 
     <body data-spy="scroll" data-target="nav" data-offset="70">
-			<div id="wrapper">
-				<div id="container" >

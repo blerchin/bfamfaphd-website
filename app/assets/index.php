@@ -1,25 +1,32 @@
 <?php require('header.php'); ?>
 <?php require('navbar.php'); ?>
-<?php if( is_front_page()) require('graph.php'); ?>
+  <div id="wrapper">
+    <div id="container" >
 						
 
 				<!--POSTS -->
-	<?php //query_posts('cat=1') ?>
+	<?php $count = 1; ?>
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<?php $even = $count % 2; ?>
+		<?php $count++; ?>
 
-<div class="slide slide-<?php the_ID()?> <?php the_slug()?>"
-				id="<?php the_slug() ?>">
-	<h2><?php the_title() ?></h2>
-	<div class="entry-content">
-		<?php the_content() ?>
-	</div>
+<div class="section section-<?php the_ID()?> <?php the_slug()?> 
+        <?php if($even){ echo 'invert'; } else { echo 'default'; }  ?>" 
+        id="<?php get_the_slug() ?>">
+		<div class="content">
+      <?php if(get_the_slug() != "home"): ?>
+        <h2><?php the_title() ?></h2>
+      <?php endif; ?>
+      <?php the_content() ?>
+		</div>
 </div>
 		
 	<?php endwhile; else: ?>
 		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 	
 	<?php endif; ?>
-
+</div> <!-- .container -->
+</div> <!-- #wrapper-->
 
 
 <?php require('footer.php') ?>

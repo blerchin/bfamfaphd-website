@@ -1,0 +1,266 @@
+@import "compass/reset"
+@import "compass/css3"
+
+$accent : #6896D2
+
+body
+  font-family: "museo-sans-rounded", sans-serif
+  font-weight: 300
+
+.content
+  position: relative
+  width: 960px
+  margin: 0 auto
+
+.header
+  width: 100%
+  background-color: $accent
+  position: fixed
+  top: 0
+  z-index: 200
+  padding: 10px 0
+  .content
+    a
+      text-decoration: none
+      color: #ffffff
+    a:hover, a.active
+      border-bottom: 2px solid #ffffff
+    ul.navigation
+      float: right
+      font-size: 1.4em
+      letter-spacing: .05em
+      font-weight: 400
+      margin-top: 3px
+      li
+        float: left
+        margin-left: 30px
+      li:first-child
+        margin-left: 0
+    h1
+      font-weight: 800
+      font-size: 1.7em
+      float: left
+      letter-spacing: .05em
+
+.section
+  width: 100%
+  overflow: auto
+  padding: 60px 0
+  .content
+    p, li
+      line-height: 1.6em
+      font-size: 1.2em
+    p
+      margin: 0 100px 30px 100px
+    ul
+      margin-bottom: 30px
+      li
+        margin: 0 100px 0 120px
+        list-style-type: disc
+    h3
+      font-size: 1.6em
+      font-weight: 600
+      margin: 0 0 20px 80px
+      letter-spacing: 0.01em
+    h2
+      font-size: 3em
+      font-weight: 600
+      margin: 0 0 60px 80px
+      letter-spacing: 0.01em
+
+.home
+  padding: 100px 0 30px 0
+  background-color: $accent
+  .content
+    h2
+      float: right
+      font-size: 3.6em
+      font-weight: 600
+      margin: 0 0 30px 0
+      line-height: 1.3em
+      letter-spacing: 0.01em
+      width: 700px
+    p.subhead
+      float: right
+      line-height: 1.6em
+      font-size: 1.2em
+      margin: 0 0 30px 0
+      width: 700px
+      letter-spacing: 0.01em
+    p.logo-top
+      float: left
+      margin: 0 0 0 -15px
+  .projectSlideshow
+    float: left
+    width: 100%
+    margin: 30px 0
+    .projectSlide
+      margin: 0
+      float: left
+    a
+      margin: 15px 0
+      background-color: #ffffff
+      float: left
+      border-bottom: none
+      img
+        float: left
+      &:hover
+        img
+          position: relative
+          opacity: 0.2
+        &:before
+          content: "LAUNCH PROJECT"
+          text-align: center
+          height: 100%
+          line-height: 450px
+          position: absolute
+          letter-spacing: .05em
+          top: 0
+          left: 0
+          z-index: 101
+          font-size: 3em
+          width: 100%
+          font-weight: 800
+          color: $accent
+    .credit
+      p
+        margin: 0
+      float: left
+      width: 100%
+      text-align: right
+      color: #ffffff
+      font-weight: 300
+      font-size: .8em
+      letter-spacing: .03em
+  .controls
+    position: relative
+    top: -50px
+    z-index: 100
+    float: left
+
+.eventList
+  float: left
+  width: 100%
+  margin-top: 60px
+  .past
+    +opacity(0.3)
+  .event
+    float: left
+    width: 100%
+    margin-bottom: 30px
+    .date
+      color: $accent
+      float: left
+      width: 30%
+      text-align: right
+      p 
+        margin: 0
+        font-size: 1.5em
+        font-weight: 600
+        line-height: 1em
+    .title
+      float: right
+      width: 60%
+      margin-bottom: 10px
+      margin-right: 3%
+      h4
+        font-size: 1.5em
+        font-weight: 600
+        line-height: 1.3em
+    .details
+      float: right
+      width: 60%
+      margin-right: 3%
+      p
+        margin: 0
+        font-size: 1.1em
+        line-height: 1.4em
+.section .content form
+  margin: 0 100px 30px 100px
+  p, ul, span, li, div
+    margin: 0 0px 10px 0px
+  li
+    list-style: none
+
+.look
+  .projects-grid
+    width: 100%
+    float: left
+    margin-top: 20px
+    .project
+      width: 210px
+      margin: 0 40px 20px 0
+      position: relative
+      a
+        background-color: #ffffff
+        float: left
+        margin-bottom: 5px
+        border: none
+      a:hover
+        img
+          +opacity(0.4)
+      img
+        float: left
+        width: 210px
+        height: 210px
+
+      .credit
+        padding-top: 10px
+        clear: left
+        h4
+          font-weight: 500
+
+      float: left
+      text-decoration: none
+    .project:nth-child(4n+4)
+      margin-right: 0
+    @media only screen and (max-width: 960px)
+      .project:nth-child(4n+4)
+        margin-right: 40px
+        
+.default
+  color: #000000
+  a
+    border-bottom: 1px solid #000000
+    color: #000000
+    text-decoration: none
+  a:hover
+    +opacity(0.6)
+   
+.invert
+  background-color: $accent
+  color: #ffffff
+  a
+    border-bottom: 1px solid #ffffff
+    color: #ffffff
+    text-decoration: none
+  a:hover
+    +opacity(0.6)
+
+.footer
+  background-color: $accent
+  text-align: center
+  padding: 60px 0
+  img
+    +opacity(0.9)
+
+    
+@media only screen and (max-width: 960px)
+  .content
+    width: 100%
+  
+  .project
+    img
+      width: 100%
+  .projectSlide
+    img
+      width: 100%
+
+
+
+
+
+
+
+
+
