@@ -8336,6 +8336,8 @@ body {
     top: -50px;
     z-index: 100;
     float: left; }
+    .home .controls a {
+      margin-right: 5px; }
 
 .eventList {
   float: left;
@@ -8370,7 +8372,8 @@ body {
     .eventList .event .details {
       float: right;
       width: 60%;
-      margin-right: 3%; }
+      margin-right: 3%;
+      line-height: 1.5em; }
       .eventList .event .details p {
         margin: 0;
         font-size: 1.1em;
@@ -8458,7 +8461,7 @@ body {
     width: 100%;
     height: auto; }
 
-  .intro img.logo {
+  .home img.logo {
     display: none; }
 
   .section .content p, .section .content h2, .section .content h3, .section .content h4, .section .content li {
@@ -8495,14 +8498,14 @@ body {
   .section {
     clear: both; }
 
-  .intro {
+  .home {
     padding-top: 20px; }
-    .intro .content h2 {
+    .home .content h2 {
       width: 100%;
       font-size: 2.5em; }
-    .intro .content p {
+    .home .content p.subhead {
       width: 100%; }
-    .intro .content .logo {
+    .home .content .logo {
       float: left;
       margin-left: -15px; }
 

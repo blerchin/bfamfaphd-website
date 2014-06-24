@@ -34,4 +34,4 @@
 			  <?php wp_head() ?>			
     </head>
 
-    <body data-spy="scroll" data-target="nav" data-offset="70">
+    <body>

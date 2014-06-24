@@ -1,6 +1,3 @@
-	<h1>
-		<a href='/'>BFAMFAPhD</a>
-	</h1>
 <?php
 	$args = array(
 		'cat' => 1,
