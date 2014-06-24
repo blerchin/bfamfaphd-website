@@ -24,5 +24,7 @@ function get_the_slug() {
 }
 add_theme_support('post-thumbnails');
 require 'post_type_project.php';
+require 'post_type_event.php';
+require 'events_list.php';
 require 'projects_gallery.php';
 require 'projects_grid.php';
