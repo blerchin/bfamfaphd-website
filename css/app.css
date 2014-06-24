@@ -8200,6 +8200,11 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
 body {
   font-family: "museo-sans-rounded", sans-serif;
   font-weight: 300; }
@@ -8211,7 +8216,7 @@ body {
 
 .header {
   width: 100%;
-  background-color: #6896d2;
+  background-color: #010101;
   position: fixed;
   top: 0;
   z-index: 200;
@@ -8234,9 +8239,10 @@ body {
       margin-left: 0; }
   .header .content h1 {
     font-weight: 800;
-    font-size: 1.7em;
+    font-size: 1.9em;
     float: left;
-    letter-spacing: 0.05em; }
+    letter-spacing: 0.05em;
+    color: white; }
 
 .section {
   width: 100%;
@@ -8265,7 +8271,7 @@ body {
 
 .home {
   padding: 100px 0 30px 0;
-  background-color: #6896d2; }
+  background-color: #010101; }
   .home .content h2 {
     float: right;
     font-size: 3.6em;
@@ -8300,21 +8306,21 @@ body {
         float: left; }
       .home .projectSlideshow a:hover img {
         position: relative;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
         opacity: 0.2; }
       .home .projectSlideshow a:hover:before {
         content: "LAUNCH PROJECT";
         text-align: center;
-        height: 100%;
-        line-height: 450px;
         position: absolute;
         letter-spacing: 0.05em;
+        margin-top: -40px;
         top: 0;
         left: 0;
         z-index: 101;
         font-size: 3em;
         width: 100%;
         font-weight: 800;
-        color: #6896d2; }
+        color: #010101; }
     .home .projectSlideshow .credit {
       float: left;
       width: 100%;
@@ -8343,7 +8349,7 @@ body {
     width: 100%;
     margin-bottom: 30px; }
     .eventList .event .date {
-      color: #6896d2;
+      color: #010101;
       float: left;
       width: 30%;
       text-align: right; }
@@ -8422,7 +8428,7 @@ body {
     opacity: 0.6; }
 
 .invert {
-  background-color: #6896d2;
+  background-color: #010101;
   color: white; }
   .invert a {
     border-bottom: 1px solid white;
@@ -8433,7 +8439,7 @@ body {
     opacity: 0.6; }
 
 .footer {
-  background-color: #6896d2;
+  background-color: #010101;
   text-align: center;
   padding: 60px 0; }
   .footer img {
@@ -8442,13 +8448,70 @@ body {
 
 @media only screen and (max-width: 960px) {
   .content {
-    width: 100%; }
+    width: 100%;
+    padding: 0 25px; }
 
   .project img {
     width: 100%; }
 
   .projectSlide img {
-    width: 100%; } }
+    width: 100%;
+    height: auto; }
+
+  .intro img.logo {
+    display: none; }
+
+  .section .content p, .section .content h2, .section .content h3, .section .content h4, .section .content li {
+    margin-left: 0;
+    margin-right: 0; }
+  .section .content ul li {
+    margin-left: 25px;
+    margin-right: 0; }
+
+  .header {
+    position: relative;
+    float: left;
+    width: 100%; }
+    .header .content {
+      padding: 0 25px; }
+      .header .content ul.navigation {
+        float: left;
+        width: 100%;
+        padding: 20px 0 30px 0;
+        border-bottom: 4px solid white; }
+        .header .content ul.navigation li {
+          display: inline;
+          margin: 0;
+          line-height: 1.6em; }
+        .header .content ul.navigation li:not(:first-child):before {
+          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+          opacity: 0.4;
+          content: "/";
+          margin: 0 2px 0 7px;
+          color: white; }
+      .header .content h1 {
+        font-size: 2.6em; }
+
+  .section {
+    clear: both; }
+
+  .intro {
+    padding-top: 20px; }
+    .intro .content h2 {
+      width: 100%;
+      font-size: 2.5em; }
+    .intro .content p {
+      width: 100%; }
+    .intro .content .logo {
+      float: left;
+      margin-left: -15px; }
+
+  .footer img {
+    width: 100%; }
+
+  .projectSlideshow .projectSlide a:hover:after {
+    margin-top: -30px;
+    font-size: 2em; } }
 
 
 /*# sourceMappingURL=app.css.map*/

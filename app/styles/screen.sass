@@ -1,7 +1,11 @@
 @import "compass/reset"
 @import "compass/css3"
 
-$accent : #6896D2
+$accent : #010101
+*, *:before, *:after
+  -moz-box-sizing: border-box
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
 
 body
   font-family: "museo-sans-rounded", sans-serif
@@ -38,9 +42,10 @@ body
         margin-left: 0
     h1
       font-weight: 800
-      font-size: 1.7em
+      font-size: 1.9em
       float: left
       letter-spacing: .05em
+      color: #ffffff
 
 .section
   width: 100%
@@ -107,14 +112,13 @@ body
       &:hover
         img
           position: relative
-          opacity: 0.2
+          +opacity(0.2)
         &:before
           content: "LAUNCH PROJECT"
           text-align: center
-          height: 100%
-          line-height: 450px
           position: absolute
           letter-spacing: .05em
+          margin-top: -40px
           top: 0
           left: 0
           z-index: 101
@@ -247,15 +251,70 @@ body
 @media only screen and (max-width: 960px)
   .content
     width: 100%
-  
+    padding: 0 25px
   .project
     img
       width: 100%
   .projectSlide
     img
       width: 100%
+      height: auto
+  .intro
+    img.logo
+      display: none
+  .section
+    .content
+      p, h2, h3, h4, li
+        margin-left: 0
+        margin-right: 0
+      ul
+        li
+          margin-left: 25px
+          margin-right: 0      
+  .header
+    position: relative
+    float: left
+    width: 100%
+    .content
+      padding: 0 25px
+      ul.navigation
+        float: left
+        width: 100%
+        padding: 20px 0 30px 0
+        border-bottom: 4px solid #ffffff
+        li
+          display: inline
+          margin: 0
+          line-height: 1.6em
+        li:not(:first-child):before
+          +opacity(0.4)
+          content: "/"
+          margin: 0 2px 0 7px
+          color: #ffffff
+      h1
+        font-size: 2.6em
+  .section
+    clear: both
+  .intro
+    padding-top: 20px
+    .content
+      h2
+        width: 100%
+        font-size: 2.5em
+      p
+        width: 100%
+      .logo
+        float: left
+        margin-left: -15px
 
-
+  .footer
+    img
+      width: 100%
+  .projectSlideshow
+    .projectSlide
+      a:hover:after
+        margin-top: -30px
+        font-size: 2em
 
 
 
