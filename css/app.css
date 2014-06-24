@@ -8377,37 +8377,37 @@ body {
   .section .content form li {
     list-style: none; }
 
-.look .projects-grid {
+.projects-grid {
   width: 100%;
   float: left;
   margin-top: 20px; }
-  .look .projects-grid .project {
+  .projects-grid .project {
     width: 210px;
     margin: 0 40px 20px 0;
     position: relative;
     float: left;
     text-decoration: none; }
-    .look .projects-grid .project a {
+    .projects-grid .project a {
       background-color: white;
       float: left;
       margin-bottom: 5px;
       border: none; }
-    .look .projects-grid .project a:hover img {
+    .projects-grid .project a:hover img {
       filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
       opacity: 0.4; }
-    .look .projects-grid .project img {
+    .projects-grid .project img {
       float: left;
       width: 210px;
       height: 210px; }
-    .look .projects-grid .project .credit {
+    .projects-grid .project .credit {
       padding-top: 10px;
       clear: left; }
-      .look .projects-grid .project .credit h4 {
+      .projects-grid .project .credit h4 {
         font-weight: 500; }
-  .look .projects-grid .project:nth-child(4n+4) {
+  .projects-grid .project:nth-child(4n+4) {
     margin-right: 0; }
   @media only screen and (max-width: 960px) {
-    .look .projects-grid .project:nth-child(4n+4) {
+    .projects-grid .project:nth-child(4n+4) {
       margin-right: 40px; } }
 
 .default {

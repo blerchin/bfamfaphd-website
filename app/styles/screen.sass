@@ -182,41 +182,40 @@ body
   li
     list-style: none
 
-.look
-  .projects-grid
-    width: 100%
-    float: left
-    margin-top: 20px
-    .project
-      width: 210px
-      margin: 0 40px 20px 0
-      position: relative
-      a
-        background-color: #ffffff
-        float: left
-        margin-bottom: 5px
-        border: none
-      a:hover
-        img
-          +opacity(0.4)
-      img
-        float: left
-        width: 210px
-        height: 210px
-
-      .credit
-        padding-top: 10px
-        clear: left
-        h4
-          font-weight: 500
-
+.projects-grid
+  width: 100%
+  float: left
+  margin-top: 20px
+  .project
+    width: 210px
+    margin: 0 40px 20px 0
+    position: relative
+    a
+      background-color: #ffffff
       float: left
-      text-decoration: none
+      margin-bottom: 5px
+      border: none
+    a:hover
+      img
+        +opacity(0.4)
+    img
+      float: left
+      width: 210px
+      height: 210px
+
+    .credit
+      padding-top: 10px
+      clear: left
+      h4
+        font-weight: 500
+
+    float: left
+    text-decoration: none
+  .project:nth-child(4n+4)
+    margin-right: 0
+  @media only screen and (max-width: 960px)
     .project:nth-child(4n+4)
-      margin-right: 0
-    @media only screen and (max-width: 960px)
-      .project:nth-child(4n+4)
-        margin-right: 40px
+      margin-right: 40px
         
 .default
   color: #000000
