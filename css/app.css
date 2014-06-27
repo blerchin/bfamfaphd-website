@@ -8391,15 +8391,18 @@ body {
       float: left; }
     .home .projectSlideshow a {
       margin: 15px 0;
-      background-color: white;
+      background-color: #010101;
       float: left;
       border-bottom: none; }
       .home .projectSlideshow a img {
         float: left; }
-    .home .projectSlideshow a:hover img {
-      position: relative;
-      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
-      opacity: 0.2; }
+    .home .projectSlideshow a:hover {
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+      opacity: 0.8; }
+      .home .projectSlideshow a:hover img {
+        position: relative;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+        opacity: 0.8; }
     .home .projectSlideshow a:hover:before {
       content: "LAUNCH PROJECT";
       text-align: center;
@@ -8407,14 +8410,14 @@ body {
       line-height: 450px;
       position: absolute;
       letter-spacing: 0.05em;
-      margin-top: -40px;
+      margin-top: 0px;
       top: 0;
       left: 0;
       z-index: 101;
       font-size: 3em;
       width: 100%;
       font-weight: 800;
-      color: #010101; }
+      color: white; }
     .home .projectSlideshow .credit {
       float: left;
       width: 100%;

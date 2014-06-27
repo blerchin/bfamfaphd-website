@@ -104,15 +104,16 @@ body
       float: left
     a
       margin: 15px 0
-      background-color: #ffffff
+      background-color: $accent
       float: left
       border-bottom: none
       img
         float: left
     a:hover
+      +opacity(.8)
       img
         position: relative
-        +opacity(0.2)
+        +opacity(0.8)
     a:hover:before
       content: "LAUNCH PROJECT"
       text-align: center
@@ -120,14 +121,14 @@ body
       line-height: 450px
       position: absolute
       letter-spacing: .05em
-      margin-top: -40px
+      margin-top: 0px
       top: 0
       left: 0
       z-index: 101
       font-size: 3em
       width: 100%
       font-weight: 800
-      color: $accent
+      color: #fff 
     .credit
       p
         margin: 0
