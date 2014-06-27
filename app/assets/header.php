@@ -10,9 +10,8 @@
     <style>
       div.nope #work{visibility: hidden;}
     </style>
-				<script type="text/javascript"
-					src="http://fast.fonts.net/jsapi/8da6cfce-072e-4d64-8bbe-9c8b672b9bc9.js"></script>
         <script>
+             Typekit.load();
             // Enable Brunch HTML/CSS Auto Reload
             window.brunch = window.brunch || {};
 						// Get Template URL

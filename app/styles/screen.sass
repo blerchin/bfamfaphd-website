@@ -109,23 +109,25 @@ body
       border-bottom: none
       img
         float: left
-      &:hover
-        img
-          position: relative
-          +opacity(0.2)
-        &:before
-          content: "LAUNCH PROJECT"
-          text-align: center
-          position: absolute
-          letter-spacing: .05em
-          margin-top: -40px
-          top: 0
-          left: 0
-          z-index: 101
-          font-size: 3em
-          width: 100%
-          font-weight: 800
-          color: $accent
+    a:hover
+      img
+        position: relative
+        +opacity(0.2)
+    a:hover:before
+      content: "LAUNCH PROJECT"
+      text-align: center
+      height: 100%
+      line-height: 450px
+      position: absolute
+      letter-spacing: .05em
+      margin-top: -40px
+      top: 0
+      left: 0
+      z-index: 101
+      font-size: 3em
+      width: 100%
+      font-weight: 800
+      color: $accent
     .credit
       p
         margin: 0

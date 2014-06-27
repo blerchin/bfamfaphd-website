@@ -10,7 +10,7 @@ function create_post_type_event() {
     'public' => true,
     'has_archive' => true,
     'rewrite' => array(
-      'slug' => 'projects'
+      'slug' => 'events'
     ),
     'supports' => array(
       'title',

@@ -25,7 +25,7 @@ function bfamfaphd_projects_gallery_shortcode($attr){
         $query->the_post();
         $custom = get_post_custom(get_the_ID());
         $out.="<div class='projectSlide projectSlide-" . get_the_ID() . "'>";
-          $out.="<a href='" . $custom['url'][0] . "'>";
+          $out.="<a href='" . get_permalink() . "'>";
             $out.= get_the_post_thumbnail( get_the_ID(), "large", true);
           $out.="</a>";
           $out.="<div class='credit'>";
