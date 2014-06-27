@@ -2,7 +2,9 @@
 
     <div class='footer'>
       <div class='content'>
+<?php if( is_front_page()): ?>
       <img src='<?php echo get_template_directory_uri() . "/images/logo.png" ?>'>
+<?php endif; ?>
       </div>
     </div>
 

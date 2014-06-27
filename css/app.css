@@ -8631,6 +8631,15 @@ body {
       .single-project .projectSlideshow .gallery-icon img {
         min-width: 100%;
         height: auto; }
+  .single-project .controls {
+    margin: 20px auto;
+    padding: 5px;
+    overflow: hidden;
+    width: auto;
+    text-align: center; }
+    .single-project .controls a {
+      display: inline-block;
+      margin-right: 5px; }
 
 @media only screen and (min-width: 960px) {
   .single-project p.logo-top {

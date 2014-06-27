@@ -25,10 +25,11 @@
 							$( '.projectSlideshow' ).cycle();
 
               $('.single-project-gallery').cycle();
-							
+<?php if( is_front_page() ): ?>
 							$('.navigation').smint({
 								'scrollSpeed' : 1000
 							});
+<?php endif; ?>
 					});
 				</script>
 

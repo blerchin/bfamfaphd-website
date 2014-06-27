@@ -9,7 +9,7 @@
 				<h1><a href="<?php bloginfo('url')?>">BFAMFAPhD</a></h1>
 			<ul class="navigation">
 				<?php while( $navbar->have_posts() ): $navbar->the_post() ?>
-					<li><a id="<?php the_slug() ?>" href="#<?php the_slug() ?>">
+          <li><a id="<?php the_slug() ?>" href="<?php bloginfo('url')?>#<?php the_slug() ?>">
 								<?php the_title() ?>
 							</a></li>
 				<?php endwhile; ?>

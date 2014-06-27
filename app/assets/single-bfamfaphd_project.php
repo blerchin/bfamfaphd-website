@@ -25,16 +25,24 @@
     </div>
 </div>
 <div class="section section-<?php the_ID()?> <?php the_slug()?> invert gallery single-project">
-        <div class="projectSlideshow"
-            data-cycle-fx='fade'
-            data-cycle-next='#next'
-            data-cycle-pause-on-hover='true'
-            data-cycle-prev='#prev'
-            data-cycle-slides='.gallery-icon'
-            data-cycle-speed='600'
-            data-cycle-timout='1000'>
-            <?php echo do_shortcode('[gallery size="original" link="none"]'); ?>
-        </div>
+    <?php $attachments = get_children(array('post_parent' => get_the_ID() ));
+        $attachment_count = count($attachments);
+if ($attachment_count > 1 ):?>
+      <div class="controls">
+          <a href="#" id="prev">Prev</a>
+          <a href="#" id="next">Next</a>
+      </div>
+<?php endif; ?>
+      <div class="projectSlideshow"
+          data-cycle-fx='fade'
+          data-cycle-next='#next'
+          data-cycle-pause-on-hover='true'
+          data-cycle-prev='#prev'
+          data-cycle-slides='.gallery-icon'
+          data-cycle-speed='600'
+          data-cycle-timout='1000'>
+          <?php echo do_shortcode('[gallery size="original" link="none"]'); ?>
+      </div>
 </div>
 
 
