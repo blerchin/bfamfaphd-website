@@ -11,7 +11,7 @@
       div.nope #work{visibility: hidden;}
     </style>
         <script>
-             Typekit.load();
+            try{Typekit.load();}catch(e){}
             // Enable Brunch HTML/CSS Auto Reload
             window.brunch = window.brunch || {};
 						// Get Template URL
@@ -23,6 +23,8 @@
 					$(document).ready(function() {
 					
 							$( '.projectSlideshow' ).cycle();
+
+              $('.single-project-gallery').cycle();
 							
 							$('.navigation').smint({
 								'scrollSpeed' : 1000

@@ -1,0 +1,30 @@
+.section.gallery
+    padding: 0
+
+.single-project
+    height: 600px 
+    overflow: hidden
+
+    .credit
+        margin: 10px 0 10px 0
+        .author
+            padding-right: 0
+            &:after
+                content: ", "
+    .content-right
+        float: left
+
+    .projectSlideshow
+        position: relative
+        .gallery-icon
+            width: 100%
+            img
+                min-width: 100%
+                height: auto
+
+@media only screen and (min-width: 960px)
+    .single-project
+        p.logo-top
+            height: 100%
+    
+@media only screen and (max-width: 960px)

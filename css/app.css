@@ -7999,7 +7999,7 @@ body {
     line-height: 1.3em;
     letter-spacing: 0.01em;
     width: 700px; }
-  .home .content p.subhead {
+  .home .content .subhead {
     float: right;
     line-height: 1.6em;
     font-size: 1.2em;
@@ -8224,7 +8224,7 @@ body {
     .home .content h2 {
       width: 100%;
       font-size: 2.5em; }
-    .home .content p.subhead {
+    .home .content .subhead {
       width: 100%; }
     .home .content .logo {
       float: left;
@@ -8236,6 +8236,14 @@ body {
   .projectSlideshow .projectSlide a:hover:after {
     margin-top: -30px;
     font-size: 2em; } }
+.single-project .home.section .content h2 {
+  margin-bottom: 0px; }
+.single-project .credit {
+  margin-top: 10px; }
+  .single-project .credit .author {
+    padding-right: 0; }
+    .single-project .credit .author:after {
+      content: ", "; }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -8364,7 +8372,7 @@ body {
     line-height: 1.3em;
     letter-spacing: 0.01em;
     width: 700px; }
-  .home .content p.subhead {
+  .home .content .subhead {
     float: right;
     line-height: 1.6em;
     font-size: 1.2em;
@@ -8589,7 +8597,7 @@ body {
     .home .content h2 {
       width: 100%;
       font-size: 2.5em; }
-    .home .content p.subhead {
+    .home .content .subhead {
       width: 100%; }
     .home .content .logo {
       float: left;
@@ -8601,6 +8609,32 @@ body {
   .projectSlideshow .projectSlide a:hover:after {
     margin-top: -30px;
     font-size: 2em; } }
+
+.section.gallery {
+  padding: 0; }
+
+.single-project {
+  height: 600px;
+  overflow: hidden; }
+  .single-project .credit {
+    margin: 10px 0 10px 0; }
+    .single-project .credit .author {
+      padding-right: 0; }
+      .single-project .credit .author:after {
+        content: ", "; }
+  .single-project .content-right {
+    float: left; }
+  .single-project .projectSlideshow {
+    position: relative; }
+    .single-project .projectSlideshow .gallery-icon {
+      width: 100%; }
+      .single-project .projectSlideshow .gallery-icon img {
+        min-width: 100%;
+        height: auto; }
+
+@media only screen and (min-width: 960px) {
+  .single-project p.logo-top {
+    height: 100%; } }
 
 
 /*# sourceMappingURL=app.css.map*/
