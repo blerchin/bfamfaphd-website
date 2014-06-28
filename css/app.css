@@ -8646,7 +8646,6 @@ body {
   padding: 0; }
 
 .single-project {
-  height: 600px;
   overflow: hidden; }
   .single-project .credit {
     margin: 10px 0 10px 0; }
@@ -8661,7 +8660,7 @@ body {
     .single-project .projectSlideshow .gallery-icon {
       width: 100%; }
       .single-project .projectSlideshow .gallery-icon img {
-        min-width: 100%;
+        width: 100%;
         height: auto; }
   .single-project .controls {
     margin: 20px auto;
@@ -8676,6 +8675,9 @@ body {
 @media only screen and (min-width: 960px) {
   .single-project p.logo-top {
     height: 100%; } }
+@media only screen and (max-width: 960px) {
+  p.logo-top {
+    display: none; } }
 
 
 /*# sourceMappingURL=app.css.map*/
