@@ -18,7 +18,7 @@ function bfamfaphd_projects_grid_shortcode($attr){
         $query->the_post();
         $custom = get_post_custom(get_the_ID());
         $out.="<div class='project project-" . get_the_ID() . "'>";
-          $out.="<a href='" . $custom['url'][0] . "'>";
+          $out.="<a href='" . get_the_permalink() . "'>";
             $out.= get_the_post_thumbnail( get_the_ID(), "thumbnail", true);
           $out.="</a>";
           $out.="<div class='credit'>";

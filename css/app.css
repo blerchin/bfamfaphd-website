@@ -8018,15 +8018,18 @@ body {
       float: left; }
     .home .projectSlideshow a {
       margin: 15px 0;
-      background-color: white;
+      background-color: #010101;
       float: left;
       border-bottom: none; }
       .home .projectSlideshow a img {
         float: left; }
-    .home .projectSlideshow a:hover img {
-      position: relative;
-      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
-      opacity: 0.2; }
+    .home .projectSlideshow a:hover {
+      filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+      opacity: 0.8; }
+      .home .projectSlideshow a:hover img {
+        position: relative;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+        opacity: 0.8; }
     .home .projectSlideshow a:hover:before {
       content: "LAUNCH PROJECT";
       text-align: center;
@@ -8034,14 +8037,14 @@ body {
       line-height: 450px;
       position: absolute;
       letter-spacing: 0.05em;
-      margin-top: -40px;
+      margin-top: 0px;
       top: 0;
       left: 0;
       z-index: 101;
       font-size: 3em;
       width: 100%;
       font-weight: 800;
-      color: #010101; }
+      color: white; }
     .home .projectSlideshow .credit {
       float: left;
       width: 100%;
@@ -8236,14 +8239,40 @@ body {
   .projectSlideshow .projectSlide a:hover:after {
     margin-top: -30px;
     font-size: 2em; } }
-.single-project .home.section .content h2 {
-  margin-bottom: 0px; }
-.single-project .credit {
-  margin-top: 10px; }
-  .single-project .credit .author {
-    padding-right: 0; }
-    .single-project .credit .author:after {
-      content: ", "; }
+.section.gallery {
+  padding: 0; }
+
+.single-project {
+  height: 600px;
+  overflow: hidden; }
+  .single-project .credit {
+    margin: 10px 0 10px 0; }
+    .single-project .credit .author {
+      padding-right: 0; }
+      .single-project .credit .author:after {
+        content: ", "; }
+  .single-project .content-right {
+    float: left; }
+  .single-project .projectSlideshow {
+    position: relative; }
+    .single-project .projectSlideshow .gallery-icon {
+      width: 100%; }
+      .single-project .projectSlideshow .gallery-icon img {
+        min-width: 100%;
+        height: auto; }
+  .single-project .controls {
+    margin: 20px auto;
+    padding: 5px;
+    overflow: hidden;
+    width: auto;
+    text-align: center; }
+    .single-project .controls a {
+      display: inline-block;
+      margin-right: 5px; }
+
+@media only screen and (min-width: 960px) {
+  .single-project p.logo-top {
+    height: 100%; } }
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
