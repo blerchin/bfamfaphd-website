@@ -12,28 +12,29 @@
     </style>
         <script>
             try{Typekit.load();}catch(e){}
-            // Enable Brunch HTML/CSS Auto Reload
-            window.brunch = window.brunch || {};
-						// Get Template URL
-						window.globals = window.globals || {};
-						window.globals.TEMPLATE_URL = '<?= get_bloginfo("template_url"); ?>';
+              // Enable Brunch HTML/CSS Auto Reload
+              window.brunch = window.brunch || {};
+            // Get Template URL
+            window.globals = window.globals || {};
+            window.globals.TEMPLATE_URL = '<?= get_bloginfo("template_url"); ?>';
 
-        </script>
-				<script>
-					$(document).ready(function() {
-					
-							$( '.projectSlideshow' ).cycle();
+            </script>
+<script>
+$(document).ready(function() {
 
-              $('.single-project-gallery').cycle();
-<?php if( is_front_page() ): ?>
-							$('.navigation').smint({
-								'scrollSpeed' : 1000
-							});
-<?php endif; ?>
-					});
-				</script>
+  $( '.projectSlideshow' ).cycle();
 
-			  <?php wp_head() ?>			
+  $('.single-project-gallery').cycle();
+  window.g = {
+    front_page: false
+  };
+  <?php if( is_front_page() ): ?>
+    window.g.front_page = true
+  <?php endif; ?>
+});
+</script>
+
+        <?php wp_head() ?>			
     </head>
 
     <body>

@@ -12,7 +12,7 @@
 
 <div class="section section-<?php the_ID()?> <?php the_slug()?> 
         <?php if($even){ echo 'invert'; } else { echo 'default'; }  ?>" 
-        id="<?php get_the_slug() ?>">
+        id="<?php the_slug() ?>">
 		<div class="content">
       <?php if(get_the_slug() != "home"): ?>
         <h2><?php the_title() ?></h2>
