@@ -13,7 +13,6 @@
         <script>
             try{Typekit.load();}catch(e){}
               // Enable Brunch HTML/CSS Auto Reload
-              window.brunch = window.brunch || {};
             // Get Template URL
             window.globals = window.globals || {};
             window.globals.TEMPLATE_URL = '<?= get_bloginfo("template_url"); ?>';
@@ -28,11 +27,7 @@ $(document).ready(function() {
   <?php if( is_front_page() ): ?>
     window.g.front_page = true
   <?php endif; ?>
-  if(window.g.front_page){
     $( '.projectSlideshow' ).cycle();
-  } else {
-    $('.single-project-gallery').cycle();
-  } 
 });
 </script>
 
