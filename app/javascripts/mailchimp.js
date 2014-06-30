@@ -1,4 +1,3 @@
-/*
 var fnames = new Array();var ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[3]='MMERGE3';ftypes[3]='text';fnames[1]='MMERGE1';ftypes[1]='zip';
 try {
     var jqueryLoaded=jQuery;
@@ -187,4 +186,3 @@ function mce_success_cb(resp){
         }
     }
 }
-*/
