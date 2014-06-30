@@ -7,7 +7,8 @@ function bfamfaphd_projects_gallery_shortcode($attr){
     $args = array(
         'post_type' => 'bfamfaphd_project',
         'orderby' => 'menu_order date',
-        'order' => 'DESC'
+        'order' => 'DESC',
+        'nopaging' => true
       );
     $query = new WP_Query( $args );
     
