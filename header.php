@@ -6,18 +6,32 @@
     <meta charset='UTF-8'>
     <meta content='user-scalable=no, width=device-width, initial-scale=1.0' name='viewport'>
     <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js' type='text/javascript'></script>
-    <script src='http://use.typekit.net/clf5ohy.js' type='text/javascript'></script>
     <style>
       div.nope #work{visibility: hidden;}
     </style>
+   <script type="text/javascript">
+    //prefer FOUT to a page that doesn't load
+    // we <3 adobe, don't we?
+      (function() {
+        var config = {
+          kitId: 'clf5ohy'
+        }
+        $.ajax({
+          url: '//use.typekit.net/' + config.kitId + '.js',
+          dataType: 'script',
+          cache: true,
+          success: function() {
+            try { Typekit.load(config); } catch (e) {}
+          }
+        });
+      })();
+    </script>
         <script>
-            //try{Typekit.load();}catch(e){}
-              // Enable Brunch HTML/CSS Auto Reload
             // Get Template URL
             window.globals = window.globals || {};
             window.globals.TEMPLATE_URL = '<?= get_bloginfo("template_url"); ?>';
 
-            </script>
+        </script>
 <script>
 $(document).ready(function() {
 
