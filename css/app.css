@@ -8791,7 +8791,7 @@ body {
   width: 100%;
   overflow: auto;
   padding: 60px 0; }
-  .section .content p, .section .content li {
+  .section .content > p, .section .content > li {
     line-height: 1.6em;
     font-size: 1.2em; }
   .section .content > p {
