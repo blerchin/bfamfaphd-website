@@ -28,3 +28,4 @@ require 'post_type_event.php';
 require 'events_list.php';
 require 'projects_gallery.php';
 require 'projects_grid.php';
+require 'mailchimp_form.php';
