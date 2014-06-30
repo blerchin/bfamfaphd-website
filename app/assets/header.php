@@ -12,7 +12,7 @@
    <script type="text/javascript">
     //prefer FOUT to a page that doesn't load
     // we <3 adobe, don't we?
-      (function() {
+      $(function() {
         var config = {
           kitId: 'clf5ohy'
         }
@@ -24,7 +24,7 @@
             try { Typekit.load(config); } catch (e) {}
           }
         });
-      })();
+      });
     </script>
         <script>
             // Get Template URL
