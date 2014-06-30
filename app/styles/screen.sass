@@ -14,8 +14,6 @@ body
 p
   margin-bottom: 20px
 
-i
-  font-weight: 500
 .content
   position: relative
   width: 960px
@@ -57,7 +55,7 @@ i
   overflow: auto
   padding: 60px 0
   .content
-    &>p, &>li
+    &>p, li
       line-height: 1.6em
       font-size: 1.2em
     &>p
@@ -103,22 +101,26 @@ i
         height: auto
   .projectSlideshow
     float: left
+    width: 100%
     margin: 30px 0
+    overflow: hidden
     .projectSlide
       margin: 0
-      float: left
       width: 100%
       height: 100%
+      float: left
     a
       margin: 15px 0
       background-color: $accent
       float: left
       border-bottom: none
       display: block
+      height: 100%
+      width: 100%
       img
-        min-width: 100%
-        min-height: 100%
         float: left
+        height: 100%
+        min-width: 100%
     a:hover
       +opacity(.8)
       img
