@@ -22,15 +22,17 @@
 <script>
 $(document).ready(function() {
 
-  $( '.projectSlideshow' ).cycle();
-
-  $('.single-project-gallery').cycle();
   window.g = {
     front_page: false
   };
   <?php if( is_front_page() ): ?>
     window.g.front_page = true
   <?php endif; ?>
+  if(window.g.front_page){
+    $( '.projectSlideshow' ).cycle();
+  } else {
+    $('.single-project-gallery').cycle();
+  } 
 });
 </script>
 
