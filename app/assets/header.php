@@ -11,7 +11,7 @@
       div.nope #work{visibility: hidden;}
     </style>
         <script>
-            try{Typekit.load();}catch(e){}
+            //try{Typekit.load();}catch(e){}
               // Enable Brunch HTML/CSS Auto Reload
             // Get Template URL
             window.globals = window.globals || {};
