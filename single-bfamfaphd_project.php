@@ -18,9 +18,9 @@
             <span class="author"><?php echo $custom['author'][0] ?></span>
             <span class="date"><?php echo $custom['date'][0] ?></span>
         </div>
-        <p class="description subhead">
+        <div class="description subhead">
             <?php echo get_the_content() ?>
-        </p>
+        </div>
     </div>
 </div>
 <div class="section section-<?php the_ID()?> <?php the_slug()?> default gallery single-project">
