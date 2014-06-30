@@ -19,7 +19,7 @@
             <span class="date"><?php echo $custom['date'][0] ?></span>
         </div>
         <div class="description subhead">
-            <?php echo get_the_content() ?>
+            <?php the_content() ?>
         </div>
     </div>
 </div>

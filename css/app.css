@@ -8346,6 +8346,9 @@ body {
   font-family: "museo-sans-rounded", sans-serif;
   font-weight: 300; }
 
+p {
+  margin-bottom: 20px; }
+
 .content {
   position: relative;
   width: 960px;
@@ -8751,6 +8754,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   font-family: "museo-sans-rounded", sans-serif;
   font-weight: 300; }
+
+p {
+  margin-bottom: 20px; }
 
 .content {
   position: relative;
