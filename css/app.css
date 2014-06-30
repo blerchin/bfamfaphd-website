@@ -8406,9 +8406,11 @@ body {
     margin: 0 0 60px 80px;
     letter-spacing: 0.01em; }
 
-.home {
-  padding: 100px 0 30px 0;
+.home.invert {
   background-color: #010101; }
+
+.home {
+  padding: 100px 0 30px 0; }
   .home .content h2, .home .content .subhead {
     float: right;
     line-height: 1.6em;
@@ -8553,6 +8555,9 @@ body {
   @media only screen and (max-width: 960px) {
     .projects-grid .project:nth-child(4n+4) {
       margin-right: 40px; } }
+
+#mc_embed_signup {
+  background-color: #444444; }
 
 .default {
   color: black; }
@@ -8802,9 +8807,11 @@ body {
     margin: 0 0 60px 80px;
     letter-spacing: 0.01em; }
 
-.home {
-  padding: 100px 0 30px 0;
+.home.invert {
   background-color: #010101; }
+
+.home {
+  padding: 100px 0 30px 0; }
   .home .content h2, .home .content .subhead {
     float: right;
     line-height: 1.6em;
@@ -9078,6 +9085,11 @@ body {
     .single-project .controls a {
       display: inline-block;
       margin-right: 5px; }
+
+.custom-project-div {
+  width: 95%%;
+  min-height: 600px;
+  padding: 20 100px; }
 
 @media only screen and (min-width: 960px) {
   .single-project p.logo-top {
