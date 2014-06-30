@@ -1,8 +1,9 @@
 $(document).ready(function() {
-
-    $('.header ul.navigation').localScroll({
-        offset: {top: -30},
-        hash: true
-    });
+    if(window.g.front_page){
+        $('.header ul.navigation').localScroll({
+            offset: {top: -30},
+            hash: true
+        });
+    }
 
 });

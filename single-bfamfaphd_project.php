@@ -44,6 +44,7 @@ if ($attachment_count > 1 ):?>
           <?php echo do_shortcode('[gallery size="original" link="none"]'); ?>
       </div>
   <?php else: ?>
+    <script src="<?php echo get_template_directory_uri() ?>/js/dataviz.js" type="text/javascript"></script>
     <div id="<?php echo $custom['custom_div_id'][0]; ?>"
         class="custom-project-div">
     </div>
