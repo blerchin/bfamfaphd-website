@@ -19,6 +19,7 @@ function bfamfaphd_projects_gallery_shortcode($attr){
       data-cycle-prev='#prev'
       data-cycle-slides='&gt; div'
       data-cycle-speed='600'
+      data-cycle-auto-height='600:300'
       data-cycle-timout='1000'>";
 
       while( $query->have_posts()) {
