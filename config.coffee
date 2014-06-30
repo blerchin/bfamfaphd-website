@@ -4,8 +4,9 @@ exports.config =
 	files:
     javascripts:
       joinTo:
-        'js/vendor.js': /^(vendor|bower_components)/
-        'js/app.js': /^app/
+        'js/vendor.js': /^app\/vendor/
+        'js/dataviz.js': /^app\/dataviz/
+        'js/app.js': /^app\/javascripts/
     stylesheets:
       joinTo:
         'css/app.css'
