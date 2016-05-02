@@ -9,6 +9,7 @@
     "bootstrap": "^3.3.6",
     "bootstrap-sass": "^3.3.6",
     "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "jquery": "^2.2.3",
     "node-sass": "^3.6.0",
@@ -26,7 +27,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors --inline --port 3000",
-    "dist": "node_modules/webpack/bin/webpack.js"
+    "dist": "node_modules/webpack/bin/webpack.js --config webpack.config.prod.js"
   },
   "author": "Ben Lerchin <ben@lerchin.com>",
   "license": "ISC"

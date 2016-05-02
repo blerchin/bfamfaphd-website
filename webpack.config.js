@@ -5,9 +5,9 @@ var autoprefixer = require('autoprefixer');
 module.exports = {
 	entry: './index.js',
 	output: {
-		path: __dirname + "/dist",
-		publicPath: "dist/",
-		filename: 'dist/bundle.js'
+		path: __dirname,
+		publicPath: "http://localhost:3000/",
+		filename: 'bundle.js'
 	},
 	devtool: 'sourcemap',
 	module: {

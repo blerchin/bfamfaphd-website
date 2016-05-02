@@ -1,6 +1,6 @@
 		</div>
 
-		<?php $dev = false; ?>
+		<?php $dev = false ?>
 		<?php if($dev): ?>
 			<script type="text/javascript" src="http://localhost:3000/dist/bundle.js"></script>
 		<?php else: ?>

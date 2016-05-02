@@ -1,4 +1,4 @@
-<article id="article-about" class="item item-full col-sm-12">
+<article id="article-about" class="item item-full">
 	<header class="article-header">
 		<h2>About</h2>
 	</header>
