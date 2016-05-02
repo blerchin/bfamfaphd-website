@@ -1,0 +1,29 @@
+body {
+	padding-top: 70px;
+}
+.container {
+	font-family: 'Work Sans', Verdana, sans-serif;
+	color: $black;
+}
+.dots-logo {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	background-image: url('../assets/images/dots.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+h2 {
+	font-weight: 600;
+	font-size: 32px;
+}
+
+h3 {
+	font-weight: 600;
+	font-size: 32px;
+}
+
+p {
+	font-size: 16px;
+}
