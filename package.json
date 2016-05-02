@@ -27,7 +27,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors --inline --port 3000",
-    "dist": "node_modules/webpack/bin/webpack.js --config webpack.config.prod.js"
+    "dist": "node_modules/webpack/bin/webpack.js --config webpack.config.prod.js",
+		"staging": "git push staging v3.0:master"
   },
   "author": "Ben Lerchin <ben@lerchin.com>",
   "license": "ISC"
