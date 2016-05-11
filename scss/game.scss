@@ -1,0 +1,31 @@
+#game {
+	background-color: $gray;
+	#cards {
+		position: relative;
+		max-width: 100%;
+		width: 700px;
+		min-height: 400px;
+		margin: 0px auto;
+		#circle {
+			width: 100%;
+			svg {
+				width: 100%;
+				#circleOverlay {
+					fill: $gray;
+				}
+				g.label {
+					font-size: 16px;
+					font-weight: 400;
+					cursor: pointer;
+					.arrow {
+						transition: transform ease-in-out 300ms;
+						transform: translateY(0px);
+					}
+					&:hover .arrow {
+						transform: translateY(10px);
+					}
+				}
+			}
+		}
+	}
+}

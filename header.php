@@ -18,3 +18,4 @@
   <body>
 		<?php require('navbar.php') ?>
 		<div class="container">
+			<?php require('game/cards.php'); ?>

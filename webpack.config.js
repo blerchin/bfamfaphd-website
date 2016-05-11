@@ -13,6 +13,12 @@ module.exports = {
 	module: {
 		loaders: [
 			{ test: /\.css$/, loader: 'style!css'},
+			{ test: /\.js$/, 
+				loader: 'babel',
+				exclude: /(node_modules)/,
+				query: {
+					presets: ['es2015']
+				}},
 			{ test: /\.scss$/, loader: 'style!css!postcss!resolve-url!sass?sourceMap'},
 			{ test: /\.(jpeg|jpg|png|gif)$/,
 				loader: 'file-loader'
