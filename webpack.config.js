@@ -34,17 +34,13 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-			jquery: 'jquery/src/jquery',
-			bootstrap: 'bootstrap-sass/assets/javascripts/bootstrap.js'
+			jquery: 'jquery/src/jquery'
 		}
 	},
 	plugins: [
 		new webpack.ProvidePlugin({
 			$: 'jquery',
 			jQuery: 'jquery'
-		}),
-		new webpack.ProvidePlugin({
-			bootstrap: "bootstrap"
 		})
 	]
 };

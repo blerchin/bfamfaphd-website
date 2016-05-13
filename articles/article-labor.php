@@ -10,7 +10,7 @@
 				</div>
 			</div>
 			<div class="article-summary">
-<p>To create a supply chain for the arts that includes solidarity art economies, the traditional supply chain becomes a closed loop representing one life cycle.<a class="more-link">Read More →</a>
+<p>To create a supply chain for the arts that includes solidarity art economies, the traditional supply chain becomes a closed loop representing one life cycle. <a class="more-link">Read More →</a>
 			</div>
 		</div>
 	</div>
