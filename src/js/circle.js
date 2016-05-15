@@ -50,7 +50,7 @@ Circle.prototype.drawContent = function(){
 };
 
 Circle.prototype.onContentClicked = function(){
-	location.replace(this.currentItem.path);
+	window.location = this.currentItem.path;
 };
 
 Circle.prototype.updateContent = function(){
