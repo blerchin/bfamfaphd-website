@@ -25,5 +25,5 @@
 		<?php else: ?>
 			<script type="text/javascript" 
 			src="<?php echo get_stylesheet_directory_uri() . "/dist/index.js" ?>"></script>
-			<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri() . "/dist/index.js" ?>"></link>
+			<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri() . "/dist/index.css" ?>"></link>
 		<?php endif; ?>
