@@ -15,6 +15,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+	<body <?php body_class(); ?>>
 		<?php get_template_part('navbar'); ?>
 		<div class="container">

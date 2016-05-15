@@ -21,7 +21,7 @@ Circle.prototype.onResize = function(){
 
 Circle.prototype.setup = function(){
 	let maxWidth = this.el.offsetWidth;
-	let winHeight = window.innerHeight - 100; 
+	let winHeight = window.innerHeight - 160; 
 	let outerDiameter = maxWidth > winHeight ? winHeight : maxWidth;
 	this.radius = outerDiameter/2 - this.padding;
 };

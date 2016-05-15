@@ -2,6 +2,8 @@ require('./scss/fonts.scss');
 require('./scss/index.scss');
 require('bootstrap-webpack')
 
+require('./src/js/collapse');
+
 const Circle = require('./src/js/circle');
 
 var circleContainer = document.getElementById('circle');

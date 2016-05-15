@@ -5,7 +5,7 @@ $supply_expanded = (get_query_var('post_type') == "supply_chain");
 	<div class="container">
 		<div class="navbar-header col-sm-4 col-sm-push-4">
 					<a 	class="navbar-title"
-							data-toggle="collapse"
+							data-toggle="slide"
 							data-target="#bfa-nav-supply-menu">
 						Of Supply Chains
 					</a>
@@ -28,7 +28,7 @@ $supply_expanded = (get_query_var('post_type') == "supply_chain");
 								>
 					<span class="dots-logo">
 		</a>
-		<div class="collapse <?php echo $supply_expanded ? 'navbar-collapse' : ''?>" 
+		<div class="slide <?php echo $supply_expanded ? 'in' : ''?>" 
 							id="bfa-nav-supply-menu">
 			<?php wp_nav_menu( array(
 				'theme-location' 	=> 'supply-chains-menu',

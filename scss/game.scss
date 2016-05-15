@@ -2,18 +2,33 @@
 	background-color: $gray;
 	position: relative;
 	#drawCardsToggle {
-		font-size: 20px;
-		font-weight: 100;
 		position: absolute;
 		z-index: 99;
-		right: -20px;
+		right: -25px;
 		top: 50%;
 		transform: rotate(90deg);
 		cursor: pointer;
 		background: none;
 		border: 0px;
 		outline: none;
-		border-bottom: 1px solid #000;
+		padding: 0px 0;
+		.text {
+			float: left;
+			display: block;
+			font-size: 16px;
+			font-weight: 300;
+			text-decoration: underline;
+		}
+		.arrow {
+			float: left;
+			display: block;
+			margin: 0px 5px;
+			text-decoration: none;
+			transition: transform ease-in-out 500ms;
+		}
+		&[aria-expanded=true] .arrow {
+			transform: scaleY(-1);
+		}
 	}
 	#drawCardsMock {
 		position: absolute;
@@ -27,7 +42,8 @@
 			background-image: url('../assets/images/drawCardsMock.png');
 			background-repeat: no-repeat;
 			background-size: contain;
-			margin: 100px;
+			background-position: center;
+			margin: 30px;
 		}
 	}
 	#cards {
@@ -73,5 +89,17 @@
 				}
 			}
 		}
+	}
+}
+@media screen and (max-width: 769px){
+	#game #drawCardsToggle {
+		transform: none;
+		bottom: 20px;
+		top: auto;
+		left: 50%;
+		margin: 0;
+		margin-left: -25%;
+		right: auto;
+		
 	}
 }

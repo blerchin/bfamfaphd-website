@@ -1,5 +1,8 @@
 body {
-	padding-top: 40px;
+	padding-top: 120px;
+}
+body.home {
+	padding-top: 80px;
 }
 .container {
 	font-family: 'Work Sans', Verdana, sans-serif;
@@ -27,4 +30,21 @@ h3 {
 body p {
 	font-size: 16px;
 	margin-bottom: 30px;
+}
+.slide {
+	transition: transform ease-in-out 500ms, opacity ease-in-out 500ms, height ease-in-out 500ms;
+}
+.slide:not(.in) {
+	position: absolute;
+	transform: translateX(100%);
+	opacity: 0;
+	height: 0;
+}
+@media screen and (max-width: 769px) {
+	.slide:not(.in) {
+		position: absolute;
+		top: 0;
+		transform: translateY(-150%);
+		height: 0;
+	}
 }
