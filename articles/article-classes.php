@@ -8,7 +8,7 @@
 			</div>
 			<div class="feature-wrapper">
 				<div class="feature">
-					<?php require('wp-modules/module-events.php'); ?>
+					<?php get_template_part('wp-modules','module-events'); ?>
 				</div>
 			</div>
 		</div>

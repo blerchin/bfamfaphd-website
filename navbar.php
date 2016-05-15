@@ -1,19 +1,25 @@
+<?php 
+$supply_expanded = (get_query_var('post_type') == "supply_chain");
+?>
 <nav class="navbar navbar-fixed-top">
 	<div class="container">
 		<div class="navbar-header col-sm-4 col-sm-push-4">
-					<a 	class="navbar-title" 
+					<a 	class="navbar-title"
 							data-toggle="collapse"
-							aria-expanded="false"
 							data-target="#bfa-nav-supply-menu">
 						Of Supply Chains
 					</a>
 		</div>
 		<div class="collapse navbar-collapse col-sm-4 col-sm-pull-4" id="bfa-nav-main-menu">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">About</a></li>
-				<li><a href="#">Classes</a></li>
-				<li><a href="#">BFAMFAPhD</a></li>
-			</ul>
+			<?php wp_nav_menu( array(
+				'theme-location' 	=> 'page-menu',
+				'menu'						=> 'page-menu',
+				'menu_id'					=> '',
+				'menu_class' 			=> 'nav navbar-nav',
+				'container' 			=> '',
+				'fallback_cb'			=> 'wp_bootstrap_navwalker::fallback',
+				'walker'					=> new wp_bootstrap_navwalker()
+			))?>
 		</div>
 		<a class="navbar-logo col-sm-1"
 								href="#"
@@ -22,19 +28,17 @@
 								>
 					<span class="dots-logo">
 		</a>
-		<div class="collapse navbar-collapse" id="bfa-nav-supply-menu">
-			<ul class="nav navbar-nav">
-				<li><a href="#">Source</a></li>
-				<li><a href="#">Labor</a></li>
-				<li><a href="#">Tool</a></li>
-				<li><a href="#">Transfer</a></li>
-				<li><a href="#">Copyright</a></li>
-				<li><a href="#">Narrate</a></li>
-				<li><a href="#">Encounter</a></li>
-				<li><a href="#">Acquire</a></li>
-				<li><a href="#">$upport</a></li>
-				<li><a href="#">Depart</a></li>
-			</ul>
+		<div class="collapse <?php echo $supply_expanded ? 'navbar-collapse' : ''?>" 
+							id="bfa-nav-supply-menu">
+			<?php wp_nav_menu( array(
+				'theme-location' 	=> 'supply-chains-menu',
+				'menu'						=> 'supply-chains-menu',
+				'menu_id'					=> '',
+				'menu_class' 			=> 'nav navbar-nav',
+				'container' 			=> '',
+				'fallback_cb'			=> 'wp_bootstrap_navwalker::fallback',
+				'walker'					=> new wp_bootstrap_navwalker()
+			))?>
 		</div>
 	</div>
 </nav>

@@ -1,17 +1,59 @@
 #game {
 	background-color: $gray;
+	position: relative;
+	#drawCardsToggle {
+		font-size: 20px;
+		font-weight: 100;
+		position: absolute;
+		z-index: 99;
+		right: -20px;
+		top: 50%;
+		transform: rotate(90deg);
+		cursor: pointer;
+		background: none;
+		border: 0px;
+		outline: none;
+		border-bottom: 1px solid #000;
+	}
+	#drawCardsMock {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $gray-overlay;
+		height: 100%;
+		width: 100%;
+		.mockup {
+			height: 100%;
+			background-image: url('../assets/images/drawCardsMock.png');
+			background-repeat: no-repeat;
+			background-size: contain;
+			margin: 100px;
+		}
+	}
 	#cards {
 		position: relative;
 		max-width: 100%;
-		width: 700px;
 		min-height: 400px;
-		margin: 0px auto;
+		margin: 40px auto;
 		#circle {
 			width: 100%;
 			svg {
-				width: 100%;
+				display: block;
+				margin: 0px auto;
 				#circleOverlay {
 					fill: $gray;
+				}
+				#contentClickable {
+					pointer-events: fill;
+					transition: background ease-in-out 300ms;
+					&:hover {
+						fill: rgba(0,0,0,.07);
+						cursor: pointer;
+					}
+				}
+				g#labelContainer {
+					transition: transform ease-in-out 1000ms;
+					transform-origin: 50% 50%;
 				}
 				g.label {
 					font-size: 16px;
@@ -21,7 +63,11 @@
 						transition: transform ease-in-out 300ms;
 						transform: translateY(0px);
 					}
-					&:hover .arrow {
+					&:hover .arrow,
+					&:focus .arrow,
+					&:active .arrow,
+					&.active .arrow
+					{
 						transform: translateY(10px);
 					}
 				}

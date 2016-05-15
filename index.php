@@ -1,3 +1,3 @@
-	<?php require('header.php') ?>
+	<?php get_header(); ?>
 	<?php require('page-home.php') ?>
-	<?php require('footer.php') ?>
+	<?php get_footer(); ?>

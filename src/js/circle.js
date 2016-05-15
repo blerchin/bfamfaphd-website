@@ -3,73 +3,11 @@ const XLINK_NS = "http://www.w3.org/1999/xlink";
 const FADE_TIME = 500;
 const PI = Math.PI;
 
-const DEFAULT_ITEMS = [
-	{
-		key: 'source',
-		name: 'Source',
-		color: 'rgb(255,94,60)',
-		imageSrc: require('../../assets/images/cards/placeholder.jpg')
-	},
-	{
-		key: 'labor',
-		name: 'Labor',
-		color: 'rgb(46,111,215)',
-		imageSrc: require('../../assets/images/cards/placeholder-alt.jpg')
-	},
-	{
-		key: 'tool',
-		name: 'Tool',
-		color: 'rgb(255,226,83)',
-		imageSrc: require('../../assets/images/cards/placeholder.jpg')
-	},
-	{
-		key: 'transfer',
-		name: 'Transfer',
-		color: 'rgb(156,127,209)',
-		imageSrc: require('../../assets/images/cards/placeholder-alt.jpg')
-	},
-	{
-		key: 'copyright',
-		name: 'Copyright',
-		color: 'rgb(233,160,180)',
-		imageSrc: require('../../assets/images/cards/placeholder.jpg')
-	}, 
-	{
-		key: 'narrate',
-		name: 'Narrate',
-		color: 'rgb(253,131, 0)',
-		imageSrc: require('../../assets/images/cards/placeholder-alt.jpg')
-	},
-	{
-		key: 'encounter',
-		name: 'Encounter',
-		color: 'rgb(130,217,247)',
-		imageSrc: require('../../assets/images/cards/placeholder.jpg')
-	},
-	{
-		key: 'acquire',
-		name: 'Acquire',
-		color: 'rgb(254,207,215)',
-		imageSrc: require('../../assets/images/cards/placeholder-alt.jpg')
-	},
-	{
-		key: 'support',
-		name: '$upport',
-		color: 'rgb(165,238,211)',
-		imageSrc: require('../../assets/images/cards/placeholder.jpg')
-	},
-	{
-		key: 'depart',
-		name: 'Depart',
-		color: 'rgb(142,194,208)',
-		imageSrc: require('../../assets/images/cards/placeholder-alt.jpg')
-	}
-];
 
 const Circle = function(attr){
 	this.el = attr.el;
 	this.padding = attr.padding || 100;
-	this.items = attr.items || DEFAULT_ITEMS;
+	this.items = attr.items;
 	this.currentItem = this.items[0];
 	this.setup();
 	this.draw();
@@ -82,7 +20,10 @@ Circle.prototype.onResize = function(){
 };
 
 Circle.prototype.setup = function(){
-	this.radius = (this.el.offsetWidth - 2 * this.padding) / 2;
+	let maxWidth = this.el.offsetWidth;
+	let winHeight = window.innerHeight - 100; 
+	let outerDiameter = maxWidth > winHeight ? winHeight : maxWidth;
+	this.radius = outerDiameter/2 - this.padding;
 };
 
 
@@ -94,7 +35,7 @@ Circle.prototype.draw = function(){
 	this.el.appendChild(this.svg);
 	this.svg.setAttribute('height', 2 * this.radius + 2 * this.padding);
 	this.svg.setAttribute('width', 2 * this.radius + 2 * this.padding);
-	this.svg.setAttribute('xmlns',SVG_NS);
+	this.svg.setAttribute('xmlns', SVG_NS);
 	this.svg.setAttribute('xmlns:xlink', XLINK_NS);
 	this.drawContent();
 	this.drawCircle();
@@ -106,6 +47,10 @@ Circle.prototype.drawContent = function(){
 	this.content.style.transition = `opacity ease-in-out ${FADE_TIME}ms`;
 	this.svg.appendChild(this.content);
 	this.updateContent();
+};
+
+Circle.prototype.onContentClicked = function(){
+	location.replace(this.currentItem.path);
 };
 
 Circle.prototype.updateContent = function(){
@@ -144,6 +89,8 @@ Circle.prototype.drawCircle = function(){
 	circle.setAttribute('fill', 'black');
 	circle.setAttribute('transform', `translate(${this.radius + this.padding} ${this.radius + this.padding})`)
 
+
+
 	var rect = document.createElementNS(SVG_NS, 'rect')
 	rect.setAttribute('width', 2 * this.radius + 2 * this.padding);
 	rect.setAttribute('height', 2 * this.radius + 2 * this.padding);
@@ -154,18 +101,42 @@ Circle.prototype.drawCircle = function(){
 
 	this.svg.appendChild(this.defs);
 	this.svg.appendChild(overlay);
+
+	var clickable = document.createElementNS(SVG_NS, 'circle');
+	clickable.setAttribute('r', this.radius);
+	clickable.setAttribute('id', 'contentClickable');
+	clickable.setAttribute('fill', 'transparent');
+	clickable.setAttribute('transform', `translate(${this.radius + this.padding} ${this.radius + this.padding})`)
+	clickable.addEventListener('click', this.onContentClicked.bind(this))
+	this.svg.appendChild(clickable);
+
 };
 
 Circle.prototype.drawLabels = function(){
 	let inc = (2 * PI) / this.items.length;
+	this.labels = document.createElementNS(SVG_NS, 'g');
+	this.labels.setAttribute('id', 'labelContainer');
+	this.svg.appendChild(this.labels);
 	this.items.forEach(function(item, i){
 		this.drawLabel(i * inc - PI/2, item);
 	}.bind(this));
 };
 
+Circle.prototype.rotateToCurrent = function(){
+	let i = this.items.indexOf(this.currentItem);
+	let len = this.items.length;
+	let rot = -1 * (360 * (i/len));
+	let r = this.radius + this.padding;
+	this.labels.style.transform = `rotate(${rot}deg)`;
+};
+
+Circle.prototype.getLabelId = function(item){
+	return `label-${item.key}`;
+};
+
 Circle.prototype.drawLabel = function(theta, item){
 	let g = document.createElementNS(SVG_NS, 'g');
-	g.setAttribute('id', `label-${item.key}`);
+	g.setAttribute('id', this.getLabelId(item));
 	g.setAttribute('class', 'label');
 
 	let r = this.radius + (this.padding / 2);
@@ -203,15 +174,35 @@ Circle.prototype.drawLabel = function(theta, item){
 	g.addEventListener('click', (e)=>{
 		this.onLabelClicked(item, e);
 	});
-	this.svg.appendChild(g);
+	this.labels.appendChild(g);
+};
+
+Circle.prototype.setActiveLabel = function(item){
+	for(let i = 0; i < this.labels.children.length; i++){
+		this.labels.children[i].setAttribute('class', 'label');
+	}
+	let active = document.getElementById(this.getLabelId(item))
+	active.setAttribute('class','label active');
+};
+
+Circle.prototype.setCurrentItemKey = function(key){
+	for(let i=0; i<this.items.length; i++){
+		if(item.key === key){
+			this.setCurrentItem(item);
+			return true;
+		}
+	}
+	return false;
 };
 
 Circle.prototype.setCurrentItem = function(item){
 	this.content.style.opacity = 0;
 	this.contentAnimating = true;
+	this.setActiveLabel(item);
 	setTimeout( ()=>{
 		this.currentItem = item;
 		this.updateContent();
+		this.rotateToCurrent();
 		this.content.style.opacity = 1;
 		this.contentAnimating = false;
 
