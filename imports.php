@@ -24,7 +24,6 @@
 			<link rel="stylesheet" type="text/css" href="//localhost:3000/index.css"></link>
 		<?php else: ?>
 			<script type="text/javascript" 
-			src="<?php echo get_stylesheet_directory_uri() . "/dist/index.js" ?>">
+			src="<?php echo get_stylesheet_directory_uri() . "/dist/index.js" ?>"></script>
 			<link rel="stylesheet" type="text/css" href="/index.css"></link>
-			</script>
 		<?php endif; ?>
