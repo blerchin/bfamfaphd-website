@@ -81,22 +81,12 @@ body.home {
   background-size: contain;
 }
 
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: #000000;
   font-weight: 600;
 }
 
-h1 a:hover,
-h2 a:hover,
-h3 a:hover,
-h4 a:hover,
-h5 a:hover,
-h6 a:hover {
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   color: #000000;
 }
 
@@ -116,29 +106,34 @@ body p {
 }
 
 .slide {
+  -webkit-transition: opacity ease-in-out 500ms, height ease-in-out 500ms, -webkit-transform ease-in-out 500ms;
+  transition: opacity ease-in-out 500ms, height ease-in-out 500ms, -webkit-transform ease-in-out 500ms;
   transition: transform ease-in-out 500ms, opacity ease-in-out 500ms, height ease-in-out 500ms;
-  transform: translateX(100%);
+  transition: transform ease-in-out 500ms, opacity ease-in-out 500ms, height ease-in-out 500ms, -webkit-transform ease-in-out 500ms;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
   opacity: 0;
 }
 
-.slide.in,
-.slide.lg-in {
-  transform: none;
+.slide.in, .slide.lg-in {
+  -webkit-transform: none;
+          transform: none;
   opacity: 1;
 }
 
 @media screen and (max-width: 769px) {
-  .slide,
-  .slide.lg-in {
+  .slide, .slide.lg-in {
     top: 0;
-    transform: translateY(-150%);
+    -webkit-transform: translateY(-150%);
+            transform: translateY(-150%);
     opacity: 0;
     display: none;
   }
 
   .slide.in {
     display: block;
-    transform: none;
+    -webkit-transform: none;
+            transform: none;
     height: auto;
     opacity: 1;
   }
@@ -190,10 +185,7 @@ body p {
   font-size: 16px;
 }
 
-.navbar ul li.active a,
-.navbar ul li a:hover,
-.navbar ul li a:active,
-.navbar ul li a:focus {
+.navbar ul li.active a, .navbar ul li a:hover, .navbar ul li a:active, .navbar ul li a:focus {
   text-decoration: underline;
   display: inline-block;
   position: relative;
@@ -211,14 +203,27 @@ body p {
 
 @media screen and (min-width: 880px) {
   .navbar #bfa-nav-supply-menu ul {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 100%;
   }
 
   .navbar #bfa-nav-supply-menu ul li {
-    flex: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 }
 
@@ -388,7 +393,8 @@ article.item-half .more-link {
   z-index: 99;
   right: -25px;
   top: 50%;
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
   cursor: pointer;
   background: none;
   border: 0px;
@@ -409,11 +415,15 @@ article.item-half .more-link {
   display: block;
   margin: 0px 5px;
   text-decoration: none;
+  -webkit-transition: -webkit-transform ease-in-out 500ms;
+  transition: -webkit-transform ease-in-out 500ms;
   transition: transform ease-in-out 500ms;
+  transition: transform ease-in-out 500ms, -webkit-transform ease-in-out 500ms;
 }
 
 #game #drawCardsToggle[aria-expanded=true] .arrow {
-  transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
 }
 
 #game #drawCardsMock {
@@ -455,6 +465,7 @@ article.item-half .more-link {
 
 #game #cards #circle svg #contentClickable {
   pointer-events: fill;
+  -webkit-transition: background ease-in-out 300ms;
   transition: background ease-in-out 300ms;
 }
 
@@ -464,8 +475,12 @@ article.item-half .more-link {
 }
 
 #game #cards #circle svg g#labelContainer {
+  -webkit-transition: -webkit-transform ease-in-out 1000ms;
+  transition: -webkit-transform ease-in-out 1000ms;
   transition: transform ease-in-out 1000ms;
-  transform-origin: 50% 50%;
+  transition: transform ease-in-out 1000ms, -webkit-transform ease-in-out 1000ms;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
 }
 
 #game #cards #circle svg g.label {
@@ -475,20 +490,23 @@ article.item-half .more-link {
 }
 
 #game #cards #circle svg g.label .arrow {
+  -webkit-transition: -webkit-transform ease-in-out 300ms;
+  transition: -webkit-transform ease-in-out 300ms;
   transition: transform ease-in-out 300ms;
-  transform: translateY(0px);
+  transition: transform ease-in-out 300ms, -webkit-transform ease-in-out 300ms;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
-#game #cards #circle svg g.label:hover .arrow,
-#game #cards #circle svg g.label:focus .arrow,
-#game #cards #circle svg g.label:active .arrow,
-#game #cards #circle svg g.label.active .arrow {
-  transform: translateY(10px);
+#game #cards #circle svg g.label:hover .arrow, #game #cards #circle svg g.label:focus .arrow, #game #cards #circle svg g.label:active .arrow, #game #cards #circle svg g.label.active .arrow {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
 }
 
 @media screen and (max-width: 769px) {
   #game #drawCardsToggle {
-    transform: none;
+    -webkit-transform: none;
+            transform: none;
     bottom: -30px;
     top: auto;
     left: 50%;
