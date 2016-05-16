@@ -1,6 +1,7 @@
 #game {
 	background-color: $gray;
 	position: relative;
+	margin-bottom: 80px;
 	#drawCardsToggle {
 		position: absolute;
 		z-index: 99;
@@ -49,7 +50,6 @@
 	#cards {
 		position: relative;
 		max-width: 100%;
-		min-height: 400px;
 		margin: 40px auto;
 		#circle {
 			width: 100%;
@@ -94,11 +94,12 @@
 @media screen and (max-width: 769px){
 	#game #drawCardsToggle {
 		transform: none;
-		bottom: 20px;
+		bottom: -30px;
 		top: auto;
 		left: 50%;
 		margin: 0;
-		margin-left: -25%;
+		width: 175px;
+		margin-left: -87px;
 		right: auto;
 		
 	}

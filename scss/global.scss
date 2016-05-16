@@ -1,12 +1,18 @@
 body {
 	padding-top: 120px;
 }
+@media screen and (max-width: 769px){
+	body {
+		padding-top: 80px;
+	}
+}
 body.home {
 	padding-top: 80px;
 }
 .container {
 	font-family: 'Work Sans', Verdana, sans-serif;
 	color: $black;
+	max-width: 1200px;
 }
 .dots-logo {
 	display: inline-block;
@@ -15,6 +21,14 @@ body.home {
 	background-image: url('../assets/images/dots.svg');
 	background-repeat: no-repeat;
 	background-size: contain;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+{
+	color: $black;
+	font-weight: 600;
+	&:hover {
+		color: $black;
+	}
 }
 
 h2 {
@@ -33,18 +47,27 @@ body p {
 }
 .slide {
 	transition: transform ease-in-out 500ms, opacity ease-in-out 500ms, height ease-in-out 500ms;
-}
-.slide:not(.in) {
-	position: absolute;
 	transform: translateX(100%);
 	opacity: 0;
-	height: 0;
 }
+.slide.in,
+.slide.lg-in {
+	transform: none;
+	opacity: 1
+}
+
 @media screen and (max-width: 769px) {
-	.slide:not(.in) {
-		position: absolute;
+	.slide,
+	.slide.lg-in {
 		top: 0;
 		transform: translateY(-150%);
-		height: 0;
+		opacity: 0;
+		display: none;
+	}
+	.slide.in{
+		display: block;
+		transform: none;
+		height: auto;
+		opacity: 1;
 	}
 }

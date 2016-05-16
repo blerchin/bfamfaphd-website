@@ -28,7 +28,7 @@ $supply_expanded = (get_query_var('post_type') == "supply_chain");
 								>
 					<span class="dots-logo">
 		</a>
-		<div class="slide <?php echo $supply_expanded ? 'in' : ''?>" 
+		<div class="slide <?php echo $supply_expanded ? 'lg-in' : ''?>" 
 							id="bfa-nav-supply-menu">
 			<?php wp_nav_menu( array(
 				'theme-location' 	=> 'supply-chains-menu',

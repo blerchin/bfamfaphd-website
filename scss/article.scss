@@ -35,7 +35,6 @@ article.item-full  {
 		width: auto;
 		position: relative;
 		overflow: hidden;
-		max-width: 700px;
 	}
 	.feature-caption {
 		clear: both;
@@ -88,15 +87,40 @@ article.item-full  {
 	}
 }
 article.item-half {
+	position: relative;
 	width: 50%;
 	float: left;
 	overflow: hidden;
+	padding-left: 15px;
+	padding-right: 15px;
+	&:nth-child(odd){
+		clear: left;
+	}
+	.article-body-wrapper {
+		width: 100%;
+		overflow: hidden;
+	}
 	.feature {
 		margin-bottom: 20px;
 		position: relative;
+		overflow: hidden;
+		img {
+			width: auto;
+			height: auto;
+			max-width: 100%;
+
+		}
 	}
 	.more-link {
 		white-space: nowrap;
+	}
+}
+@media screen and (max-width: 769px){
+	article.item-half {
+		margin-right: 0px;
+		margin-left: 0px;
+		width: auto;
+		max-width: 100%;
 	}
 }
 .video-placeholder {
