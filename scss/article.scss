@@ -55,6 +55,10 @@ article.item-full  {
 			border-radius: 15px;
 			background-color: $white;
 			overflow: hidden;
+			img {
+				max-width: 100%;
+				max-height: 100%;
+			}
 		}
 	}
 	.article-secondary-image {

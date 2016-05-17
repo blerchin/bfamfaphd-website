@@ -296,6 +296,11 @@ article.item-full .article-media .article-card {
   overflow: hidden;
 }
 
+article.item-full .article-media .article-card img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 article.item-full .article-secondary-image {
   margin: 40px auto;
   height: 100%;

@@ -13,7 +13,7 @@
 
 			$card_image = get_field('card_image');
 			if(!empty($card_image)){
-				$card_image = $card_image['sizes']['medium'];
+				$card_image = $card_image['sizes']['large'];
 			}
 
 		?>
