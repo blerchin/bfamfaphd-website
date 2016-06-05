@@ -1,5 +1,6 @@
 <?php
 require_once('includes/supply_chain_post_type.php');
+require_once('includes/card_post_type.php');
 require_once('includes/wp_bootstrap_navwalker.php');
 
 
