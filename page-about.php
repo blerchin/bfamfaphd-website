@@ -1,5 +1,7 @@
 <?php get_header(); ?>
-<?php require('game/cards.php'); ?>
+<?php if(is_front_page()){
+	get_template_part('game/cards'); 
+}?>
 <div id="page-home" class="page">
 	<div class="about">
 		<?php if(have_posts()): while(have_posts()): the_post(); ?>

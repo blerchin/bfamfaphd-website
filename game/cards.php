@@ -1,5 +1,4 @@
 <div id="game">
-	<?php if(is_front_page()): ?>
 		<div id="cards">
 			<button id="drawCardsToggle" data-target="#drawCardsContainer" data-toggle="slide">
 				<span class="arrow">↓</span>
@@ -24,5 +23,4 @@
 			</div>
 			<div id="circle"></div>
 		</div>
-	<?php endif; ?>
 </div>
