@@ -5,7 +5,9 @@
 				<span class="text">Project Ideas</span>
 				<span class="arrow">↓</span>
 			</button>
-			<div id="drawCardsContainer" class="slide in">
+			<div id="drawCardsContainer" class="slide 
+				<?php echo (is_front_page() ? '' : 'in') ?>
+				">
 				<div class="cardsWrapper">
 					<div class="cards">
 						<div class="card card-1">
