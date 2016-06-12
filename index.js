@@ -5,6 +5,7 @@ require('bootstrap-webpack')
 require('./src/js/collapse');
 
 const Circle = require('./src/js/circle');
+const Cards = require('./src/js/cards');
 
 $(document).ready(function(){
 
@@ -21,6 +22,18 @@ $(document).ready(function(){
 	var circle = new Circle({
 		el: circleContainer,
 		items: supplyChains
-
 	});
+	var cardsContainer = document.getElementById('drawCardsContainer');
+	var cards = window.g.cards.map(function(card){
+		return {
+			key: card.post_name,
+			name: card.post_title,
+			imageSrc: card.post_thumbnail_uri,
+			excerpt: card.post_excerpt
+		};
+	})
+	var cards = new Cards({
+		el: cardsContainer,
+		cards: cards
+	})
 });

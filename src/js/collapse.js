@@ -9,9 +9,11 @@ $(document).ready(function(){
 			if($target.hasClass('in')){
 				$target.removeClass('in');
 				$button.attr('aria-expanded', 'false');
+				$target.trigger('collapse:out');
 			} else {
 				$target.addClass('in');
 				$button.attr('aria-expanded', 'true');
+				$target.trigger('collapse:in');
 			}
 		});
 	}

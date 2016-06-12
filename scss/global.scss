@@ -1,13 +1,14 @@
 body {
 	padding-top: 120px;
 }
-@media screen and (max-width: 769px){
-	body {
-		padding-top: 80px;
-	}
-}
 body.home {
 	padding-top: 80px;
+}
+@media screen and (max-width: 769px){
+	body,
+	body.home {
+		padding-top: 20px;
+	}
 }
 .container {
 	font-family: 'Work Sans', Verdana, sans-serif;

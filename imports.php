@@ -1,21 +1,14 @@
 		<?php $dev = preg_match('/local$/', $_SERVER['HTTP_HOST']) ?>
 
-		<?php $supplyChains = get_posts(array(
-				'post_type' =>'supply_chain',
-				'posts_per_page' =>'100'
-			));
-			foreach( $supplyChains as $key => $post){
-				$supplyChains[$key]->meta_color = get_post_meta( $post->ID, 'color', true);
-				$thumb_id = get_post_thumbnail_id($post->ID);
-				$supplyChains[$key]->post_thumbnail_uri = wp_get_attachment_url( $thumb_id);
-				$supplyChains[$key]->permalink = get_permalink($post->ID);
-			}
-			$supplyChainsJson = json_encode($supplyChains);
+		<?php 
+			$cardsJson = get_posts_json('card');
+			$supplyChainsJson = get_posts_json('supply_chain');
 		?>
 
 		<script type="text/javascript">
 			window.g = {};
-			window.g.supplyChains = <?php echo $supplyChainsJson; ?>
+			window.g.supplyChains = <?php echo $supplyChainsJson; ?>;
+			window.g.cards 				= <?php echo $cardsJson; ?>;
 			
 		</script>
 
