@@ -53,6 +53,7 @@
 	__webpack_require__(110);
 	
 	var Circle = __webpack_require__(111);
+	var Cards = __webpack_require__(112);
 	
 	$(document).ready(function () {
 	
@@ -69,7 +70,19 @@
 		var circle = new Circle({
 			el: circleContainer,
 			items: supplyChains
-	
+		});
+		var cardsContainer = document.getElementById('drawCardsContainer');
+		var cards = window.g.cards.map(function (card) {
+			return {
+				key: card.post_name,
+				name: card.post_title,
+				imageSrc: card.post_thumbnail_uri,
+				excerpt: card.post_excerpt
+			};
+		});
+		var cards = new Cards({
+			el: cardsContainer,
+			cards: cards
 		});
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(70)))
@@ -12855,9 +12868,11 @@
 				if ($target.hasClass('in')) {
 					$target.removeClass('in');
 					$button.attr('aria-expanded', 'false');
+					$target.trigger('collapse:out');
 				} else {
 					$target.addClass('in');
 					$button.attr('aria-expanded', 'true');
+					$target.trigger('collapse:in');
 				}
 			});
 		}
@@ -13082,6 +13097,93 @@
 	};
 	
 	module.exports = Circle;
+
+/***/ },
+/* 112 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+	
+	var Cards = function Cards(attr) {
+		this.el = attr.el;
+		this.$el = $(this.el);
+		this.cards = attr.cards;
+		this.drawSize = this.$el.find('.card').length;
+		this.$el.on('collapse:in', this.draw.bind(this));
+		this.$el.find('#refreshButton').click(this.draw.bind(this));
+		this.draw();
+	};
+	
+	Cards.prototype.draw = function () {
+		var cards = this.getCards();
+		var cardEls = this.$el.find('.card');
+		for (var i = 0; i < cards.length; i++) {
+			var card = cards[i];
+			var $el = $(cardEls[i]);
+			console.log($el);
+			$el.empty();
+			$el.append('<img src="' + card.imageSrc + '"/>');
+		}
+		this.drawStory(cards);
+	};
+	
+	Cards.prototype.getCards = function () {
+		var _this = this;
+	
+		return this.dedupe(this.getRandomIndices)().map(function (i) {
+			return _this.cards[i];
+		});
+	};
+	
+	Cards.prototype.drawStory = function (cards) {
+		var p = this.$el.find('.story').empty().append('<p>' + this.getStory(cards) + '</p>');
+	};
+	
+	Cards.prototype.getStory = function (cards) {
+		return 'Make a project by ' + cards[0].excerpt + ', ' + (cards[1].excerpt + ', and ' + cards[2].excerpt + '.');
+	};
+	
+	Cards.prototype.dedupe = function (generator) {
+		var _this2 = this;
+	
+		return function () {
+			var results = generator.apply(_this2);
+			function hasDupes(arr) {
+				for (var i = 0; i < arr.length; i++) {
+					for (var j = 0; j < arr.length; j++) {
+						if (i !== j && arr[i] === arr[j]) {
+							return true;
+						}
+					}
+				}
+				return false;
+			};
+			var tries = 0;
+			while (hasDupes(results)) {
+				if (++tries > 100) {
+					break;
+				}
+				results = generator.apply(_this2);
+			}
+			return results;
+		};
+	};
+	
+	Cards.prototype.getRandomIndices = function () {
+		var _this3 = this;
+	
+		var indices = Array.apply(null, Array(this.drawSize));
+		return indices.map(function () {
+			return _this3.getRandomIndex();
+		});
+	};
+	
+	Cards.prototype.getRandomIndex = function () {
+		return Math.floor(Math.random() * this.cards.length);
+	};
+	
+	module.exports = Cards;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(70)))
 
 /***/ }
 /******/ ]);

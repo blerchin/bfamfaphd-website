@@ -56,14 +56,14 @@ body {
   padding-top: 120px;
 }
 
-@media screen and (max-width: 769px) {
-  body {
-    padding-top: 80px;
-  }
-}
-
 body.home {
   padding-top: 80px;
+}
+
+@media screen and (max-width: 769px) {
+  body, body.home {
+    padding-top: 20px;
+  }
 }
 
 .container {
@@ -399,8 +399,8 @@ article.item-half .more-link {
   z-index: 99;
   right: -25px;
   top: 50%;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
   cursor: pointer;
   background: none;
   border: 0px;
@@ -432,32 +432,110 @@ article.item-half .more-link {
           transform: scaleY(-1);
 }
 
-#game #drawCardsMock {
+#game #drawCardsContainer {
   position: absolute;
   top: 0;
+  bottom: 0;
+  right: 0;
   left: 0;
   background-color: rgba(245, 245, 245, 0.9);
+}
+
+#game #drawCardsContainer .cardsWrapper {
   height: 100%;
   width: 100%;
 }
 
-#game #drawCardsMock .mockup {
+#game #drawCardsContainer .cards {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
   height: 100%;
-  background-image: url(/wp-content/themes/bfamfaphd-theme/dist/300d8d790d6cdd34718c995f7524395e.png);
+  overflow: hidden;
+  padding: 5vw;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+#game #drawCardsContainer .cards .card {
+  position: relative;
+  float: left;
+  width: 33%;
+  max-height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#game #drawCardsContainer .cards .card img {
+  display: block;
+  margin: 0px auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#game #drawCardsContainer #refreshButton {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTAwcHgiIGhlaWdodD0iMTAwcHgiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxkZWZzPg0KCQk8cmVjdCBpZD0iU1ZHSURfMV8iIHg9Ii0xMDY3LjUwMyIgeT0iLTY0OC41NzkiIHdpZHRoPSIyMjM0LjI2MSIgaGVpZ2h0PSIxMzk2LjQxMyIvPg0KCTwvZGVmcz4NCgk8Y2xpcFBhdGggaWQ9IlNWR0lEXzJfIj4NCgkJPHVzZSB4bGluazpocmVmPSIjU1ZHSURfMV8iICBvdmVyZmxvdz0idmlzaWJsZSIvPg0KCTwvY2xpcFBhdGg+DQoJPHBhdGggY2xpcC1wYXRoPSJ1cmwoI1NWR0lEXzJfKSIgZmlsbD0iIzAxMDEwMSIgZD0iTS05MjIuMTYxLDYwOC40Yy0xMy4zNzgtMy4yNzItMjIuMTk0LTEyLjE2NS0yMi4xOTQtMjIuMTI1DQoJCWMwLTEyLjkyLDE1LjM1Mi0yMy40MzIsMzMuNTk4LTIzLjQzMnYyLjQzNGMtMTcuMDI5LDAtMzEuMTY0LDkuNDItMzEuMTY0LDIwLjk5OGMwLDguODE5LDguMTU2LDE2Ljc1OSwyMC40MjQsMTkuNzYxDQoJCUwtOTIyLjE2MSw2MDguNHoiLz4NCgk8cGF0aCBjbGlwLXBhdGg9InVybCgjU1ZHSURfMl8pIiBmaWxsPSIjMDEwMTAxIiBkPSJNLTkzMy4xNjIsNjE3LjEzNGMzLjg5NS00LjUxOCw5LjI2Mi03LjY1NywxNC43NjYtOS44NTgNCgkJYy00LjQ1Ni0zLjkzNC04LjE4NC04Ljg0Ny0xMC40MzctMTQuMzYxbC0yLjk4OC0wLjUzNmMyLjI3OCw1LjM2Miw1LjMwNywxMC4yMDgsOS40MDUsMTQuMTc5DQoJCWMtNS4yMywyLjM1NC05LjkwNCw1Ljg3LTEzLjc4NCwxMC4wMzNMLTkzMy4xNjIsNjE3LjEzNHoiLz4NCgk8cGF0aCBjbGlwLXBhdGg9InVybCgjU1ZHSURfMl8pIiBmaWxsPSIjMDEwMTAxIiBkPSJNLTkxNC43MDUsNTgwLjA5MWMxMy4zNzcsMy4yNzIsMjEuOTY0LDEyLjE2NiwyMS45NjQsMjIuMTI2DQoJCWMwLDEyLjkxOS0xNS41ODQsMjMuNDMxLTMzLjgzLDIzLjQzMXYtMi40MzRjMTcuMDMsMCwzMS4zOTctOS40MiwzMS4zOTctMjAuOTk3YzAtOC44Mi04LjA0Mi0xNi43Ni0yMC4zMS0xOS43NjJMLTkxNC43MDUsNTgwLjA5MQ0KCQl6Ii8+DQoJPHBhdGggY2xpcC1wYXRoPSJ1cmwoI1NWR0lEXzJfKSIgZmlsbD0iIzAxMDEwMSIgZD0iTS05MDMuNzA1LDU3MS4zNThjLTMuODk0LDQuNTE3LTkuMjYyLDcuNjU2LTE0Ljc2NSw5Ljg1Nw0KCQljNC40NTYsMy45MzUsOC4xODMsOC44NDcsMTAuNDM3LDE0LjM2MWwyLjk4NywwLjUzN2MtMi4yNzctNS4zNjMtNS4zMDYtMTAuMjA5LTkuNDA0LTE0LjE4YzUuMjI4LTIuMzU0LDkuOTA0LTUuODcsMTMuNzg0LTEwLjAzMw0KCQlMLTkwMy43MDUsNTcxLjM1OHoiLz4NCjwvZz4NCjxnPg0KCTxkZWZzPg0KCQk8cmVjdCBpZD0iU1ZHSURfM18iIHg9Ii0xMDY1Ljc1OCIgeT0iLTY0Ni44MzQiIHdpZHRoPSIyMjM0LjI2MiIgaGVpZ2h0PSIxMzk2LjQxNCIvPg0KCTwvZGVmcz4NCgk8Y2xpcFBhdGggaWQ9IlNWR0lEXzRfIj4NCgkJPHVzZSB4bGluazpocmVmPSIjU1ZHSURfM18iICBvdmVyZmxvdz0idmlzaWJsZSIvPg0KCTwvY2xpcFBhdGg+DQoJPHBhdGggY2xpcC1wYXRoPSJ1cmwoI1NWR0lEXzRfKSIgZmlsbD0iIzAxMDEwMSIgZD0iTS05MjAuNDE2LDYxMC4xNDZjLTEzLjM3OC0zLjI3My0yMi4xOTQtMTIuMTY2LTIyLjE5NC0yMi4xMjYNCgkJYzAtMTIuOTE5LDE1LjM1My0yMy40MzIsMzMuNTk5LTIzLjQzMnYyLjQzNWMtMTcuMDMsMC0zMS4xNjUsOS40MTktMzEuMTY1LDIwLjk5N2MwLDguODE5LDguMTU2LDE2Ljc2LDIwLjQyNCwxOS43NjINCgkJTC05MjAuNDE2LDYxMC4xNDZ6Ii8+DQoJPHBhdGggY2xpcC1wYXRoPSJ1cmwoI1NWR0lEXzRfKSIgZmlsbD0iIzAxMDEwMSIgZD0iTS05MzEuNDE3LDYxOC44NzljMy44OTYtNC41MTgsOS4yNjMtNy42NTcsMTQuNzY2LTkuODU3DQoJCWMtNC40NTYtMy45MzUtOC4xODMtOC44NDctMTAuNDM3LTE0LjM2MWwtMi45ODgtMC41MzdjMi4yNzgsNS4zNjIsNS4zMDcsMTAuMjA5LDkuNDA1LDE0LjE3OQ0KCQljLTUuMjI5LDIuMzU0LTkuOTAzLDUuODcxLTEzLjc4NCwxMC4wMzNMLTkzMS40MTcsNjE4Ljg3OXoiLz4NCgk8cGF0aCBjbGlwLXBhdGg9InVybCgjU1ZHSURfNF8pIiBmaWxsPSIjMDEwMTAxIiBkPSJNLTkxMi45NTksNTgxLjgzNmMxMy4zNzcsMy4yNzMsMjEuOTY0LDEyLjE2NiwyMS45NjQsMjIuMTI2DQoJCWMwLDEyLjkxOS0xNS41ODUsMjMuNDMyLTMzLjgzMSwyMy40MzJ2LTIuNDM1YzE3LjAzLDAsMzEuMzk3LTkuNDE5LDMxLjM5Ny0yMC45OTdjMC04LjgxOS04LjA0MS0xNi43Ni0yMC4zMS0xOS43NjINCgkJTC05MTIuOTU5LDU4MS44MzZ6Ii8+DQoJPHBhdGggY2xpcC1wYXRoPSJ1cmwoI1NWR0lEXzRfKSIgZmlsbD0iIzAxMDEwMSIgZD0iTS05MDEuOTU5LDU3My4xMDRjLTMuODk1LDQuNTE4LTkuMjYzLDcuNjU3LTE0Ljc2Niw5Ljg1Nw0KCQljNC40NTcsMy45MzUsOC4xODMsOC44NDgsMTAuNDM3LDE0LjM2MWwyLjk4OCwwLjUzN2MtMi4yNzctNS4zNjItNS4zMDctMTAuMjA5LTkuNDA0LTE0LjE3OQ0KCQljNS4yMjctMi4zNTQsOS45MDMtNS44NzEsMTMuNzg0LTEwLjAzM0wtOTAxLjk1OSw1NzMuMTA0eiIvPg0KPC9nPg0KPHBhdGggZmlsbD0iIzAxMDEwMSIgZD0iTTQ2LjYwMSw2NS41NDVjLTEzLjM3OC0zLjI3Mi0yMi4xOTQtMTIuMTY2LTIyLjE5NC0yMi4xMjZjMC0xMi45MTksMTUuMzUyLTIzLjQzMSwzMy41OTgtMjMuNDMxdjIuNDM0DQoJYy0xNy4wMywwLTMxLjE2NCw5LjQyLTMxLjE2NCwyMC45OTdjMCw4LjgyLDguMTU2LDE2Ljc2LDIwLjQyNCwxOS43NjJMNDYuNjAxLDY1LjU0NXoiLz4NCjxwYXRoIGZpbGw9IiMwMTAxMDEiIGQ9Ik0zNS42LDc0LjI3OGMzLjg5NS00LjUxOCw5LjI2Mi03LjY1NywxNC43NjYtOS44NThjLTQuNDU2LTMuOTM0LTguMTg0LTguODQ3LTEwLjQzNy0xNC4zNjFsLTIuOTg4LTAuNTM3DQoJYzIuMjc4LDUuMzYzLDUuMzA3LDEwLjIwOSw5LjQwNSwxNC4xOGMtNS4yMywyLjM1NC05LjkwNCw1Ljg3LTEzLjc4NSwxMC4wMzNMMzUuNiw3NC4yNzh6Ii8+DQo8cGF0aCBmaWxsPSIjMDEwMTAxIiBkPSJNNTQuMDU2LDM3LjIzNUM2Ny40MzQsNDAuNTA4LDc2LjAyMSw0OS40LDc2LjAyMSw1OS4zNmMwLDEyLjkyLTE1LjU4NSwyMy40MzItMzMuODMxLDIzLjQzMnYtMi40MzQNCgljMTcuMDMsMCwzMS4zOTctOS40MiwzMS4zOTctMjAuOTk4YzAtOC44MTktOC4wNDMtMTYuNzU5LTIwLjMxLTE5Ljc2MUw1NC4wNTYsMzcuMjM1eiIvPg0KPHBhdGggZmlsbD0iIzAxMDEwMSIgZD0iTTY1LjA1OCwyOC41MDJjLTMuODk1LDQuNTE4LTkuMjYzLDcuNjU3LTE0Ljc2Nyw5Ljg1OGM0LjQ1NywzLjkzNCw4LjE4NCw4Ljg0NywxMC40MzcsMTQuMzYxbDIuOTg4LDAuNTM3DQoJYy0yLjI3Ny01LjM2My01LjMwNy0xMC4yMDktOS40MDQtMTQuMThjNS4yMjctMi4zNTQsOS45MDQtNS44NywxMy43ODQtMTAuMDMzTDY1LjA1OCwyOC41MDJ6Ii8+DQo8L3N2Zz4NCg==);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
-  margin: 30px;
+}
+
+#game #drawCardsContainer .story {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#game #drawCardsContainer .story p {
+  font-size: 20px;
+  margin: 0 20px 40px 20px;
+  text-align: center;
 }
 
 #game #cards {
   position: relative;
   max-width: 100%;
   margin: 40px auto;
+  height: calc(100vh - 160px);
 }
 
 #game #cards #circle {
   width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #game #cards #circle svg {
@@ -509,7 +587,13 @@ article.item-half .more-link {
           transform: translateY(10px);
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (min-width: 481px) {
+  #game #drawCardsContainer .story {
+    margin-left: 80px;
+  }
+}
+
+@media screen and (max-width: 481px) {
   #game #drawCardsToggle {
     -webkit-transform: none;
             transform: none;
@@ -520,6 +604,30 @@ article.item-half .more-link {
     width: 175px;
     margin-left: -87px;
     right: auto;
+  }
+
+  #game #drawCardsContainer #refreshButton {
+    bottom: -40px;
+    left: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  #game #drawCardsContainer .cardsWrapper {
+    overflow-x: scroll;
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    top: 40px;
+    bottom: 100px;
+  }
+
+  #game #drawCardsContainer .cardsWrapper .cards {
+    width: 220%;
+  }
+
+  #game #drawCardsContainer .cardsWrapper .cards .card {
+    height: 100%;
   }
 }
 
