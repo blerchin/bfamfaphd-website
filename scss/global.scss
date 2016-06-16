@@ -1,8 +1,19 @@
-body {
+body.hasNavbar {
 	padding-top: 120px;
 }
 body.home {
 	padding-top: 80px;
+}
+body.scrollLocked {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	.container {
+		position: relative;
+		height: 100%;
+	}
 }
 @media screen and (max-width: 769px){
 	body,

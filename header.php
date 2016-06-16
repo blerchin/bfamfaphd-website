@@ -1,3 +1,10 @@
+<?php
+	global $SHOW_NAVBAR;
+	global $SCROLL_LOCKED;
+	$bodyClassAddons = "";
+	$bodyClassAddons .= $SHOW_NAVBAR ? 'hasNavbar ' : 'hasNoNavbar ';
+	$bodyClassAddons .= $SCROLL_LOCKED ? 'scrollLocked ' : '';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,6 +23,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-	<body <?php body_class(); ?>>
-		<?php get_template_part('navbar'); ?>
+	<body <?php body_class($bodyClassAddons); ?>>
+		<?php 
+			if($SHOW_NAVBAR){
+				get_template_part('navbar'); 
+			}
+		?>
 		<div class="container">

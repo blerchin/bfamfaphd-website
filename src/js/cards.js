@@ -1,7 +1,9 @@
+const _ = require('lodash');
 const Cards = function(attr){
 	this.el = attr.el;
 	this.$el = $(this.el);
 	this.cards = attr.cards;
+	this.order = attr.order;
 	this.drawSize = this.$el.find('.card').length;
 	this.$el.on('collapse:in', this.draw.bind(this));
 	this.$el.find('#refreshButton').click(this.draw.bind(this));
@@ -10,21 +12,19 @@ const Cards = function(attr){
 
 Cards.prototype.draw = function(){
 	let cards = this.getCards();
-	let cardEls = this.$el.find('.card'); 
+	let cardEls = this.$el.find('.card .img'); 
 	for(let i=0; i<cards.length; i++){
 		let card = cards[i];
 		let $el = $(cardEls[i]);
-		console.log($el);
-		$el.empty();
-		$el.append(`<img src="${card.imageSrc}"/>`);
+		$el.css('background-image', `url(${card.imageSrc})`);
 	}
 	this.drawStory(cards);
 };
 
 Cards.prototype.getCards = function(){
-	return this.dedupe(this.getRandomIndices)().map((i)=>{
-		return this.cards[i];
-	})
+	return this.sortByCategory(
+		this.dedupe(this.getRandomCards)()
+	);
 };
 
 Cards.prototype.drawStory = function(cards){
@@ -38,21 +38,33 @@ Cards.prototype.getStory = function(cards){
 				 `${cards[1].excerpt}, and ${cards[2].excerpt}.`
 };
 
+Cards.prototype.compare = function(card1, card2){
+	return card1.category === card2.category;
+
+};
+
+Cards.prototype.hasDupes = function(arr){
+		for(let i=0; i<arr.length; i++){
+			for(let j=0; j<arr.length; j++){
+				if(i !== j && this.compare(arr[i], arr[j])){
+					return true;
+				}
+			}
+		}
+		return false;
+};
+
+Cards.prototype.sortByCategory = function(arr){
+	return _.sortBy(arr, (item)=>{
+		return this.order.indexOf(item.category);
+	});
+};
+
 Cards.prototype.dedupe = function(generator){
 	return ()=>{
 		let results = generator.apply(this);
-		function hasDupes(arr){
-			for(let i=0; i<arr.length; i++){
-				for(let j=0; j<arr.length; j++){
-					if(i !== j && arr[i] === arr[j]){
-						return true;
-					}
-				}
-			}
-			return false;
-		};
 		let tries = 0;
-		while(hasDupes(results)){
+		while(this.hasDupes(results)){
 			if(++tries > 100){
 				break;
 			}
@@ -60,6 +72,12 @@ Cards.prototype.dedupe = function(generator){
 		}
 		return results;
 	};
+};
+
+Cards.prototype.getRandomCards = function(){
+	return this.getRandomIndices().map((i)=>{
+		return this.cards[i];
+	});
 };
 
 Cards.prototype.getRandomIndices = function(){

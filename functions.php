@@ -12,6 +12,11 @@ function get_posts_json($post_type){
 		$posts[$key]->meta_color = get_post_meta( $post->ID, 'color', true);
 		$thumb_id = get_post_thumbnail_id($post->ID);
 		$posts[$key]->post_thumbnail_uri = wp_get_attachment_url( $thumb_id);
+		$cats = get_the_category($post->ID);
+		if(count($cats) > 0){
+			$cat = $cats[0]->cat_name;
+		}
+		$posts[$key]->post_category = $cat;
 		$posts[$key]->permalink = get_permalink($post->ID);
 	}
 	$postsJson = json_encode($posts);
@@ -29,4 +34,14 @@ function setup_features() {
 	add_theme_support('post-thumbnails');
 }
 add_action('init', 'setup_features');
+
+function setup_options() {
+	global $SHOW_CIRCLE;
+	$SHOW_CIRCLE = true;
+	global $SHOW_NAVBAR;
+	$SHOW_NAVBAR = true;
+	global $SCROLL_LOCKED;
+	$SCROLL_LOCKED = false;
+}
+add_action('init', 'setup_options');
 
