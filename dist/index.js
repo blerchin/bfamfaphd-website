@@ -13121,6 +13121,7 @@
 		this.$el.on('collapse:in', this.draw.bind(this));
 		this.$el.find('#refreshButton').click(this.draw.bind(this));
 		this.draw();
+		$(window).on('resize', this.draw.bind(this));
 	};
 	
 	Cards.prototype.draw = function () {
@@ -13132,6 +13133,7 @@
 			$el.css('background-image', 'url(' + card.imageSrc + ')');
 		}
 		this.drawStory(cards);
+		this.$el.find('.cardsWrapper').scrollLeft(0);
 	};
 	
 	Cards.prototype.getCards = function () {
@@ -13140,6 +13142,13 @@
 	
 	Cards.prototype.drawStory = function (cards) {
 		var p = this.$el.find('.story').empty().append('<p>' + this.getStory(cards) + '</p>');
+		this.sizeCards(p.height());
+	};
+	
+	Cards.prototype.sizeCards = function (storyHeight) {
+		var h = this.$el.height() - storyHeight;
+		var $cards = this.$el.find('.cards');
+		$cards.outerHeight(h);
 	};
 	
 	Cards.prototype.getStory = function (cards) {
