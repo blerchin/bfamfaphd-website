@@ -679,5 +679,73 @@ article.item-half .more-link {
   height: calc(100vh - 120px);
 }
 
+#page-about {
+  margin: 15px auto;
+  padding: 40px;
+}
+
+#page-about h2 {
+  margin: 40px 0;
+  font-weight: 300;
+}
+
+#page-about p {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+#page-about p b {
+  font-weight: 500;
+}
+
+#page-about a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+#page-about .content {
+  max-width: 640px;
+  margin: 40px auto;
+}
+
+#page-about .row-landing {
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+#page-about .landing-image-wrapper > a {
+  font-size: 24px;
+  display: block;
+  margin: 20px 0px;
+  color: #000000;
+}
+
+#page-about .landing-image-wrapper > a:hover {
+  color: #000000;
+}
+
+#page-about .landing-image-wrapper .landing-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top-left;
+  height: 30vw;
+}
+
+#page-about .landing-image-wrapper .landing-image.artists-report {
+  background-image: url(/wp-content/themes/bfamfaphd-theme/dist/6b7643a38e693f3dcd13d79a923fdf31.png);
+}
+
+#page-about .landing-image-wrapper .landing-image.supply-chains {
+  background-image: url(/wp-content/themes/bfamfaphd-theme/dist/29835086b0ac84f64e9ac85ddc69a5ff.jpg);
+}
+
+#page-about .landing-image-wrapper .landing-image > a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
 
 /*# sourceMappingURL=index.css.map*/
