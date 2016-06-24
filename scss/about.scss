@@ -3,7 +3,10 @@
 	padding: 40px;
 	h2 {
 		margin: 40px 0;
-		font-weight:300 
+		font-weight:300;
+    a {
+      font-weight: inherit;
+    }
 	}
 	p {
 		font-size: 24px;

@@ -689,6 +689,10 @@ article.item-half .more-link {
   font-weight: 300;
 }
 
+#page-about h2 a {
+  font-weight: inherit;
+}
+
 #page-about p {
   font-size: 24px;
   font-weight: 300;
