@@ -19,10 +19,10 @@
 				'walker'					=> new wp_bootstrap_navwalker()
 			))?>
 		</div>
-		<a class="navbar-logo col-sm-1">
-					<span class="dots-logo"></span>
-		</a>
 		<?php if($SUPPLY_MENU):?>
+      <a class="navbar-logo col-sm-1">
+            <span class="dots-logo"></span>
+      </a>
 			<div class="slide lg-in" 
 								id="bfa-nav-supply-menu">
 				<?php wp_nav_menu( array(
