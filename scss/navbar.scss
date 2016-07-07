@@ -3,9 +3,17 @@
 	background-color: $white;
 	font-weight: 300;
 	padding-top: 20px;
-	padding-bottom: 10px;
+	padding-bottom: 0px;
 	margin-bottom: 0px;
 	color: $black;
+  &.navbar-bfamfaphd {
+    .container {
+      border-bottom: 1px solid $light-blue;
+    }
+    li, li a, li.active a, a, a:hover {
+      color: $light-blue;
+    }
+  }
 	.container {
 		position: relative;
 	}
@@ -30,6 +38,14 @@
 		top: 0px;
 		text-align: right;
 	}
+
+  .navbar-interstitial {
+    float: right;
+    ul, ul li {
+      float: right;
+    }
+    text-align: right;
+  }
 
 	ul.navbar-nav {
 		margin-left: -15px;
@@ -58,16 +74,5 @@
 		margin-left: auto;
 		margin-right: auto;
 		text-align: center;
-	}
-	@media screen and (min-width: 880px) {
-		#bfa-nav-supply-menu ul {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			width: 100%;
-			li {
-				flex: 1;
-			}
-		}
 	}
 }

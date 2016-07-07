@@ -1,4 +1,5 @@
 <?php
+
 require_once('includes/supply_chain_post_type.php');
 require_once('includes/card_post_type.php');
 require_once('includes/wp_bootstrap_navwalker.php');
@@ -26,7 +27,9 @@ function get_posts_json($post_type){
 
 function register_menus() {
 	register_nav_menu('page-menu', __( 'Page Menu' ));
+	register_nav_menu('supply-chains-page-menu', __( 'Supply Chains Page Menu' ));
 	register_nav_menu('supply-chains-menu', __( 'Supply Chains Menu' ));
+	register_nav_menu('interstitial-menu', __( 'Interstitial Menu' ));
 }
 add_action('init', 'register_menus');
 
@@ -36,12 +39,29 @@ function setup_features() {
 add_action('init', 'setup_features');
 
 function setup_options() {
-	global $SHOW_CIRCLE;
+  global $SHOW_CIRCLE;
+  global $SITE_SECTION;
+  global $SHOW_NAVBAR;
+  global $SCROLL_LOCKED;
 	$SHOW_CIRCLE = true;
-	global $SHOW_NAVBAR;
 	$SHOW_NAVBAR = true;
-	global $SCROLL_LOCKED;
+  $SITE_SECTION = 'bfamfaphd';
 	$SCROLL_LOCKED = false;
 }
+
+function get_bfamfaphd_section_name(){
+  global $SITE_SECTION;
+  $NAMES = array(
+    'supply-chains' => 'Supply Chains',
+    'bfamfaphd' => 'BFAMFAPhD'
+  );
+  return $NAMES[$SITE_SECTION];
+};
+
+function get_bfamfaphd_section_slug(){
+  global $SITE_SECTION;
+  return $SITE_SECTION;
+};
+
 add_action('init', 'setup_options');
 
