@@ -1,16 +1,12 @@
 <?php global $SHOW_CIRCLE; ?>
 <div id="game">
 		<div id="cards">
-			<?php if(is_front_page()): ?>
-				<button id="drawCardsToggle" data-target="#drawCardsContainer" data-toggle="slide">
-					<span class="arrow">↓</span>
-					<span class="text">Project Ideas</span>
-					<span class="arrow">↓</span>
-				</button>
-			<?php endif; ?>
-			<div id="drawCardsContainer" class="slide 
-				<?php echo (is_front_page() ? '' : 'in') ?>
-				">
+      <button id="drawCardsToggle" data-target="#drawCardsContainer" data-toggle="slide">
+        <span class="arrow">↓</span>
+        <span class="text">Project Ideas</span>
+        <span class="arrow">↓</span>
+      </button>
+			<div id="drawCardsContainer" class="slide">
 				<div class="cardsWrapper">
 					<div class="cards">
 						<div class="card card-1">
