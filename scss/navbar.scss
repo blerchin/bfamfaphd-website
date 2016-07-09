@@ -30,7 +30,15 @@
 			cursor: pointer;
 			color: inherit;
 		}
-	}
+  }
+  .navbar-toggle {
+    position: absolute;
+    right: 0px;
+    top: -2px;
+    span.icon-bar {
+      background-color: $light-blue;
+    }
+  }
 
 	.navbar-logo {
 		position: absolute;

@@ -4,6 +4,7 @@
 	$bodyClassAddons = "";
 	$bodyClassAddons .= $SHOW_NAVBAR ? 'hasNavbar ' : 'hasNoNavbar ';
 	$bodyClassAddons .= $SCROLL_LOCKED ? 'scrollLocked ' : '';
+  $bodyClassAddons .= 'section-' . get_bfamfaphd_section_slug() . ' ';
 ?>
 <!DOCTYPE html>
 <html lang="en">

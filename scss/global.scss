@@ -35,28 +35,83 @@ body.scrollLocked {
 	background-repeat: no-repeat;
 	background-size: contain;
 }
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
-{
-	color: $black;
-	font-weight: 600;
-	&:hover {
-		color: $black;
-	}
-}
+.section-bfamfaphd {
+  h1, h2, h3, h4, h5, h6,
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+  label {
+    color: $violet;
+    font-weight: 400;
+    letter-spacing: 1px;
+    &:hover {
+      color: $violet;
+    }
+  }
+  h3 {
+    font-size: 28px;
+    line-height: 36px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  h3.lead {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  @media screen and (max-width: 768px) {
+    h3 {
+      font-size: 4vw;
+      line-height: 5vw;
+    }
+  }
+  h4, label, .btn {
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-h2 {
-	font-weight: 600;
-	font-size: 32px;
-}
+  body p {
+    color: $violet;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  input.form-control {
+    width: 100%;
+    border: 0px;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    border-bottom: 1px solid $light-blue;
+    color: $violet;
+  }
 
-h3 {
-	font-weight: 600;
-	font-size: 32px;
 }
+.section-supply-chains {
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+    color: $black;
+    font-weight: 600;
+    &:hover {
+      color: $black;
+    }
+  }
 
-body p {
-	font-size: 16px;
-	margin-bottom: 30px;
+  h2 {
+    font-weight: 600;
+    font-size: 32px;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 32px;
+  }
+
+  body p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
 }
 .slide {
 	transition: transform ease-in-out 500ms, opacity ease-in-out 500ms, height ease-in-out 500ms;

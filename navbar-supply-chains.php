@@ -4,7 +4,7 @@
       <a 	class="navbar-title"
           data-toggle="slide"
           data-target="#bfa-nav-main-menu">
-        <?php echo get_bfamfaphd_section_name(); ?>
+        Of Supply Chains
       </a>
 		</div>
     <div class="navbar-menu navbar-collapse collapse col-sm-4 col-sm-pull-4" id="bfa-nav-main-menu">

@@ -18,7 +18,7 @@ module.exports = {
 			{ test: /\.css$/,
 				loader: ExtractTextPlugin.extract(
 					'style-loader',
-					'css-loader')
+					'css-loader?sourceMap')
 			},
 			{ test: /\.js$/, 
 				loader: 'babel',

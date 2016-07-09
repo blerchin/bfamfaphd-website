@@ -4,8 +4,14 @@
       <a 	class="navbar-title"
           data-toggle="slide"
           data-target="#bfa-nav-main-menu">
-        <?php echo get_bfamfaphd_section_name(); ?>
+        BFAMFAPhD
       </a>
+       <button type="button" class="navbar-toggle collapsed" data-toggle="slide" data-target="#bfa-nav-main-menu" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
 		</div>
     <div class="navbar-menu navbar-collapse collapse col-sm-4 col-sm-pull-4"
          id="bfa-nav-main-menu">

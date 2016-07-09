@@ -1,0 +1,62 @@
+.section-bfamfaphd {
+  .mailchimp-form {
+    form {
+      margin-left: -15px;
+      margin-right: -15px;
+      display: block;
+    }
+    h4 {
+      color: $light-blue;
+    }
+    label {
+      font-size: 20px;
+      color: $light-blue;
+    }
+    .form-group {
+      display: block;
+      position: relative;
+      float: left;
+      width: 33%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .btn-subscribe {
+      background-color: transparent;
+      color: $light-blue;
+      box-shadow: none;
+      border: 0px;
+    }
+  }
+  .interstitial-module {
+    position: relative;
+    width: 100%;
+    background-color: $light-blue;
+    padding: 80px;
+    .supply-ring {
+      background-image: url('../assets/images/supply_chains_ring.png');
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 30vh;
+    }
+    h3, a, p {
+      color: $white;
+      max-width: 800px;
+    }
+    h3 a {
+      border-bottom: 2px solid $white;
+    }
+  }
+  @media screen and (min-width: 768px){
+    .interstitial-module {
+      padding-bottom: 210px;
+      .supply-ring {
+        position: absolute;
+        bottom: 80px;
+        right: 80px;
+        background-position: right;
+      }
+    }
+  }
+}

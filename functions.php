@@ -3,6 +3,8 @@
 require_once('includes/supply_chain_post_type.php');
 require_once('includes/card_post_type.php');
 require_once('includes/wp_bootstrap_navwalker.php');
+require_once('includes/mailchimp_form.php');
+require_once('includes/topic_post_type.php');
 
 function get_posts_json($post_type){
 	$posts = get_posts(array(
