@@ -1,32 +1,4 @@
 .section-bfamfaphd {
-  .mailchimp-form {
-    form {
-      margin-left: -15px;
-      margin-right: -15px;
-      display: block;
-    }
-    h4 {
-      color: $light-blue;
-    }
-    label {
-      font-size: 20px;
-      color: $light-blue;
-    }
-    .form-group {
-      display: block;
-      position: relative;
-      float: left;
-      width: 33%;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-    .btn-subscribe {
-      background-color: transparent;
-      color: $light-blue;
-      box-shadow: none;
-      border: 0px;
-    }
-  }
   .interstitial-module {
     position: relative;
     width: 100%;
@@ -48,7 +20,7 @@
       border-bottom: 2px solid $white;
     }
   }
-  @media screen and (min-width: 768px){
+  @media screen and (min-width: 1024px){
     .interstitial-module {
       padding-bottom: 210px;
       .supply-ring {
@@ -58,5 +30,9 @@
         background-position: right;
       }
     }
+  }
+  .projects {
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 }

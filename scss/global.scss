@@ -36,15 +36,17 @@ body.scrollLocked {
 	background-size: contain;
 }
 .section-bfamfaphd {
+  a,
+  a:hover {
+    font-weight: 500;
+    color: $violet;
+  }
   h1, h2, h3, h4, h5, h6,
   h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
   label {
     color: $violet;
     font-weight: 400;
     letter-spacing: 1px;
-    &:hover {
-      color: $violet;
-    }
   }
   h3 {
     font-size: 28px;
@@ -71,6 +73,10 @@ body.scrollLocked {
     margin-right: 0;
     padding-left: 0;
     padding-right: 0;
+  }
+  h5 {
+    font-size: 16px;
+    font-weight: 300;
   }
 
   body p {

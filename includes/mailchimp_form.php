@@ -1,7 +1,10 @@
 <?php
 add_shortcode( 'bfamfaphd_mailchimp_form', 'bfamfaphd_mailchimp_form_shortcode');
-    
 function bfamfaphd_mailchimp_form_shortcode($attr){ 
+  return bfamfaphd_mailchimp_form();
+}
+    
+function bfamfaphd_mailchimp_form(){ 
   return '
   <div id="mc_embed_signup" class="mailchimp-form">
   <h4>Join the BFAMFAPhD mailing list:</h4>
