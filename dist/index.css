@@ -95,14 +95,15 @@ body.scrollLocked .container {
   background-size: contain;
 }
 
+.section-bfamfaphd a, .section-bfamfaphd a:hover {
+  font-weight: 500;
+  color: #333366;
+}
+
 .section-bfamfaphd h1, .section-bfamfaphd h2, .section-bfamfaphd h3, .section-bfamfaphd h4, .section-bfamfaphd h5, .section-bfamfaphd h6, .section-bfamfaphd h1 a, .section-bfamfaphd h2 a, .section-bfamfaphd h3 a, .section-bfamfaphd h4 a, .section-bfamfaphd h5 a, .section-bfamfaphd h6 a, .section-bfamfaphd label {
   color: #333366;
   font-weight: 400;
   letter-spacing: 1px;
-}
-
-.section-bfamfaphd h1:hover, .section-bfamfaphd h2:hover, .section-bfamfaphd h3:hover, .section-bfamfaphd h4:hover, .section-bfamfaphd h5:hover, .section-bfamfaphd h6:hover, .section-bfamfaphd h1 a:hover, .section-bfamfaphd h2 a:hover, .section-bfamfaphd h3 a:hover, .section-bfamfaphd h4 a:hover, .section-bfamfaphd h5 a:hover, .section-bfamfaphd h6 a:hover, .section-bfamfaphd label:hover {
-  color: #333366;
 }
 
 .section-bfamfaphd h3 {
@@ -133,6 +134,11 @@ body.scrollLocked .container {
   margin-right: 0;
   padding-left: 0;
   padding-right: 0;
+}
+
+.section-bfamfaphd h5 {
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .section-bfamfaphd body p {
@@ -225,6 +231,7 @@ body.scrollLocked .container {
 
 .navbar.navbar-bfamfaphd li, .navbar.navbar-bfamfaphd li a, .navbar.navbar-bfamfaphd li.active a, .navbar.navbar-bfamfaphd a, .navbar.navbar-bfamfaphd a:hover {
   color: #3366ff;
+  font-weight: 300;
 }
 
 .navbar .container {
@@ -298,37 +305,6 @@ body.scrollLocked .container {
   text-align: center;
 }
 
-.section-bfamfaphd .mailchimp-form form {
-  margin-left: -15px;
-  margin-right: -15px;
-  display: block;
-}
-
-.section-bfamfaphd .mailchimp-form h4 {
-  color: #3366ff;
-}
-
-.section-bfamfaphd .mailchimp-form label {
-  font-size: 20px;
-  color: #3366ff;
-}
-
-.section-bfamfaphd .mailchimp-form .form-group {
-  display: block;
-  position: relative;
-  float: left;
-  width: 33%;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.section-bfamfaphd .mailchimp-form .btn-subscribe {
-  background-color: transparent;
-  color: #3366ff;
-  box-shadow: none;
-  border: 0px;
-}
-
 .section-bfamfaphd .interstitial-module {
   position: relative;
   width: 100%;
@@ -354,7 +330,7 @@ body.scrollLocked .container {
   border-bottom: 2px solid #ffffff;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .section-bfamfaphd .interstitial-module {
     padding-bottom: 210px;
   }
@@ -365,6 +341,11 @@ body.scrollLocked .container {
     right: 80px;
     background-position: right;
   }
+}
+
+.section-bfamfaphd .projects {
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .articles {
@@ -389,6 +370,36 @@ article .article-body {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.item {
+  position: relative;
+}
+
+.item.item-half, .item.item-third {
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.item .item-thumb {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid whitesmoke;
+}
+
+.item .item-thumb img {
+  height: 100%;
+  width: auto;
+}
+
+.item-list {
+  margin-left: -15px;
+  margin-right: -15px;
+  overflow: hidden;
 }
 
 article.item-full .article-body-wrapper {
@@ -539,6 +550,15 @@ article.item-half .more-link {
     width: auto;
     max-width: 100%;
   }
+}
+
+article.item-third {
+  width: 33%;
+  float: left;
+}
+
+article.item-third:nth-child(4) {
+  clear: left;
 }
 
 .video-placeholder {
@@ -924,6 +944,41 @@ article.item-half .more-link {
 
 .topics article.item-full:nth-child(even) p, .topics article.item-full:nth-child(even) h1, .topics article.item-full:nth-child(even) h2, .topics article.item-full:nth-child(even) h3, .topics article.item-full:nth-child(even) h4, .topics article.item-full:nth-child(even) h5, .topics article.item-full:nth-child(even) h6, .topics article.item-full:nth-child(even) ul li, .topics article.item-full:nth-child(even) hr {
   color: #3366ff;
+}
+
+.mailchimp-form {
+  overflow: hidden;
+}
+
+.mailchimp-form form {
+  margin-left: -15px;
+  margin-right: -15px;
+  display: block;
+}
+
+.mailchimp-form h4 {
+  color: #3366ff;
+}
+
+.mailchimp-form label {
+  font-size: 20px;
+  color: #3366ff;
+}
+
+.mailchimp-form .form-group {
+  display: block;
+  position: relative;
+  float: left;
+  width: 33%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.mailchimp-form .btn-subscribe {
+  background-color: transparent;
+  color: #3366ff;
+  box-shadow: none;
+  border: 0px;
 }
 
 
