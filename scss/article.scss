@@ -16,8 +16,10 @@ article {
         max-width: 700px;
         margin-left: auto;
         margin-right: auto;
-        padding-top: 26px;
-        padding-bottom: 30px;
+        // padding-top: 26px;
+        // padding-bottom: 30px;
+            padding-top: 46px;
+    padding-bottom: 50px;
     }
 }
 
@@ -83,7 +85,7 @@ article.item-full {
         margin-bottom: 10px;
     }
     .article-content p {
-        max-width: 560px; /*550px*/
+        max-width: 600px; /*550px*/
         // margin-bottom: 0;
     }
     .article-media {
