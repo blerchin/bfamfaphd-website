@@ -6,6 +6,10 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body.hasNavbar {
 	padding-top: 120px;
 }
@@ -54,13 +58,13 @@ body.scrollLocked {
   label {
     color: $violet;
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
   }
   h3 {
     font-size: 23px;
     line-height: 33px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 25px;
   }
   h3.lead {
     margin-top: 80px;

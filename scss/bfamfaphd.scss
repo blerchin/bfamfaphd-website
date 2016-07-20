@@ -1,9 +1,12 @@
 .section-bfamfaphd {
   .interstitial-module {
     position: relative;
-    width: 100%;
-    background-color: $light-blue;
+    width: auto;
     padding: 80px;
+    margin: 0 -600rem;
+    background: $light-blue;
+    border-left: 600rem solid $light-blue;
+    border-right: 600rem solid $light-blue;
     .supply-ring {
       background-image: url('../assets/images/supply_chains_ring.png');
       background-size: contain;
@@ -17,7 +20,8 @@
       max-width: 800px;
     }
     h3 a {
-      border-bottom: 2px solid $white;
+      border-bottom: 1px solid $white;
+      padding-bottom: 6px;
     }
   }
   @media screen and (min-width: 1024px){

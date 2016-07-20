@@ -2,13 +2,14 @@
 	font-size: 16px;
 	background-color: $white;
 	font-weight: 400;
-	padding-top: 20px;
-	padding-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 	margin-bottom: 0px;
 	color: $black;
+    border-bottom: 1px solid $light-blue;
   &.navbar-bfamfaphd {
     .container {
-      border-bottom: 1px solid $light-blue;
+      // border-bottom: 1px solid $light-blue;
     }
     li, li a, li.active a, a, a:hover {
       color: $light-blue;
@@ -21,12 +22,13 @@
 
 	.navbar-title {
 		display: block;
-		padding-top: 15px;
-		padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 0;
 		margin-left: auto;
 		margin-right: auto;
 		text-align: center;
-		text-decoration: underline;
+		// text-decoration: underline;
+		border-bottom: 1px solid $light-blue;
 		&:hover {
 			cursor: pointer;
 			color: inherit;
@@ -70,7 +72,8 @@
 		a:hover,
 		a:active,
 		a:focus {
-			text-decoration: underline;
+			// text-decoration: underline;
+					border-bottom: 1px solid $light-blue;
 			display: inline-block;
 			position: relative;
 			background-color: $white;
