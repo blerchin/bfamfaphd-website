@@ -29,9 +29,14 @@
                 padding-bottom: 0;
             }
         }
+        .nav > li > a {
+            padding: 0;
+            padding-top:10px;
+            margin-left: 15px;
+        }
         .container {
             position: relative;
-                padding-bottom: 8px;
+            padding-bottom: 8px;
         }
         .navbar-title {
             display: block;
