@@ -9,7 +9,7 @@
           </div>
         </div>
         <header class="article-header">
-          <h3><?php the_title() ?></h3>
+          <h4><?php the_title() ?></h4>
           <h5 class="author">
             <?php echo get_post_meta($post->ID, 'author', true); ?>
           </h5>
