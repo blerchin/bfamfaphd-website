@@ -1,6 +1,6 @@
 <?php 
-global $SUPPLY_MENU;
-$SUPPLY_MENU = true;
+global $SITE_SECTION;
+$SITE_SECTION = "supply-chains";
 global $SHOW_CIRCLE;
 $SHOW_CIRCLE = true;
 ?>

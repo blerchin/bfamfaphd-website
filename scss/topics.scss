@@ -1,0 +1,29 @@
+
+.topics {
+  article.item-full + article.item-full .article-body {
+    border-top: 1px solid $violet;
+  }
+  article.item-full {
+    hr {
+      margin-top: 40px;
+      margin-bottom: 10px;
+    }
+  }
+  article.item-full:nth-child(odd){ 
+    .article-body {
+      border-top-color: $violet !important;
+    }
+    p, h1, h2, h3, h4, h5, h6, ul li, hr {
+      color: $violet;
+    }
+  }
+  article.item-full:nth-child(even){ 
+    .article-body {
+      border-top-color: $light-blue !important;
+      color: $light-blue;
+    }
+    p, h1, h2, h3, h4, h5, h6, ul li, hr {
+      color: $light-blue;
+    }
+  }
+}

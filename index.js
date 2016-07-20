@@ -1,6 +1,8 @@
 require('./scss/fonts.scss');
 require('./scss/index.scss');
 require('bootstrap-webpack');
+//require('./src/js/jquery.form-n-validate');
+//require('./src/js/mailchimp');
 
 require('./src/js/collapse');
 
@@ -26,18 +28,20 @@ $(document).ready(function(){
 		});
 	}
 	var cardsContainer = document.getElementById('drawCardsContainer');
-	var cards = window.g.cards.map(function(card){
-		return {
-			key: card.post_name,
-			name: card.post_title,
-			imageSrc: card.post_thumbnail_uri,
-			excerpt: card.post_excerpt,
-			category: card.post_category
-		};
-	})
-	var cards = new Cards({
-		el: cardsContainer,
-		cards: cards,
-		order: window.g.supplyChains.map((c)=> c.post_title)
-	})
+  if(cardsContainer && window.g.cards){
+    var cards = window.g.cards.map(function(card){
+      return {
+        key: card.post_name,
+        name: card.post_title,
+        imageSrc: card.post_thumbnail_uri,
+        excerpt: card.post_excerpt,
+        category: card.post_category
+      };
+    })
+    var cards = new Cards({
+      el: cardsContainer,
+      cards: cards,
+      order: window.g.supplyChains.map((c)=> c.post_title)
+    })
+  }
 });
