@@ -14,7 +14,7 @@ $projects = new WP_Query(array(
           <div class="item-thumb">
             <?php the_post_thumbnail('large') ?>
           </div>
-          <h4><?php the_title() ?></h4>
+          <h5 class="project-title"><?php the_title() ?></h5>
           <h5 class="author">
             <?php echo get_post_meta($post->ID, 'author', true); ?>
           </h5>
