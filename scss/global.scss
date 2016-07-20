@@ -10,6 +10,12 @@ html, body {
   overflow-x: hidden;
 }
 
+body{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+}
+
 body.hasNavbar {
 	padding-top: 120px;
 }
@@ -78,7 +84,7 @@ body.scrollLocked {
   }
   h4, label, .btn {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 19px;
     margin-top: 20px;
     margin-bottom: 10px;
     margin-left: 0;
