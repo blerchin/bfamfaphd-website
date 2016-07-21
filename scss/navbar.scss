@@ -31,8 +31,9 @@
         }
         .nav > li > a {
             padding: 0;
-            padding-top:10px;
+            padding-top: 10px;
             margin-left: 15px;
+            border-bottom: 1px solid transparent;
         }
         .container {
             position: relative;
@@ -47,8 +48,8 @@
             text-align: center;
             // text-decoration: underline;
             // border-bottom: 1px solid $light-blue;
-            width: 95px; // To allow the underline to be the correct size - is there a better way to do this?!?
-                border-bottom: 1px solid $light-blue;
+            // width: 95px; // To allow the underline to be the correct size - is there a better way to do this?!?
+            border-bottom: 1px solid $light-blue;
             &:hover {
                 cursor: pointer;
                 color: inherit;
@@ -68,6 +69,9 @@
             right: 15px;
             top: 0px;
             text-align: right;
+        }
+        a.navbar-logo:hover {
+            border-bottom: none;
         }
         .navbar-interstitial {
             float: right;
