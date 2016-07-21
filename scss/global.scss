@@ -73,7 +73,7 @@ body.scrollLocked {
 .section-bfamfaphd {
     a,
     a:hover {
-        font-weight: 500;
+        // font-weight: 500;
         color: $violet;
     }
     h1,
@@ -123,7 +123,7 @@ body.scrollLocked {
     label,
     .btn {
         font-weight: 400;
-        font-size: 19px;
+        font-size: 16px;
         margin-top: 20px;
         margin-bottom: 10px;
         margin-left: 0;
@@ -132,7 +132,7 @@ body.scrollLocked {
         padding-right: 0;
     }
     h5 {
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 400;
     }
     body p {
@@ -148,6 +148,9 @@ body.scrollLocked {
         padding: 0;
         border-bottom: 1px solid $light-blue;
         color: $violet;
+        font-size: 15px;
+        line-height: 22px;
+        height: 30px;
     }
 }
 
