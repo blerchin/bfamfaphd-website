@@ -48,10 +48,11 @@
             // text-decoration: underline;
             // border-bottom: 1px solid $light-blue;
             width: 95px; // To allow the underline to be the correct size - is there a better way to do this?!?
+                border-bottom: 1px solid $light-blue;
             &:hover {
                 cursor: pointer;
                 color: inherit;
-                border-bottom: 1px solid $light-blue;
+                // border-bottom: 1px solid $light-blue;
             }
         }
         .navbar-toggle {
