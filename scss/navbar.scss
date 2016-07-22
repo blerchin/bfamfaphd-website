@@ -1,87 +1,112 @@
-.navbar {
-	font-size: 16px;
-	background-color: $white;
-	font-weight: 300;
-	padding-top: 20px;
-	padding-bottom: 0px;
-	margin-bottom: 0px;
-	color: $black;
-  &.navbar-bfamfaphd {
-    .container {
-      border-bottom: 1px solid $light-blue;
+    .navbar {
+        font-size: 16px;
+        background-color: $white;
+        font-weight: 400;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 0px;
+        color: $black;
+        border-bottom: 1px solid $light-blue;
+        &.navbar-bfamfaphd {
+            .container {
+                // border-bottom: 1px solid $light-blue;
+            }
+            li,
+            li a,
+            li.active a,
+            a,
+            a:hover {
+                color: $light-blue;
+                font-weight: 400;
+            }
+        }
+        a:hover {
+            text-decoration: none;
+        }
+        .navbar-nav {
+            li > a {
+                padding-top: 10px;
+                padding-bottom: 0;
+            }
+        }
+        .nav > li > a {
+            padding: 0;
+            padding-top: 10px;
+            margin-left: 15px;
+            border-bottom: 1px solid transparent;
+        }
+        .container {
+            position: relative;
+            padding-bottom: 8px;
+        }
+        .navbar-title {
+            display: block;
+            padding-top: 10px;
+            padding-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            // text-decoration: underline;
+            // border-bottom: 1px solid $light-blue;
+            // width: 95px; // To allow the underline to be the correct size - is there a better way to do this?!?
+            border-bottom: 1px solid $light-blue;
+            &:hover {
+                cursor: pointer;
+                color: inherit;
+                // border-bottom: 1px solid $light-blue;
+            }
+        }
+        .navbar-toggle {
+            position: absolute;
+            right: 0px;
+            top: -2px;
+            span.icon-bar {
+                background-color: $light-blue;
+            }
+        }
+        .navbar-logo {
+            position: absolute;
+            right: 15px;
+            top: 0px;
+            text-align: right;
+        }
+        a.navbar-logo:hover {
+            border-bottom: none;
+        }
+        .navbar-interstitial {
+            float: right;
+            ul,
+            ul li {
+                float: right;
+            }
+            text-align: right;
+        }
+        ul.navbar-nav {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        a {
+            color: $black;
+            font-size: 16px;
+        }
+        ul li {
+            &.active a,
+            a:hover,
+            a:active,
+            a:focus {
+                // text-decoration: underline;
+                border-bottom: 1px solid $light-blue;
+                display: inline-block;
+                position: relative;
+                background-color: $white;
+                color: $black;
+            }
+        }
+        .navbar-header a.navbar-brand {
+            display: block;
+            float: none;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
     }
-    li, li a, li.active a, a, a:hover {
-      color: $light-blue;
-      font-weight: 300;
-    }
-  }
-	.container {
-		position: relative;
-	}
-
-	.navbar-title {
-		display: block;
-		padding-top: 15px;
-		padding-bottom: 15px;
-		margin-left: auto;
-		margin-right: auto;
-		text-align: center;
-		text-decoration: underline;
-		&:hover {
-			cursor: pointer;
-			color: inherit;
-		}
-  }
-  .navbar-toggle {
-    position: absolute;
-    right: 0px;
-    top: -2px;
-    span.icon-bar {
-      background-color: $light-blue;
-    }
-  }
-
-	.navbar-logo {
-		position: absolute;
-		right: 15px;
-		top: 0px;
-		text-align: right;
-	}
-
-  .navbar-interstitial {
-    float: right;
-    ul, ul li {
-      float: right;
-    }
-    text-align: right;
-  }
-
-	ul.navbar-nav {
-		margin-left: -15px;
-		margin-right: -15px;
-	}
-
-	a {
-		color: $black;
-		font-size: 16px;
-	}
-	ul li {
-		&.active a,
-		a:hover,
-		a:active,
-		a:focus {
-			text-decoration: underline;
-			display: inline-block;
-			position: relative;
-			background-color: $white;
-			color: $black;
-		}
-	}
-	.navbar-header a.navbar-brand {
-		display: block;
-		float: none;
-		margin-left: auto;
-		margin-right: auto;
-		text-align: center;
-	}
-}
