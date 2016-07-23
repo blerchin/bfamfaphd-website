@@ -1,6 +1,6 @@
 <?php
 $topics = new WP_Query(array(
-  'post_type'=> 'topic',
+  'post_type'=> 'fp_topic',
   'orderby' => 'menu_order',
   'order' => 'ASC'
 
@@ -9,7 +9,9 @@ $topics = new WP_Query(array(
 <div class="topics">
   <?php if($topics->have_posts()): ?>
     <?php while($topics->have_posts()): $topics->the_post(); ?>
-      <article <?php post_class('item item-full') ?> id="topic-home">
+      <?php global $post; $slug = $post->post_name; ?>
+      <article <?php post_class('item item-full') ?> id="topic-<?php echo $slug; ?>">
+        <a name="topic-<?php echo $slug; ?>"></a>
         <div class="article-body-wrapper">
           <div class="article-body">
             <div class="feature-wrapper">

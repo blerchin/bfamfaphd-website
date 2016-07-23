@@ -1,11 +1,35 @@
+<?php
+function supply_chains_menu($ul_class){
+	global $post;
+	?>
+	<?php $supplyChains = new WP_Query('post_type=supply_chain'); ?>
+	<?php if($supplyChains->have_posts()): ?>
+		<ul id="menu-supply-chains-menu" class="<?php echo $ul_class; ?>">
+		<?php while($supplyChains->have_posts()): $supplyChains->the_post(); ?>
+			<?php $post_color = get_post_meta($post->ID, 'color', true); ?>
+			<li <?php post_class('menu-item')?>>
+				<a href="<?php the_permalink() ?>" style="color: <?php echo $post_color; ?>;">
+					<?php the_title(); ?>
+				</a>
+			</li>
+		<?php endwhile; ?>
+		</ul>
+	<?php endif; ?>
+<?php
+}
+?>
+
 <nav class="navbar navbar-fixed-top navbar-supply-chains">
 	<div class="container">
 		<div class="navbar-header col-sm-4 col-sm-push-4">
-      <a 	class="navbar-title"
-          data-toggle="slide"
-          data-target="#bfa-nav-main-menu">
-        Of Supply Chains
-      </a>
+			<div class="navbar-title-wrap">
+	      <a 	class="navbar-title"
+						href="#"
+	          data-toggle="slide"
+	          data-target="#bfa-nav-main-menu">
+	        Of Supply Chains
+	      </a>
+			</div>
 		</div>
     <div class="navbar-menu navbar-collapse collapse col-sm-4 col-sm-pull-4" id="bfa-nav-main-menu">
       <?php wp_nav_menu( array(
@@ -17,7 +41,9 @@
         'fallback_cb'			=> 'wp_bootstrap_navwalker::fallback',
         'walker'					=> new wp_bootstrap_navwalker()
       ))?>
-      <?php wp_nav_menu( array(
+      <?php
+				supply_chains_menu('nav navbar-nav visible-xs');
+			/*wp_nav_menu( array(
         'theme-location' 	=> 'supply-chains-menu',
         'menu'						=> 'supply-chains-menu',
         'menu_id'					=> '',
@@ -25,16 +51,23 @@
         'container' 			=> '',
         'fallback_cb'			=> 'wp_bootstrap_navwalker::fallback',
         'walker'					=> new wp_bootstrap_navwalker()
-      ))?>
+      ))*/?>
     </div>
     <a class="navbar-logo col-sm-1">
-      <span class="dots-logo"></span>
+      <span class="dots-logo"
+          data-toggle="slide"
+          data-target="#bfa-nav-main-menu"
+					>
+			</span>
     </a>
   </div>
   <div class="container">
-    <div  class="navbar-supply-chains hidden-xs" 
+    <div  class="navbar-supply-chains hidden-xs"
           id="bfa-nav-main-menu">
-      <?php wp_nav_menu( array(
+			<?php
+				supply_chains_menu('nav navbar-nav');
+				/*
+      wp_nav_menu( array(
         'theme-location' 	=> 'supply-chains-menu',
         'menu'						=> 'supply-chains-menu',
         'menu_id'					=> '',
@@ -42,7 +75,9 @@
         'container' 			=> '',
         'fallback_cb'			=> 'wp_bootstrap_navwalker::fallback',
         'walker'					=> new wp_bootstrap_navwalker()
-      ))?>
+      ))
+			*/
+			?>
     </div>
   </div>
 </nav>

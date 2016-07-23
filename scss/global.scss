@@ -51,23 +51,16 @@ body.scrollLocked {
 @media screen and (max-width: 769px) {
     body,
     body.home {
-        padding-top: 20px;
+        padding-top: 40px;
     }
 }
 
-.container {
+.container, .container-fluid {
     font-family: 'Work Sans', Verdana, sans-serif;
     color: $black;
-    max-width: 1200px;
 }
-
-.dots-logo {
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-    background-image: url('../assets/images/dots.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
+.container {
+    max-width: 1200px;
 }
 
 .section-bfamfaphd {

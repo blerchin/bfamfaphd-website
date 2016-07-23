@@ -3,8 +3,9 @@ $(document).ready(function(){
 	for(var i=0; i<slide.length; i++){
 		slide[i].addEventListener('click', function(evt){
 			console.log(this);
-			var $button = $(this);
-			var target = document.querySelector(this.getAttribute('data-target'));
+			var id = this.getAttribute('data-target');
+			var $button = $(`[data-target='${id}']`);
+			var target = document.querySelector(id);
 			var $target = $(target);
 			if($target.hasClass('in')){
 				$target.removeClass('in');
