@@ -1,4 +1,4 @@
-<?php 
+<?php
 global $SITE_SECTION;
 $SITE_SECTION = "supply-chains";
 global $SHOW_CIRCLE;
@@ -6,10 +6,12 @@ $SHOW_CIRCLE = true;
 ?>
 	<?php get_header(); ?>
 	<?php if (have_posts() ) : while ( have_posts() ) : the_post(); ?>
-		<?php 
+		<?php
 			$post_color = get_post_meta($post->ID, 'color');
 			if($post_color){
 				$post_color = $post_color[0];
+				$rgb = hex2rgb($post_color);
+				$post_color = 'rgba('.$rgb['red'].','.$rgb['green'].','.$rgb['blue'].',.1)';
 			}
 
 			$lead_image = get_field('lead_image');
