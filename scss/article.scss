@@ -194,12 +194,13 @@ article.item-half {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
     .item.item-half,
     .item.item-third {
         margin-right: 0px;
         margin-left: 0px;
-        width: 100%;
+        width: auto;
+        max-width: 100%;
     }
 }
 

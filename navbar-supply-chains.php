@@ -8,7 +8,8 @@ function supply_chains_menu($ul_class){
 		<?php while($supplyChains->have_posts()): $supplyChains->the_post(); ?>
 			<?php $post_color = get_post_meta($post->ID, 'color', true); ?>
 			<li <?php post_class('menu-item')?>>
-				<a href="<?php the_permalink() ?>" style="color: <?php echo $post_color; ?>;">
+				<a href="<?php the_permalink() ?>"
+					style="color: <?php echo $post_color; ?>; border-color: <?php echo $post_color; ?>;">
 					<?php the_title(); ?>
 				</a>
 			</li>
@@ -21,12 +22,10 @@ function supply_chains_menu($ul_class){
 
 <nav class="navbar navbar-fixed-top navbar-supply-chains">
 	<div class="container">
-		<div class="navbar-header col-sm-4 col-sm-push-4">
+		<div class="navbar-header col-sm-4 col-sm-push-4"G>
 			<div class="navbar-title-wrap">
 	      <a 	class="navbar-title"
-						href="#"
-	          data-toggle="slide"
-	          data-target="#bfa-nav-main-menu">
+						href="#page-supply-chains">
 	        Of Supply Chains
 	      </a>
 			</div>
@@ -54,16 +53,21 @@ function supply_chains_menu($ul_class){
       ))*/?>
     </div>
     <a class="navbar-logo col-sm-1">
-      <span class="dots-logo"
+      <span class="dots-logo visible-xs"
           data-toggle="slide"
           data-target="#bfa-nav-main-menu"
+					>
+			</span>
+      <span class="dots-logo hidden-xs"
+          data-toggle="slide"
+          data-target="#bfa-nav-chain-menu"
 					>
 			</span>
     </a>
   </div>
   <div class="container">
-    <div  class="navbar-supply-chains hidden-xs"
-          id="bfa-nav-main-menu">
+    <div  class="navbar-supply-chains hidden-xs collapse"
+          id="bfa-nav-chain-menu">
 			<?php
 				supply_chains_menu('nav navbar-nav');
 				/*

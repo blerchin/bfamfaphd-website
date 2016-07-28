@@ -2,9 +2,7 @@
 	<div class="container-fluid">
 		<div class="navbar-header col-md-2 col-md-push-5">
 			<div class="navbar-title-wrap">
-	      <a 	class="navbar-title"
-	          data-toggle="slide"
-	          data-target="#bfa-nav-main-menu">
+	      <a 	class="navbar-title" href="#topic-home">
 	        BFAMFAPhD
 	      </a>
 			 </div>

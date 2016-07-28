@@ -2,10 +2,12 @@
         font-size: 16px;
         background-color: $white;
         font-weight: 400;
-        padding-top: 10px;
-        padding-bottom: 10px;
         margin-bottom: 0px;
         color: $black;
+        .container {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
         ul li {
             &.active a,
             a:hover,
@@ -21,11 +23,31 @@
         }
         &.navbar-supply-chains {
             li.active a,
-            a:hover {
+            a:hover, a:active, a:visited, a:focus {
               border-bottom: 1px solid $black;
             }
             a.navbar-title {
-              border-bottom: 1px solid $black;
+              border-width: 0px !important;
+            }
+            #menu-supply-chains-menu {
+              li a {
+                border-width: 0px;
+                &:hover, &:active, &:visited, &:focus {
+                  border-width: 1px;
+                }
+              }
+            }
+            #bfa-nav-chain-menu {
+              &.collapse {
+                display: block;
+                transform: scaleY(0);
+                transition: transform 500ms ease-in-out;
+                &.in {
+                  transform: scaleY(1);
+                }
+              }
+
+
             }
         }
         &.navbar-bfamfaphd {
@@ -35,7 +57,7 @@
                 // border-bottom: 1px solid $light-blue;
             }
             a.navbar-title {
-              border-bottom: 1px solid $light-blue;
+              border-width: 0px !important;
             }
             li,
             li a,
@@ -116,6 +138,7 @@
             margin: 0 0;
             padding: 20px 0;
             background: $white;
+            max-height: 95%;
             position: fixed;
             left: 0;
             width: 100%;
@@ -149,14 +172,15 @@
             right: 0px;
             top: -2px;
             span.icon-bar {
-                background-color: $light-blue;
+              background-color: $light-blue;
             }
         }
         .navbar-logo {
             position: absolute;
             right: 15px;
-            top: 0px;
+            top: 5px;
             text-align: right;
+            cursor: pointer;
         }
         a.navbar-logo:hover {
             border-bottom: none;
