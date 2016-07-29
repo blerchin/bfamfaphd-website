@@ -72,7 +72,6 @@ body {
 
 a:hover, a:focus {
   text-decoration: none;
-  border-bottom: 1px solid #3366ff;
 }
 
 p {
@@ -80,7 +79,7 @@ p {
 }
 
 body.hasNavbar {
-  padding-top: 120px;
+  padding-top: 50px;
 }
 
 body.home {
@@ -116,8 +115,9 @@ body.scrollLocked .container {
   max-width: 1200px;
 }
 
-.section-bfamfaphd a, .section-bfamfaphd a:hover {
+.section-bfamfaphd a, .section-bfamfaphd a:hover, .section-bfamfaphd a:focus {
   color: #333366;
+  border-bottom: 1px solid #333366;
 }
 
 .section-bfamfaphd h1, .section-bfamfaphd h2, .section-bfamfaphd h3, .section-bfamfaphd h4, .section-bfamfaphd h5, .section-bfamfaphd h6, .section-bfamfaphd h1 a, .section-bfamfaphd h2 a, .section-bfamfaphd h3 a, .section-bfamfaphd h4 a, .section-bfamfaphd h5 a, .section-bfamfaphd h6 a, .section-bfamfaphd label {
@@ -231,6 +231,10 @@ body.scrollLocked .container {
   -webkit-transform: none;
           transform: none;
   opacity: 1;
+}
+
+iframe {
+  display: block;
 }
 
 @media screen and (max-width: 769px) {
@@ -583,6 +587,10 @@ body.scrollLocked .container {
   }
 }
 
+.section-bfamfaphd .topics article.item-full#topic-events p, .section-bfamfaphd .topics article.item-full#topic-events h1, .section-bfamfaphd .topics article.item-full#topic-events h2, .section-bfamfaphd .topics article.item-full#topic-events h3, .section-bfamfaphd .topics article.item-full#topic-events h4, .section-bfamfaphd .topics article.item-full#topic-events h5, .section-bfamfaphd .topics article.item-full#topic-events h6, .section-bfamfaphd .topics article.item-full#topic-events li, .section-bfamfaphd .topics article.item-full#topic-events a {
+  color: #333366;
+}
+
 .section-bfamfaphd ul.ecs-event-list {
   margin: 20px 0;
 }
@@ -603,11 +611,6 @@ body.scrollLocked .container {
 
 .section-bfamfaphd ul.ecs-event-list li.ecs-event h4.entry-title {
   margin-bottom: 2px;
-}
-
-.section-bfamfaphd ul.ecs-event-list li.ecs-event h4.entry-title a {
-  font-weight: 500;
-  border-color: #333366;
 }
 
 .section-bfamfaphd ul.ecs-event-list li.ecs-event p.ecs-excerpt {
@@ -673,7 +676,7 @@ article .article-body {
   float: left;
 }
 
-.item.item-third:nth-child(4) {
+.item.item-third:nth-child(3n+1) {
   clear: left;
 }
 
