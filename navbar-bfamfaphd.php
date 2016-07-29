@@ -2,7 +2,7 @@
 	<div class="container-fluid">
 		<div class="navbar-header col-md-2 col-lg-push-5">
 			<div class="navbar-title-wrap">
-	      <a 	class="navbar-title" href="#topic-home">
+	      <a 	class="navbar-title" href="/#topic-home">
 	        BFAMFAPhD
 	      </a>
 			 </div>

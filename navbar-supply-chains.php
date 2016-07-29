@@ -25,7 +25,7 @@ function supply_chains_menu($ul_class){
 		<div class="navbar-header col-sm-4 col-sm-push-4"G>
 			<div class="navbar-title-wrap">
 	      <a 	class="navbar-title"
-						href="#page-supply-chains">
+						href="/#page-supply-chains">
 	        Of Supply Chains
 	      </a>
 			</div>
