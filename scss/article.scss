@@ -1,26 +1,26 @@
 .articles {
-    margin-left: -15px;
-    margin-right: -15px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 article {
-    padding: 0px 0px;
-    &:first-child {
-        clear: both;
-    }
-    header.article-header {
-        margin-top: 60px;
-        margin-bottom: 40px;
-    }
-    .article-body {
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-        // padding-top: 26px;
-        // padding-bottom: 30px;
-        padding-top: 46px;
-        padding-bottom: 50px;
-    }
+  padding: 0px 0px;
+  &:first-child {
+    clear: both;
+  }
+  header.article-header {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+  .article-body {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    // padding-top: 26px;
+    // padding-bottom: 30px;
+    padding-top: 46px;
+    padding-bottom: 50px;
+  }
 }
 
 .item {
@@ -35,7 +35,7 @@ article {
     &.item-third {
         width: 33%;
         float: left;
-        &:nth-child(4) {
+        &:nth-child(3n+1) {
             clear: left;
         }
     }

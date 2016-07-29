@@ -48,6 +48,11 @@
       margin-left: -15%;
     }
   }
+  .topics article.item-full#topic-events {
+    p,h1,h2,h3,h4,h5,h6,li, a {
+      color: $violet;
+    }
+  }
   ul.ecs-event-list {
     li.ecs-event {
       list-style: none;
@@ -61,10 +66,6 @@
       }
       h4.entry-title{
         margin-bottom: 2px;
-        a {
-          font-weight: 500;
-          border-color: $violet;
-        }
       }
       p.ecs-excerpt {
         margin-bottom: 2px;

@@ -1,4 +1,4 @@
-<?php 
+<?php
 global $SITE_SECTION;
 $SITE_SECTION = "supply-chains";
 global $SHOW_CIRCLE;
@@ -15,9 +15,6 @@ $SHOW_CIRCLE = true;
 			</div>
 		<?php endwhile; ?>
 		<?php endif; ?>
-	</div>
-	<div class="articles">
-		<?php get_template_part('articles/supply-chain-list'); ?>
 	</div>
 </div>
 <?php get_footer(); ?>

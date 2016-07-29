@@ -15,7 +15,7 @@
 		</div>
     <div class="navbar-menu col-md-6 col-lg-pull-2"
          id="bfa-nav-main-menu">
-			<?php $nav = new WP_Query('post_type=fp_topic&order=ASC'); ?>
+			<?php $nav = new WP_Query('post_type=fp_topic&order=ASC&orderby=menu_order'); ?>
 			<div class="nav navbar-nav">
 				<?php while( $nav->have_posts() ): $nav->the_post() ?>
 					<?php global $post; $slug = $post->post_name; ?>
