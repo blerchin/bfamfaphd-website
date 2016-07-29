@@ -1,6 +1,6 @@
 <nav class="navbar navbar-fixed-top navbar-bfamfaphd ?>">
 	<div class="container-fluid">
-		<div class="navbar-header col-md-2 col-md-push-5">
+		<div class="navbar-header col-md-2 col-lg-push-5">
 			<div class="navbar-title-wrap">
 	      <a 	class="navbar-title" href="#topic-home">
 	        BFAMFAPhD
@@ -13,7 +13,7 @@
         <span class="icon-bar"></span>
       </button>
 		</div>
-    <div class="navbar-menu col-md-5 col-md-pull-2"
+    <div class="navbar-menu col-md-6 col-lg-pull-2"
          id="bfa-nav-main-menu">
 			<?php $nav = new WP_Query('post_type=fp_topic&order=ASC'); ?>
 			<div class="nav navbar-nav">
@@ -32,7 +32,7 @@
         'walker'					=> new wp_bootstrap_navwalker()
       ))?>
     </div>
-    <div class="navbar-interstitial col-md-5 hidden-xs">
+    <div class="navbar-interstitial col-md-4 hidden-xs">
       <?php wp_nav_menu( array(
         'theme-location' 	=> 'interstitial-menu',
         'menu'						=> 'interstitial-menu',

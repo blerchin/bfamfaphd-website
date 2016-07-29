@@ -3,52 +3,69 @@
         background-color: $white;
         font-weight: 400;
         margin-bottom: 0px;
+        padding-top: 10px;
+        padding-bottom: 0px;
         color: $black;
         .container {
           padding-top: 10px;
           padding-bottom: 10px;
         }
         ul li {
-            &.active a,
-            a:hover,
-            a:active,
-            a:focus {
-                // text-decoration: underline;
-                border-bottom: 1px solid $light-blue;
-                display: inline-block;
-                position: relative;
-                background-color: $white;
-                color: $black;
-            }
+          &.active a,
+          a:hover,
+          a:active,
+          a:focus {
+            // text-decoration: underline;
+            border-bottom: 1px solid $light-blue;
+            display: inline-block;
+            position: relative;
+            background-color: $white;
+            color: $black;
+          }
         }
         &.navbar-supply-chains {
-            li.active a,
-            a:hover, a:active, a:visited, a:focus {
-              border-bottom: 1px solid $black;
-            }
-            a.navbar-title {
-              border-width: 0px !important;
-            }
-            #menu-supply-chains-menu {
-              li a {
-                border-width: 0px;
-                &:hover, &:active, &:visited, &:focus {
-                  border-width: 1px;
-                }
+          height: 60px;
+          li.active a,
+          a:hover, a:active, a:visited, a:focus {
+            border-bottom: 1px solid $black;
+          }
+          a.navbar-title {
+            border-width: 0px !important;
+          }
+          .container {
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+          }
+          #menu-supply-chains-menu {
+            li a {
+              border-width: 0px;
+              &:hover, &:active, &:visited, &:focus {
+                border-width: 1px;
               }
             }
-            #bfa-nav-chain-menu {
-              &.collapse {
-                display: block;
-                transform: scaleY(0);
-                transition: transform 500ms ease-in-out;
-                &.in {
-                  transform: scaleY(1);
-                }
-              }
-
-
+          }
+          #bfa-nav-chain-menu {
+            overflow: hidden;
+            background-color: $white;
+            ul {
+              margin-top: 10px;
+              margin-bottom: 20px;
+              overflow: hidden;
             }
+            &.collapse {
+              display: block;
+              transform: scaleY(0);
+              transition: transform 500ms ease-in-out;
+              transform-origin: top;
+              &.in {
+                transform: scaleY(1);
+              }
+            }
+
+
+          }
         }
         &.navbar-bfamfaphd {
             border-bottom: 1px solid $light-blue;
@@ -151,7 +168,6 @@
             }
             .navbar-nav {
               margin: 0px;
-
             }
             li {
               height: 60px;
@@ -168,19 +184,20 @@
           }
         }
         .navbar-toggle {
-            position: absolute;
-            right: 0px;
-            top: -2px;
-            span.icon-bar {
-              background-color: $light-blue;
-            }
+          position: absolute;
+          right: 0px;
+          top: -2px;
+          span.icon-bar {
+            background-color: $light-blue;
+          }
         }
         .navbar-logo {
-            position: absolute;
-            right: 15px;
-            top: 5px;
-            text-align: right;
-            cursor: pointer;
+          position: absolute;
+          right: 15px;
+          top: 5px;
+          text-align: right;
+          cursor: pointer;
+          z-index: 99;
         }
         a.navbar-logo:hover {
             border-bottom: none;
@@ -209,9 +226,11 @@
             text-align: center;
         }
         .dots-logo {
+            position: relative;
+            top: -5px;
             display: inline-block;
-            height: 50px;
-            width: 50px;
+            height: 40px;
+            width: 40px;
             background-image: url('../assets/images/dots.svg');
             background-repeat: no-repeat;
             background-size: contain;
