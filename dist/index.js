@@ -94,7 +94,21 @@
 				})
 			});
 		}
+		$(window).resize(resizeIframe);
+		resizeIframe();
 	});
+	
+	function resizeIframe() {
+		var iframes = document.getElementsByTagName('iframe');
+		for (var i = 0; i < iframes.length; i++) {
+			var o = iframes[i];
+			if (/vimeo/.test(o.getAttribute('src'))) {
+				var ratio = o.getAttribute('width') / o.getAttribute('height');
+				o.setAttribute('width', o.parentNode.offsetWidth);
+				o.setAttribute('height', o.parentNode.offsetWidth / ratio);
+			}
+		}
+	}
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(70)))
 
 /***/ },
@@ -12907,7 +12921,7 @@
 	
 	var Circle = function Circle(attr) {
 		this.el = attr.el;
-		this.padding = attr.padding || 100;
+		this.padding = attr.padding || 100; //this.getDefaultPadding();
 		this.items = attr.items;
 		this.currentItem = this.items[0];
 		this.setup();
@@ -12918,6 +12932,11 @@
 	Circle.prototype.onResize = function () {
 		this.setup();
 		this.draw();
+	};
+	
+	Circle.prototype.getDefaultPadding = function () {
+		var small = window.offsetWidth < 481 || window.offsetHeight < 481;
+		return small > 480 ? 100 : 50;
 	};
 	
 	Circle.prototype.setup = function () {
