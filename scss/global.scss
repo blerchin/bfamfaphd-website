@@ -53,6 +53,10 @@ body.scrollLocked {
     padding-top: 40px;
   }
 }
+.page {
+  margin-bottom: 40px;
+
+}
 
 .container, .container-fluid {
   font-family: 'Work Sans', Verdana, sans-serif;
@@ -60,6 +64,22 @@ body.scrollLocked {
 }
 .container {
   max-width: 1200px;
+}
+.btn {
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+h4,
+label,
+h5 {
+  font-size: 15px;
+  font-weight: 400;
 }
 
 .section-bfamfaphd {
@@ -112,38 +132,10 @@ body.scrollLocked {
       line-height: 5vw;
     }
   }
-  h4,
-  label,
-  .btn {
-    font-weight: 400;
-    font-size: 16px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  h5 {
-    font-size: 15px;
-    font-weight: 400;
-  }
   body p {
     color: $violet;
     font-size: 16px;
     margin-bottom: 30px;
-  }
-  input.form-control {
-    width: 100%;
-    border: 0px;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
-    border-bottom: 1px solid $light-blue;
-    color: $violet;
-    font-size: 15px;
-    line-height: 22px;
-    height: 30px;
   }
 }
 
@@ -156,6 +148,7 @@ body.scrollLocked {
   h6 a {
     color: $black;
     font-weight: 600;
+    border-width: 0px;
     &:hover {
         color: $black;
     }
@@ -168,9 +161,24 @@ body.scrollLocked {
     font-weight: 600;
     font-size: 32px;
   }
-  body p {
+  a,
+  p a {
+    color: $black;
+    border-bottom: 1px solid $black;
+  }
+  a.more-link {
+    border-bottom-width: 0px;
+  }
+  p {
     font-size: 16px;
+    line-height: 24px;
     margin-bottom: 30px;
+  }
+  article.item-half p{
+    line-height: 22px;
+  }
+  article.item-third p{
+    line-height: 22px;
   }
 }
 
@@ -191,20 +199,15 @@ iframe {
   display: block;
 }
 
-@media screen and (max-width: 769px) {
-    /*
-  .slide,
-  .slide.lg-in {
-    top: 0;
-    transform: translateY(-150%);
-    opacity: 0;
-    display: none;
-  }
-  .slide.in{
-    display: block;
-    transform: none;
-    height: auto;
-    opacity: 1;
-  }
-  */
+input.form-control {
+  width: 100%;
+  border: 0px;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  border-bottom: 1px solid $light-blue;
+  color: $violet;
+  font-size: 15px;
+  line-height: 22px;
+  height: 30px;
 }

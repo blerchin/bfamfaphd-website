@@ -44,4 +44,19 @@ $(document).ready(function(){
       order: window.g.supplyChains.map((c)=> c.post_title)
     })
   }
+	$(window).resize(resizeIframe)
+	resizeIframe()
+
 });
+
+function resizeIframe(){
+	var iframes = document.getElementsByTagName('iframe');
+	for (let i=0; i<iframes.length; i++) {
+		let o = iframes[i]
+	  if(/vimeo/.test(o.getAttribute('src'))){
+			let ratio = o.getAttribute('width') / o.getAttribute('height')
+			o.setAttribute('width', o.parentNode.offsetWidth)
+			o.setAttribute('height', o.parentNode.offsetWidth / ratio)
+		}
+	}
+}

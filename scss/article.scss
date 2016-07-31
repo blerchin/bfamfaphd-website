@@ -29,8 +29,6 @@ article {
     &.item-third {
         padding-right: 15px;
         padding-left: 15px;
-        padding-top: 15px;
-        padding-bottom: 15px;
     }
     &.item-third {
         width: 33%;
@@ -172,8 +170,20 @@ article.item-half {
     overflow: hidden;
     padding-left: 15px;
     padding-right: 15px;
+    margin-top: 60px;
+    margin-bottom: 20px;
     &:nth-child(odd) {
         clear: left;
+    }
+    header.article-header {
+      margin-bottom: 20px;
+      margin-top: 0px;
+    }
+    .article-body {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
     .article-body-wrapper {
         width: 100%;

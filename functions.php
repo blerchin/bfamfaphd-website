@@ -13,6 +13,8 @@ require_once('includes/of_supply_chains_interstitial.php');
 function get_posts_json($post_type){
 	$posts = get_posts(array(
 			'post_type' => $post_type,
+			'orderby' => 'menu_order',
+			'order' => 'ASC',
 			'posts_per_page' =>'100'
 	));
 	foreach( $posts as $key => $post){

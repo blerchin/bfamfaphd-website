@@ -6,7 +6,7 @@ const PI = Math.PI;
 
 const Circle = function(attr){
 	this.el = attr.el;
-	this.padding = attr.padding || 100;
+	this.padding = attr.padding || 100;//this.getDefaultPadding();
 	this.items = attr.items;
 	this.currentItem = this.items[0];
 	this.setup();
@@ -19,9 +19,14 @@ Circle.prototype.onResize = function(){
 	this.draw();
 };
 
+Circle.prototype.getDefaultPadding = function(){
+	let small = window.offsetWidth < 481 || window.offsetHeight < 481;
+	return small > 480 ? 100 : 50;
+};
+
 Circle.prototype.setup = function(){
 	let maxWidth = this.el.offsetWidth;
-	let winHeight = window.innerHeight - 160; 
+	let winHeight = window.innerHeight - 160;
 	let outerDiameter = maxWidth > winHeight ? winHeight : maxWidth;
 	this.radius = outerDiameter/2 - this.padding;
 };
@@ -152,7 +157,7 @@ Circle.prototype.drawLabel = function(theta, item){
 												+ `C${-1 * r},${.33 * r} ${-.4 * r},0 0,0`
 											  + `C${.4 * r},0 ${r},${.33 * r} ${r},${r}`);
 	this.defs.appendChild(textPath);
-	
+
 	let text = document.createElementNS(SVG_NS, 'text');
 	let textPathEl = document.createElementNS(SVG_NS, 'textPath')
 	textPathEl.setAttributeNS(XLINK_NS, 'xlink:href',`#${textPathId}` )
