@@ -2,6 +2,7 @@
 	background-color: $gray;
 	position: relative;
 	height: calc(100% - 80px);
+	margin-bottom: 30px;
 	#drawCardsToggle {
 		position: absolute;
 		z-index: 99;
@@ -206,7 +207,9 @@
 			right: 0;
 			width: 40px;
 			height: 40px;
-
+			a {
+				border-width: 0;
+			}
 		}
 		.cardsWrapper {
 			overflow-x: scroll;

@@ -8,6 +8,7 @@ require_once('includes/wp_bootstrap_navwalker.php');
 require_once('includes/mailchimp_form.php');
 require_once('includes/projects-list.php');
 require_once('includes/supply-chain-list.php');
+require_once('includes/supply_chain_helpers.php');
 require_once('includes/of_supply_chains_interstitial.php');
 
 function get_posts_json($post_type){

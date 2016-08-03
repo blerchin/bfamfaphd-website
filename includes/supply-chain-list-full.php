@@ -1,4 +1,4 @@
-<?php function supply_chain_list(){
+<?php function supply_chain_list_full(){
 	global $post;
 	$chains = new WP_Query(array(
 		'post_type' => 'supply_chain',
@@ -6,7 +6,7 @@
 		'order' => 'ASC',
 		'posts_per_page' => '20'
 	));
-	$out = '<div class="supply-chain-list">';
+	$out = '<div class="supply-chain-list-full">';
 	if($chains->have_posts()){
 		while($chains->have_posts()): $chains->the_post();
 			$post_color = get_post_meta($post->ID, 'color', true);

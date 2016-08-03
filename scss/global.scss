@@ -140,12 +140,8 @@ h5 {
 }
 
 .section-supply-chains {
-  h1 a,
-  h2 a,
-  h3 a,
-  h4 a,
-  h5 a,
-  h6 a {
+  h1, h2, h3, h4, h5, h6,
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     color: $black;
     font-weight: 600;
     border-width: 0px;
@@ -210,4 +206,7 @@ input.form-control {
   font-size: 15px;
   line-height: 22px;
   height: 30px;
+  &:focus {
+    box-shadow: none;
+  }
 }
