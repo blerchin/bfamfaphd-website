@@ -184,13 +184,13 @@ h4, label, h5 {
   margin-bottom: 30px;
 }
 
-.section-supply-chains h1 a, .section-supply-chains h2 a, .section-supply-chains h3 a, .section-supply-chains h4 a, .section-supply-chains h5 a, .section-supply-chains h6 a {
+.section-supply-chains h1, .section-supply-chains h2, .section-supply-chains h3, .section-supply-chains h4, .section-supply-chains h5, .section-supply-chains h6, .section-supply-chains h1 a, .section-supply-chains h2 a, .section-supply-chains h3 a, .section-supply-chains h4 a, .section-supply-chains h5 a, .section-supply-chains h6 a {
   color: #000000;
   font-weight: 600;
   border-width: 0px;
 }
 
-.section-supply-chains h1 a:hover, .section-supply-chains h2 a:hover, .section-supply-chains h3 a:hover, .section-supply-chains h4 a:hover, .section-supply-chains h5 a:hover, .section-supply-chains h6 a:hover {
+.section-supply-chains h1:hover, .section-supply-chains h2:hover, .section-supply-chains h3:hover, .section-supply-chains h4:hover, .section-supply-chains h5:hover, .section-supply-chains h6:hover, .section-supply-chains h1 a:hover, .section-supply-chains h2 a:hover, .section-supply-chains h3 a:hover, .section-supply-chains h4 a:hover, .section-supply-chains h5 a:hover, .section-supply-chains h6 a:hover {
   color: #000000;
 }
 
@@ -258,6 +258,10 @@ input.form-control {
   font-size: 15px;
   line-height: 22px;
   height: 30px;
+}
+
+input.form-control:focus {
+  box-shadow: none;
 }
 
 .navbar {
@@ -654,6 +658,87 @@ input.form-control {
   background-repeat: no-repeat;
 }
 
+.section-supply-chains .supply-chain-section-wrap {
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 60px;
+  margin: 30px 0;
+}
+
+.section-supply-chains .supply-chain-section-wrap .supply-chain-section {
+  max-width: 600px;
+  margin: 0px auto;
+}
+
+.section-supply-chains .supply-chain-collapse-wrap {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #000000;
+  margin: 30px 0;
+}
+
+.section-supply-chains .supply-chain-collapse-wrap header {
+  position: relative;
+  cursor: pointer;
+}
+
+.section-supply-chains .supply-chain-collapse-wrap header[aria-expanded=true]:before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.section-supply-chains .supply-chain-collapse-wrap header:before {
+  position: absolute;
+  right: 0px;
+  top: -5px;
+  width: 20px;
+  height: 20px;
+  content: '\2193';
+  text-align: center;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+}
+
+.section-supply-chains .supply-chain-collapse-wrap .supply-chain-collapse {
+  position: relative;
+  max-height: 100px;
+  overflow: hidden;
+  -webkit-transition: max-height 500ms ease-in-out;
+  transition: max-height 500ms ease-in-out;
+  z-index: 0;
+  padding-bottom: 40px;
+}
+
+.section-supply-chains .supply-chain-collapse-wrap .supply-chain-collapse.in {
+  max-height: 1500px !important;
+}
+
+.section-supply-chains .supply-chain-collapse-wrap .supply-chain-collapse:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: -webkit-linear-gradient(top, transparent 30%, whitesmoke);
+  background: linear-gradient(to bottom, transparent 30%, whitesmoke);
+  z-index: 2;
+}
+
+.section-supply-chains .ecs-event-list {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.section-supply-chains .ecs-event-list li {
+  list-style: none;
+}
+
 .section-supply-chains .mailchimp-form {
   background-color: whitesmoke;
   padding: 20px;
@@ -928,6 +1013,7 @@ article.item-half .more-link {
   background-color: whitesmoke;
   position: relative;
   height: calc(100% - 80px);
+  margin-bottom: 30px;
 }
 
 #game #drawCardsToggle {
@@ -1205,6 +1291,10 @@ article.item-half .more-link {
     right: 0;
     width: 40px;
     height: 40px;
+  }
+
+  #game #drawCardsContainer #instructionsButton a {
+    border-width: 0;
   }
 
   #game #drawCardsContainer .cardsWrapper {
