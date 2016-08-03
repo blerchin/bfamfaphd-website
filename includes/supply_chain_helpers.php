@@ -12,6 +12,15 @@ function supply_chain_section($atts, $content){
 add_shortcode('supply_chain_section', 'supply_chain_section');
 
 function supply_chain_collapse($atts, $content){
+  global $post;
+  $post_color = get_post_meta($post->ID, 'color', true);
+  if($post_color) {
+    $post_color = lighten($post_color);
+  } else {
+    $post_color = '#f5f5f5';
+
+  }
+
   $a = shortcode_atts( array(
     'title' => 'Please add title= to the shortcode',
     'height' => '100'
@@ -23,6 +32,11 @@ function supply_chain_collapse($atts, $content){
     $out .= '</header>';
     $out .= '<div class="body-content supply-chain-collapse"';
       $out .= 'style="max-height:' . $a['height'] .'px;">';
+
+      $out .= '<div class="collapse-gradient" style="';
+        $out .= 'background: linear-gradient( ';
+        $out .= 'to bottom, transparent 30%, ' . $post_color . ');">';
+        $out .= '</div>';
     $out .= $content;
     $out .= '</div>';
   $out .= '</div>';

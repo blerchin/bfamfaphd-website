@@ -53,6 +53,14 @@
       color: $violet;
     }
   }
+  article.item-full {
+    .article-content p {
+      max-width: 600px;
+      /*550px*/
+      // margin-bottom: 0;
+      color: $violet;
+    }
+  }
   ul.ecs-event-list {
     li.ecs-event {
       list-style: none;

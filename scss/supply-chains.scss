@@ -57,8 +57,7 @@
       &.in {
         max-height: 1500px !important;
       }
-      &:before {
-        content: '';
+      .collapse-gradient {
         position: absolute;
         bottom: 0;
         left: 0;

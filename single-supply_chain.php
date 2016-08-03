@@ -7,12 +7,8 @@ $SHOW_CIRCLE = true;
 	<?php get_header(); ?>
 	<?php if (have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<?php
-			$post_color = get_post_meta($post->ID, 'color');
-			if($post_color){
-				$post_color = $post_color[0];
-				$rgb = hex2rgb($post_color);
-				$post_color = 'rgba('.$rgb['red'].','.$rgb['green'].','.$rgb['blue'].',.1)';
-			}
+			$post_color = get_post_meta($post->ID, 'color', true);
+			$post_color = lighten($post_color);
 
 			$lead_image = get_field('lead_image');
 			if(!empty($lead_image)){
@@ -26,9 +22,6 @@ $SHOW_CIRCLE = true;
 
 		?>
 		<article 	<?php post_class('item item-full') ?>>
-			<header class="article-header">
-				<h2><?php the_title() ?></h2>
-			</header>
 			<div 	class="article-body-wrapper"
 						style="background-color: <?php echo $post_color;?>">
 				<div class="article-body">
@@ -37,6 +30,9 @@ $SHOW_CIRCLE = true;
 							<img src="<?php echo $lead_image; ?>"/>
 						</div>
 					</div>
+					<header class="article-header">
+						<h3><?php the_title() ?></h3>
+					</header>
 					<div class="article-summary">
 						<?php the_excerpt() ?>
 					</div>
@@ -45,8 +41,10 @@ $SHOW_CIRCLE = true;
 							<img src="<?php echo $card_image; ?>" />
 						</div>
 						<div class="article-secondary-image-wrapper">
-							<div class="article-secondary-image">
-								<?php the_post_thumbnail('large')?>
+							<div class="article-secondary-image"
+								style="background-image: url('<?php echo get_the_post_thumbnail_url($post, 'large'); ?>');">
+							</div>
+							<div class="article-secondary-image-caption">
 							</div>
 						</div>
 					</div>
@@ -58,6 +56,7 @@ $SHOW_CIRCLE = true;
 			<footer class="article-footer">
 			</footer>
 		</article>
+		<?php echo do_shortcode('[bfamfaphd_mailchimp_form]'); ?>
 	<?php endwhile; else : ?>
 		<p><?php _e('Sorry, nothing found at this address.'); ?></p>
 	<?php endif; ?>
