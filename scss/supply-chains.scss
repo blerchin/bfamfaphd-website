@@ -90,5 +90,12 @@
       border-color: $black;
     }
   }
-
+  @media screen and (min-width: 1024px){
+    article.item-full {
+      .article-content {
+        margin-left: 130px;
+        width: 540px;
+      }
+    }
+  }
 }

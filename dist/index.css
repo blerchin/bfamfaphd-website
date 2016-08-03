@@ -761,6 +761,13 @@ input.form-control:focus {
   border-color: #000000;
 }
 
+@media screen and (min-width: 1024px) {
+  .section-supply-chains article.item-full .article-content {
+    margin-left: 130px;
+    width: 540px;
+  }
+}
+
 .articles {
   margin-left: -15px;
   margin-right: -15px;
@@ -952,11 +959,6 @@ article.item-full ul li:last-child {
 }
 
 @media screen and (min-width: 1024px) {
-  article.item-full .article-content {
-    margin-left: 130px;
-    width: 540px;
-  }
-
   article.item-full .article-media {
     margin-left: -100px;
   }
