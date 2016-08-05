@@ -38,7 +38,7 @@ function get_posts_json($post_type){
 
 function lighten( $color ) {
 	$clr = new Color($color);
-	return '#' . $clr->lighten(40);
+	return '#' . $clr->lighten(35);
 }
 
 function register_menus() {

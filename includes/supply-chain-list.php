@@ -23,7 +23,7 @@
 				$out .= '<div class="article-body-wrapper">';
 					$out .= '<div class="article-body">';
 						$out .= '<div class="feature-wrapper">';
-							$out .= '<a href="' . get_the_permalink() . '">';
+							$out .= '<a href="/supply-chains-list/#' . $post->post_name . '">';
 								$out .= '<div class="feature" style="background-image: url(';
 									$out .= $lead_image . ');">';
 								$out .= '</div>';
@@ -31,7 +31,7 @@
 						$out .= '</div>';
 						$out .='<div class="article-summary">';
 						$out .= '<p>' . get_the_excerpt();
-							$out .='<a class="more-link" href="'.get_the_permalink() . '"';
+							$out .='<a class="more-link" href="/supply-chains-list/#'. $post->post_name . '"';
 							$out .='style="color:' . $post_color . ';">';
 								$out .= ' Read More →';
 							$out .= '</a>';

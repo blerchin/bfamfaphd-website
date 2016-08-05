@@ -8,7 +8,7 @@ function supply_chains_menu($ul_class){
 		<?php while($supplyChains->have_posts()): $supplyChains->the_post(); ?>
 			<?php $post_color = get_post_meta($post->ID, 'color', true); ?>
 			<li <?php post_class('menu-item')?>>
-				<a href="<?php the_permalink() ?>"
+				<a href="/supply-chains-list#<?php echo$post->post_name; ?>"
 					style="color: <?php echo $post_color; ?>; border-color: <?php echo $post_color; ?>;">
 					<?php the_title(); ?>
 				</a>
