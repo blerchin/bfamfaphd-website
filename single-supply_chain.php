@@ -10,6 +10,7 @@ $SHOW_CIRCLE = true;
 			$post_color = get_post_meta($post->ID, 'color', true);
 			$post_color = lighten($post_color);
 
+			$lead_video = get_field('lead_video');
 			$lead_image = get_field('lead_image');
 			if(!empty($lead_image)){
 				$lead_image = $lead_image['sizes']['large'];
@@ -38,7 +39,11 @@ $SHOW_CIRCLE = true;
 				<div class="article-body">
 					<div class="feature-wrapper">
 						<div class="feature">
-							<img src="<?php echo $lead_image; ?>"/>
+							<?php if(!empty($lead_video)): ?>
+								<?php echo $lead_video; ?>
+							<?php else: ?>
+								<img src="<?php echo $lead_image; ?>"/>
+							<?php endif; ?>
 						</div>
 					</div>
 					<header class="article-header">
