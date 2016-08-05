@@ -30,7 +30,7 @@ function get_posts_json($post_type){
 			$cat = $cats[0]->cat_name;
 		}
 		$posts[$key]->post_category = $cat;
-		$posts[$key]->permalink = get_permalink($post->ID);
+		$posts[$key]->permalink = '/supply-chains-list#' . $post->post_name;
 	}
 	$postsJson = json_encode($posts);
 	return $postsJson;
