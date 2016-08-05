@@ -20,6 +20,17 @@ $SHOW_CIRCLE = true;
 				$card_image = $card_image['sizes']['large'];
 			}
 
+			$thumbnail_id = get_post_thumbnail_id($post->ID);
+			$thumbnail_caption = '';
+			if(isset($thumbnail_id)){
+				$thumbnail_caption = get_post($thumbnail_id)->post_excerpt;
+			}
+
+			$workshop_guide_url = get_field('workshop_guide');
+			$workshop_presentation_url = get_field('workshop_presentation');
+			$syllabus_url = get_field('syllabus');
+			$reading_url = get_field('reading');
+
 		?>
 		<article 	<?php post_class('item item-full') ?>>
 			<div 	class="article-body-wrapper"
@@ -45,11 +56,34 @@ $SHOW_CIRCLE = true;
 								style="background-image: url('<?php echo get_the_post_thumbnail_url($post, 'large'); ?>');">
 							</div>
 							<div class="article-secondary-image-caption">
+								<?php echo $thumbnail_caption; ?>
 							</div>
 						</div>
 					</div>
 					<div class="article-content">
 						<?php the_content() ?>
+						<div class="article-attachments">
+							<ul>
+								<?php
+									if(isset($workshop_guide_url)){
+										echo '<li> <a href="' . $workshop_guide_url . '">';
+										echo 'Download Workshop Guide</a></li>';
+									}
+									if(isset($workshop_presentation_url)){
+										echo '<li> <a href="' . $workshop_presentation_url . '">';
+										echo 'Download Workshop Presentation</a></li>';
+									}
+									if(isset($syllabus_url)){
+										echo '<li> <a href="' . $syllabus_url . '">';
+										echo 'Download 15 Week Syllabus</a></li>';
+									}
+									if(isset($reading_url)){
+										echo '<li> <a href="' . $reading_url . '">';
+										echo 'Download Reading</a></li>';
+									}
+								?>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
