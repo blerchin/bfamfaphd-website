@@ -35,7 +35,8 @@ function supply_chain_collapse($atts, $content){
 
       $out .= '<div class="collapse-gradient" style="';
         $out .= 'background: linear-gradient( ';
-        $out .= 'to bottom, transparent 30%, ' . $post_color . ');">';
+        $out .= 'to bottom, rgba(255,255,255,0) 30%, ' . $post_color . ');';
+        $out .= '">';
         $out .= '</div>';
     $out .= $content;
     $out .= '</div>';
