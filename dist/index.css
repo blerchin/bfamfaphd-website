@@ -1492,10 +1492,10 @@ article.item-half .more-link {
 
 .topics article.item-full:nth-child(even) .article-body {
   border-top-color: #3366ff !important;
-  color: #3366ff;
+  color: #3366ff !important;
 }
 
-.topics article.item-full:nth-child(even) p, .topics article.item-full:nth-child(even) h1, .topics article.item-full:nth-child(even) h2, .topics article.item-full:nth-child(even) h3, .topics article.item-full:nth-child(even) h4, .topics article.item-full:nth-child(even) h5, .topics article.item-full:nth-child(even) h6, .topics article.item-full:nth-child(even) ul li, .topics article.item-full:nth-child(even) hr {
+.topics article.item-full:nth-child(even) p, .topics article.item-full:nth-child(even) h1, .topics article.item-full:nth-child(even) h2, .topics article.item-full:nth-child(even) h3, .topics article.item-full:nth-child(even) h4, .topics article.item-full:nth-child(even) h5, .topics article.item-full:nth-child(even) h6, .topics article.item-full:nth-child(even) ul li, .topics article.item-full:nth-child(even) hr, .topics article.item-full:nth-child(even) a {
   color: #3366ff;
 }
 
