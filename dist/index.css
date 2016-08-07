@@ -1499,6 +1499,10 @@ article.item-half .more-link {
   color: #3366ff;
 }
 
+.topics article.item-full:nth-child(even) a {
+  border-bottom-color: #3366ff;
+}
+
 .mailchimp-form {
   overflow: hidden;
 }
