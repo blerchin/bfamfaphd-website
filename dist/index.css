@@ -155,16 +155,7 @@ h4, label, h5 {
 
 .section-bfamfaphd h3.lead {
   margin-top: 80px;
-  margin-bottom: 80px;
-}
-
-.section-bfamfaphd h5 {
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.section-bfamfaphd h5.project-title {
-  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
 .section-bfamfaphd h5:last-child {
@@ -540,6 +531,10 @@ input.form-control:focus {
           transform: rotate(180deg);
 }
 
+.section-bfamfaphd article#topic-home .article-body {
+  padding-bottom: 0px;
+}
+
 .section-bfamfaphd .interstitial-module {
   position: relative;
   width: auto;
@@ -586,8 +581,27 @@ input.form-control:focus {
   margin-bottom: 60px;
 }
 
-.section-bfamfaphd .projects .projects-list a h5 {
+.section-bfamfaphd .projects .projects-list .item {
+  margin-bottom: 55px;
+}
+
+.section-bfamfaphd .projects .projects-list a h5, .section-bfamfaphd .projects .projects-list a h6 {
   color: #333366 !important;
+  margin: 3px 0;
+}
+
+.section-bfamfaphd .projects .projects-list a h5.project-title {
+  margin-top: 15px;
+  font-style: italic;
+}
+
+.section-bfamfaphd .projects .projects-list a h6.author {
+  display: none;
+}
+
+.section-bfamfaphd .projects .projects-list a h6.year {
+  display: none;
+  margin-bottom: 10px;
 }
 
 @media screen and (min-width: 768px) {
@@ -796,6 +810,39 @@ article .article-body {
   margin-right: auto;
   padding-top: 46px;
   padding-bottom: 50px;
+}
+
+article.type-project .article-header h4.project-title {
+  font-style: italic;
+}
+
+article.type-project .more-projects {
+  position: relative;
+  margin-left: -15px;
+  margin-right: -15px;
+  overflow: hidden;
+}
+
+article.type-project .more-projects a {
+  cursor: pointer;
+}
+
+article.type-project .more-projects > h4 {
+  margin-left: 15px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+article.type-project .more-projects .project-item {
+  width: 33%;
+  float: left;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-style: italic;
+}
+
+article.type-project .more-projects .project-item .thumb {
+  height: 100px;
 }
 
 .item {
@@ -1186,6 +1233,7 @@ article.item-half .more-link {
   display: block;
   height: 100%;
   width: 100%;
+  border-bottom: none;
 }
 
 #game #drawCardsContainer #instructionsButton a:hover {
@@ -1462,7 +1510,7 @@ article.item-half .more-link {
   display: block;
 }
 
-.mailchimp-form h4, .mailchimp-form h5 {
+.mailchimp-form h3, .mailchimp-form h4, .mailchimp-form h5 {
   color: #3366ff;
 }
 
@@ -1475,7 +1523,6 @@ article.item-half .more-link {
   display: block;
   position: relative;
   float: left;
-  width: 33%;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -1485,6 +1532,12 @@ article.item-half .more-link {
   color: #3366ff;
   box-shadow: none;
   border: 0px;
+}
+
+@media screen and (min-width: 480px) {
+  .mailchimp-form .form-group {
+    width: 33%;
+  }
 }
 
 
