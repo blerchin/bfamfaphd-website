@@ -659,6 +659,10 @@ input.form-control:focus {
   border-bottom: 1px solid #333366;
 }
 
+.section-bfamfaphd #topic-events h3 {
+  margin-top: 20px;
+}
+
 .section-bfamfaphd #topic-events .article-content ul.ecs-event-list:nth-child(4n-2) + h3 {
   color: #3366ff;
 }

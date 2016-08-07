@@ -114,6 +114,11 @@
       }
     }
   }
+  #topic-events {
+    h3 {
+      margin-top: 20px;
+    }
+  }
   #topic-events .article-content ul.ecs-event-list:nth-child(4n-2) + h3 {
     color: $light-blue;
   }
