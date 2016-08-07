@@ -9,7 +9,7 @@
       margin-bottom: 10px;
     }
   }
-  article.item-full:nth-child(odd){ 
+  article.item-full:nth-child(odd){
     .article-body {
       border-top-color: $violet !important;
     }
@@ -17,12 +17,12 @@
       color: $violet;
     }
   }
-  article.item-full:nth-child(even){ 
+  article.item-full:nth-child(even){
     .article-body {
       border-top-color: $light-blue !important;
-      color: $light-blue;
+      color: $light-blue !important;
     }
-    p, h1, h2, h3, h4, h5, h6, ul li, hr {
+    p, h1, h2, h3, h4, h5, h6, ul li, hr, a{
       color: $light-blue;
     }
   }
