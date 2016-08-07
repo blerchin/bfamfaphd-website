@@ -1,12 +1,16 @@
-<?php global $SHOW_CIRCLE; ?>
+<?php global $SHOW_CIRCLE;
+$cards_in = $SHOW_CIRCLE ? '' : 'in';
+?>
 <div id="game">
 		<div id="cards">
-      <button id="drawCardsToggle" data-target="#drawCardsContainer" data-toggle="slide">
-        <span class="arrow">↓</span>
-        <span class="text">Project Ideas</span>
-        <span class="arrow">↓</span>
-      </button>
-			<div id="drawCardsContainer" class="slide">
+			<?php if($SHOW_CIRCLE): ?>
+	      <button id="drawCardsToggle" data-target="#drawCardsContainer" data-toggle="slide">
+	        <span class="arrow">↓</span>
+	        <span class="text">Project Ideas</span>
+	        <span class="arrow">↓</span>
+	      </button>
+			<?php endif; ?>
+			<div id="drawCardsContainer" class="slide <?php echo $cards_in; ?>">
 				<div class="cardsWrapper">
 					<div class="cards">
 						<div class="card card-1">
