@@ -21,12 +21,12 @@
           $out .= '<h5 class="project-title">';
           $out .= get_the_title();
           $out .= '</h5>';
-          $out .= '<h5 class="author">';
+          $out .= '<h6 class="author">';
             $out .= get_post_meta($post->ID, 'author', true);
-          $out .= '</h5>';
-          $out .= '<h5 class="year">';
+          $out .= '</h6>';
+          $out .= '<h6 class="year">';
             $out .= get_post_meta($post->ID, 'year', true);
-          $out .= '</h5>';
+          $out .= '</h6>';
         $out .= '</a>';
       $out .= '</article>';
     endwhile;

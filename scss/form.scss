@@ -5,7 +5,7 @@
     margin-right: -15px;
     display: block;
   }
-  h4, h5 {
+  h3, h4, h5 {
     color: $light-blue;
   }
   label {
@@ -16,7 +16,6 @@
     display: block;
     position: relative;
     float: left;
-    width: 33%;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -25,5 +24,10 @@
     color: $light-blue;
     box-shadow: none;
     border: 0px;
+  }
+  @media screen and (min-width: 480px) {
+    .form-group {
+      width: 33%;
+    }
   }
 }

@@ -1,4 +1,7 @@
 .section-bfamfaphd {
+  article#topic-home .article-body {
+    padding-bottom: 0px;
+  }
   .interstitial-module {
     position: relative;
     width: auto;
@@ -37,8 +40,25 @@
     margin-top: 60px;
     margin-bottom: 60px;
     .projects-list {
-      a h5 {
-        color: $violet !important;
+      .item {
+        margin-bottom: 55px;
+      }
+      a {
+        h5, h6 {
+          color: $violet !important;
+          margin: 3px 0;
+        }
+        h5.project-title {
+          margin-top: 15px;
+          font-style: italic;
+        }
+        h6.author {
+          display: none;
+        }
+        h6.year {
+          display: none;
+          margin-bottom: 10px
+        }
       }
     }
   }

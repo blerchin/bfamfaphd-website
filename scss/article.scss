@@ -24,6 +24,42 @@ article {
     padding-top: 46px;
     padding-bottom: 50px;
   }
+
+}
+article.type-project {
+  .article-header {
+    h4.project-title {
+      font-style: italic;
+    }
+  }
+  .more-projects {
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+    overflow: hidden;
+    a {
+      cursor: pointer;
+
+    }
+    &>h4 {
+      margin-left: 15px;
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+    .project-item {
+      width: 33%;
+      float: left;
+      padding-right: 15px;
+      padding-left: 15px;
+      font-style: italic;
+      .thumb {
+        height: 100px;
+      }
+
+    }
+
+  }
+
 }
 
 .item {

@@ -1,13 +1,13 @@
 <?php
 add_shortcode( 'bfamfaphd_mailchimp_form', 'bfamfaphd_mailchimp_form_shortcode');
-function bfamfaphd_mailchimp_form_shortcode($attr){ 
+function bfamfaphd_mailchimp_form_shortcode($attr){
   return bfamfaphd_mailchimp_form();
 }
-    
-function bfamfaphd_mailchimp_form(){ 
+
+function bfamfaphd_mailchimp_form(){
   return '
   <div id="mc_embed_signup" class="mailchimp-form">
-  <h5>Join the BFAMFAPhD mailing list:</h5>
+  <h3>Join the BFAMFAPhD mailing list</h3>
   <form action="http://bfamfaphd.us8.list-manage1.com/subscribe/post?u=86adc32179584ba8d5862e0de&amp;id=a65c9b0ed6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
   <div class="form-group">
     <label class="control-label" for="mce-EMAIL">Email<span class="asterisk">*</span>
