@@ -10,7 +10,7 @@ $SHOW_CIRCLE = false;
   'orderby' => 'menu_order',
   'order' => 'ASC',
   'posts_per_page' => '12'
-)); ?>
+));?>
 <?php if ($chains->have_posts() ) : while ( $chains->have_posts() ) : $chains->the_post(); ?>
   <?php get_template_part('articles/article', 'supply_chain'); ?>
 <?php endwhile; ?>

@@ -46,6 +46,8 @@ $(document).ready(function(){
   }
 	$(window).resize(resizeIframe)
 	resizeIframe()
+	$(window).resize(cardsCarousel)
+	cardsCarousel()
 
 });
 
@@ -57,6 +59,20 @@ function resizeIframe(){
 			let ratio = o.getAttribute('width') / o.getAttribute('height')
 			o.setAttribute('width', o.parentNode.offsetWidth)
 			o.setAttribute('height', o.parentNode.offsetWidth / ratio)
+		}
+	}
+}
+
+function cardsCarousel(){
+	const cards = document.getElementsByClassName('article-cards');
+	if(cards.length){
+		for(let i=0; i<cards.length; i++){
+			let width = 0;
+			for(let j=0; j<cards[i].children.length; j++){
+				width += cards[i].children[j].offsetWidth;
+			}
+			console.log(width)
+			cards[i].style.width = width + 'px';
 		}
 	}
 }

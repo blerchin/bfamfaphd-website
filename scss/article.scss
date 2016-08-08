@@ -124,8 +124,19 @@ article.item-full {
       height: auto;
     }
   }
+  .article-cards-wrapper {
+    overflow-x: scroll;
+    margin-right: 0;
+    position: relative;
+  }
+  .article-cards {
+    max-height: 500px;
+    width: 800vw;
+    overflow: hidden;
+  }
   .article-media {
     margin: 0px 0;
+    float: left;
     .article-card {
       width: 190px;
       height: 300px;
@@ -192,7 +203,7 @@ article.item-full {
   }
   @media screen and (min-width: 769px) {
     .article-media {
-      margin: 40px 0;
+      margin: 40px 80px 40px 0;
       overflow-y: hidden;
       .article-card {
         float: left;
@@ -214,7 +225,7 @@ article.item-full {
     }
   }
   @media screen and (min-width: 1024px) {
-    .article-media {
+    .article-cards-wrapper {
       margin-left: -100px;
       .article-secondary-image-wrapper {
         width: 540px;

@@ -1,4 +1,5 @@
 <?php
+	require_once('article-cards.php');
 	global $post;
 	$post_color = get_post_meta($post->ID, 'color', true);
 	$post_color = lighten($post_color);
@@ -46,21 +47,12 @@
 			<div class="article-summary">
 				<?php the_excerpt() ?>
 			</div>
-			<div class="article-media">
-				<div class="article-card">
-					<img src="<?php echo $card_image; ?>" />
-				</div>
-				<div class="article-secondary-image-wrapper">
-					<div class="article-secondary-image"
-						style="background-image: url('<?php echo get_the_post_thumbnail_url($post, 'large'); ?>');">
-					</div>
-					<div class="article-secondary-image-caption">
-						<?php echo $thumbnail_caption; ?>
-					</div>
-				</div>
+			<div class="article-cards-wrapper">
+				<?php supply_chain_render_cards($post->post_name); ?>
 			</div>
+
 			<div class="article-content">
-				<?php the_content() ?>
+				<?php the_content(); ?>
 				<div class="article-attachments">
 					<ul>
 						<?php

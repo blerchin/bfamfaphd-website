@@ -27,7 +27,7 @@
         </div>
         <div class="article-footer">
           <div class="more-projects">
-            <h4>See More</h4>
+            <h3>See More</h3>
             <?php while($projects->have_posts()): $projects->the_post(); ?>
               <div class="project-item">
                 <a href="<?php the_permalink() ?>">
