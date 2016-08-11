@@ -242,8 +242,9 @@ input.form-control {
   border: 0px;
   border-radius: 0;
   box-shadow: none;
-  padding: 0;
+  padding: 10px;
   border-bottom: 1px solid #3366ff;
+  background-color: #f5f7ff;
   color: #333366;
   font-size: 15px;
   line-height: 22px;
@@ -1537,6 +1538,10 @@ article.item-half .more-link {
 .mailchimp-form label {
   font-size: 15px;
   color: #3366ff;
+}
+
+.mailchimp-form input {
+  margin-top: 10px;
 }
 
 .mailchimp-form .form-group {

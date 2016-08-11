@@ -192,8 +192,9 @@ input.form-control {
   border: 0px;
   border-radius: 0;
   box-shadow: none;
-  padding: 0;
+  padding: 10px;
   border-bottom: 1px solid $light-blue;
+  background-color: lighten($light-blue, 38);
   color: $violet;
   font-size: 15px;
   line-height: 22px;
