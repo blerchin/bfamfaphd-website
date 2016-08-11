@@ -82,6 +82,7 @@
     }
   }
   ul.ecs-event-list {
+    margin: 20px 0 0 0;
     li.ecs-event {
       list-style: none;
       padding-bottom: 30px;
@@ -100,7 +101,6 @@
 
       }
     }
-    margin: 20px 0;
     &:nth-child(4n){
       li.ecs-event * {
         color: $light-blue !important;
