@@ -6,6 +6,8 @@ require('bootstrap-webpack');
 
 require('./src/js/collapse');
 
+const Flickity = require('flickity');
+
 const Circle = require('./src/js/circle');
 const Cards = require('./src/js/cards');
 
@@ -46,7 +48,6 @@ $(document).ready(function(){
   }
 	$(window).resize(resizeIframe)
 	resizeIframe()
-	$(window).resize(cardsCarousel)
 	cardsCarousel()
 
 });
@@ -66,13 +67,21 @@ function resizeIframe(){
 function cardsCarousel(){
 	const cards = document.getElementsByClassName('article-cards');
 	if(cards.length){
+		const flk = new Flickity(cards[0], {
+			adaptiveHeight: true,
+			pageDots: false
+		})
+	}
+	/*
+	if(cards.length){
 		for(let i=0; i<cards.length; i++){
 			let width = 0;
 			for(let j=0; j<cards[i].children.length; j++){
 				width += cards[i].children[j].offsetWidth;
 			}
-			console.log(width)
 			cards[i].style.width = width + 'px';
 		}
 	}
+	*/
+
 }
