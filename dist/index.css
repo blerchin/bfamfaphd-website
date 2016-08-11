@@ -628,15 +628,15 @@ input.form-control:focus {
 .section-bfamfaphd ul.ecs-event-list li.ecs-event {
   list-style: none;
   padding-bottom: 30px;
-  border-bottom: 1px solid #333366;
-}
-
-.section-bfamfaphd ul.ecs-event-list li.ecs-event:last-child {
-  border-bottom: 1px solid #3366ff;
 }
 
 .section-bfamfaphd ul.ecs-event-list li.ecs-event:before {
   content: '';
+}
+
+.section-bfamfaphd ul.ecs-event-list li.ecs-event * {
+  color: #333366 !important;
+  border-color: #333366;
 }
 
 .section-bfamfaphd ul.ecs-event-list li.ecs-event h4.entry-title {
@@ -649,22 +649,14 @@ input.form-control:focus {
 
 .section-bfamfaphd ul.ecs-event-list:nth-child(4n) li.ecs-event * {
   color: #3366ff !important;
-  border-color: #3366ff !important;
-}
-
-.section-bfamfaphd ul.ecs-event-list:nth-child(4n) li.ecs-event {
-  border-bottom: 1px solid #3366ff;
-}
-
-.section-bfamfaphd ul.ecs-event-list:nth-child(4n) li.ecs-event:last-child {
-  border-bottom: 1px solid #333366;
+  border-color: #3366ff;
 }
 
 .section-bfamfaphd #topic-events h3 {
   margin-top: 20px;
 }
 
-.section-bfamfaphd #topic-events .article-content ul.ecs-event-list:nth-child(4n-2) + h3 {
+.section-bfamfaphd .article-content ul.ecs-event-list:nth-child(4n-2) + h3 {
   color: #3366ff;
 }
 
@@ -808,7 +800,7 @@ article header.article-header h3 {
   font-size: 20px;
 }
 
-article .article-body {
+article .article-body, article .article-header {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
