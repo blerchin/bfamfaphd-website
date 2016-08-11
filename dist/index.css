@@ -163,8 +163,8 @@ h4, label, h5 {
 
 @media screen and (max-width: 768px) {
   .section-bfamfaphd h3 {
-    font-size: 4vw;
-    line-height: 5vw;
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 
@@ -918,8 +918,21 @@ article.item-full .feature img {
   height: auto;
 }
 
+article.item-full .article-cards-wrapper {
+  overflow-x: scroll;
+  margin-right: 0;
+  position: relative;
+}
+
+article.item-full .article-cards {
+  max-height: 500px;
+  width: 800vw;
+  overflow: hidden;
+}
+
 article.item-full .article-media {
   margin: 0px 0;
+  float: left;
 }
 
 article.item-full .article-media .article-card {
@@ -998,7 +1011,7 @@ article.item-full .article-attachments ul li a {
 
 @media screen and (min-width: 769px) {
   article.item-full .article-media {
-    margin: 40px 0;
+    margin: 40px 80px 40px 0;
     overflow-y: hidden;
   }
 
@@ -1022,11 +1035,11 @@ article.item-full .article-attachments ul li a {
 }
 
 @media screen and (min-width: 1024px) {
-  article.item-full .article-media {
+  article.item-full .article-cards-wrapper {
     margin-left: -100px;
   }
 
-  article.item-full .article-media .article-secondary-image-wrapper {
+  article.item-full .article-cards-wrapper .article-secondary-image-wrapper {
     width: 540px;
   }
 }
@@ -1083,7 +1096,7 @@ article.item-half .more-link {
   .item.item-half, .item.item-third {
     margin-right: 0px;
     margin-left: 0px;
-    width: auto;
+    width: 100%;
     max-width: 100%;
   }
 }

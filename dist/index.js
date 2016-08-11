@@ -96,6 +96,8 @@
 		}
 		$(window).resize(resizeIframe);
 		resizeIframe();
+		$(window).resize(cardsCarousel);
+		cardsCarousel();
 	});
 	
 	function resizeIframe() {
@@ -106,6 +108,20 @@
 				var ratio = o.getAttribute('width') / o.getAttribute('height');
 				o.setAttribute('width', o.parentNode.offsetWidth);
 				o.setAttribute('height', o.parentNode.offsetWidth / ratio);
+			}
+		}
+	}
+	
+	function cardsCarousel() {
+		var cards = document.getElementsByClassName('article-cards');
+		if (cards.length) {
+			for (var i = 0; i < cards.length; i++) {
+				var width = 0;
+				for (var j = 0; j < cards[i].children.length; j++) {
+					width += cards[i].children[j].offsetWidth;
+				}
+				console.log(width);
+				cards[i].style.width = width + 'px';
 			}
 		}
 	}
