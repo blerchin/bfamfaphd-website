@@ -15,12 +15,15 @@ $cards_in = $SHOW_CIRCLE ? '' : 'in';
 					<div class="cards">
 						<div class="card card-1">
 							<div class="img"></div>
+							<div class="back"></div>
 						</div>
 						<div class="card card-2">
 							<div class="img"></div>
+							<div class="back"></div>
 						</div>
 						<div class="card card-3">
 							<div class="img"></div>
+							<div class="back"></div>
 						</div>
 					</div>
 				</div>

@@ -911,63 +911,6 @@ article.item-full .feature img {
   height: auto;
 }
 
-article.item-full .article-cards-wrapper {
-  overflow-x: scroll;
-  margin-right: 0;
-  position: relative;
-}
-
-article.item-full .article-cards {
-  max-height: 500px;
-  width: 800vw;
-  overflow: hidden;
-}
-
-article.item-full .article-media {
-  margin: 0px 0;
-  float: left;
-}
-
-article.item-full .article-media .article-card {
-  width: 190px;
-  height: 300px;
-  margin: 40px auto;
-  border-radius: 15px;
-  overflow: hidden;
-}
-
-article.item-full .article-media .article-card img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-article.item-full .article-secondary-image-wrapper {
-  height: 340px;
-}
-
-article.item-full .article-secondary-image-caption {
-  margin: 10px 0;
-}
-
-article.item-full .article-secondary-image {
-  position: relative;
-  margin: 0px auto;
-  height: 300px;
-  width: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-article.item-full .article-secondary-image img {
-  display: block;
-  margin: 0px auto;
-  width: auto;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-}
-
 article.item-full ul {
   margin-left: 0px;
   padding-left: 0px;
@@ -1000,41 +943,6 @@ article.item-full .article-attachments ul li {
 article.item-full .article-attachments ul li a {
   font-weight: bold;
   border-bottom: 0px;
-}
-
-@media screen and (min-width: 769px) {
-  article.item-full .article-media {
-    margin: 40px 80px 40px 0;
-    overflow-y: hidden;
-  }
-
-  article.item-full .article-media .article-card {
-    float: left;
-  }
-
-  article.item-full .article-media .article-secondary-image-wrapper img {
-    margin: 0px 0px;
-  }
-
-  article.item-full .article-media .article-secondary-image-wrapper {
-    position: relative;
-    float: left;
-    height: 300px;
-    margin-top: 40px;
-    margin-left: 40px;
-    max-width: 100%;
-    width: 390px;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  article.item-full .article-cards-wrapper {
-    margin-left: -100px;
-  }
-
-  article.item-full .article-cards-wrapper .article-secondary-image-wrapper {
-    width: 540px;
-  }
 }
 
 article.item-half {
@@ -1102,6 +1010,54 @@ article.item-half .more-link {
   margin-right: 0;
   min-width: 600px;
   height: 422px;
+}
+
+.article-cards {
+  position: relative;
+  outline: none;
+}
+
+.article-cards button.next, .article-cards button.previous {
+  border: 0px;
+  background: transparent;
+  width: 22px;
+}
+
+.article-cards .flickity-slider {
+  height: 100%;
+}
+
+.article-cards .flickity-viewport {
+  overflow: hidden;
+}
+
+.article-cards .article-media {
+  width: 100%;
+  position: relative;
+  margin: 0px 20px;
+}
+
+.article-cards .article-media .article-card {
+  float: left;
+  width: 25%;
+  height: auto;
+}
+
+.article-cards .article-media .article-card-image-wrapper {
+  position: absolute;
+  left: 25%;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  padding-left: 45px;
+}
+
+.article-cards .article-media .article-card-image-wrapper .article-card-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
 }
 
 #game {
@@ -1194,6 +1150,8 @@ article.item-half .more-link {
   height: 100%;
   overflow: hidden;
   padding: 5vw;
+  -webkit-perspective: 2000px;
+          perspective: 2000px;
 }
 
 #game #drawCardsContainer .cards .card {
@@ -1204,14 +1162,41 @@ article.item-half .more-link {
   max-height: 100%;
   padding-left: 15px;
   padding-right: 15px;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+#game #drawCardsContainer .cards .card.flipped {
+  -webkit-transform: rotateY(180deg) translateX(0);
+          transform: rotateY(180deg) translateX(0);
+}
+
+#game #drawCardsContainer .cards .card .back {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
 }
 
 #game #drawCardsContainer .cards .card .img {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  z-index: 2;
+}
+
+#game #drawCardsContainer .cards .card .img, #game #drawCardsContainer .cards .card .back {
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  position: absolute;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 
 #game #drawCardsContainer #refreshButton {

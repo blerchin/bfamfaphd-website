@@ -54,6 +54,7 @@
 			height: 100%;
 			overflow: hidden;
 			padding: 5vw;
+			perspective: 2000px;
 			.card {
 				position: relative;
 				float: left;
@@ -62,12 +63,28 @@
 				max-height: 100%;
 				padding-left: 15px;
 				padding-right: 15px;
+				transition: transform 500ms ease-in-out;
+				transform-style: preserve-3d;
+				&.flipped {
+					transform: rotateY(180deg) translateX(0);
+				}
+				.back {
+					transform: rotateY(0deg);
+				}
 				.img {
+					transform: rotateY(180deg);
+					z-index: 2;
+				}
+				.img, .back {
+					top: 0;
+					left: 0;
 					width: 100%;
 					height: 100%;
+					position: absolute;
 					background-size: contain;
 					background-position: center;
 					background-repeat: no-repeat;
+					backface-visibility: hidden;
 				}
 			}
 		}

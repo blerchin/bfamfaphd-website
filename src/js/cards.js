@@ -13,11 +13,20 @@ const Cards = function(attr){
 
 Cards.prototype.draw = function(){
 	let cards = this.getCards();
-	let cardEls = this.$el.find('.card .img'); 
+	let cardEls = this.$el.find('.card');
+	let cardFronts = this.$el.find('.card .img');
+	let cardBacks = this.$el.find('.card .back');
+	cardEls.removeClass('flipped');
 	for(let i=0; i<cards.length; i++){
 		let card = cards[i];
-		let $el = $(cardEls[i]);
-		$el.css('background-image', `url(${card.imageSrc})`);
+		let $cardEl = $(cardEls[i]);
+		let $front = $(cardFronts[i]);
+		$front.css('background-image', `url(${card.imageSrc})`);
+		let $back = $(cardBacks[i]);
+		$back.css('background-image', `url(${card.backImageSrc})`);
+		setTimeout(function(){
+			$cardEl.addClass('flipped')
+		}, (i+1) * 1000);
 	}
 	this.drawStory(cards);
 	this.$el.find('.cardsWrapper').scrollLeft(0);

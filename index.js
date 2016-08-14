@@ -36,6 +36,7 @@ $(document).ready(function(){
         key: card.post_name,
         name: card.post_title,
         imageSrc: card.post_thumbnail_uri,
+				backImageSrc: card.card_back_image_uri,
         excerpt: card.post_excerpt,
         category: card.post_category
       };
