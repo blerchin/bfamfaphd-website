@@ -1,5 +1,6 @@
 const _ = require('lodash');
 const Cards = function(attr){
+	const instance = this;
 	this.el = attr.el;
 	this.$el = $(this.el);
 	this.cards = attr.cards;
@@ -7,11 +8,30 @@ const Cards = function(attr){
 	this.drawSize = this.$el.find('.card').length;
 	this.$el.on('collapse:in', this.draw.bind(this));
 	this.$el.find('#refreshButton').click(this.draw.bind(this));
+	this.$el.find('.card').click(function(){
+		instance.onCardClicked(this);
+	});
+	this.$el.find('.deck').click(()=>{
+	  this.draw();
+	})
+
 	this.draw();
 	$(window).on('resize', this.draw.bind(this));
 };
 
+Cards.prototype.onCardClicked = function(el){
+		const $this = $(el);
+		const isOpen = $this.hasClass('open');
+		this.$el.find('.card').removeClass('open');
+		if(isOpen){
+			$this.removeClass('open');
+		} else {
+			$this.addClass('open');
+		}
+};
+
 Cards.prototype.draw = function(){
+	this.$el.find('.cards').removeClass('dealt');
 	let cards = this.getCards();
 	let cardEls = this.$el.find('.card');
 	let cardFronts = this.$el.find('.card .img');
@@ -24,10 +44,11 @@ Cards.prototype.draw = function(){
 		$front.css('background-image', `url(${card.imageSrc})`);
 		let $back = $(cardBacks[i]);
 		$back.css('background-image', `url(${card.backImageSrc})`);
-		setTimeout(function(){
-			$cardEl.addClass('flipped')
-		}, (i+1) * 1000);
 	}
+	setTimeout(()=>{
+		this.$el.find('.cards').addClass('dealt');
+	}, 1000)
+
 	this.drawStory(cards);
 	this.$el.find('.cardsWrapper').scrollLeft(0);
 };

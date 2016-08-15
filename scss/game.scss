@@ -45,29 +45,23 @@
 			position: relative;
 			width: 100%;
 		}
+		$card-height: 300px;
 		.cards {
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-			padding: 5vw;
 			perspective: 2000px;
-			.card {
-				position: relative;
-				float: left;
-				width: 33%;
-				height: 100%;
+			.card, .deck {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-left: -.32 * $card-height;
+				margin-top: -.5 * $card-height;
+				height: $card-height;
+				width: .63 * $card-height;
 				max-height: 100%;
 				padding-left: 15px;
 				padding-right: 15px;
 				transition: transform 500ms ease-in-out;
 				transform-style: preserve-3d;
-				&.flipped {
-					transform: rotateY(180deg) translateX(0);
-				}
+				transform-origin: right bottom;
 				.back {
 					transform: rotateY(0deg);
 				}
@@ -85,6 +79,21 @@
 					background-position: center;
 					background-repeat: no-repeat;
 					backface-visibility: hidden;
+				}
+			}
+			.card.open {
+				z-index: 100;
+				transform: scale(1.5) rotateY(180deg) translateX(.5 * $card-height) !important;
+			}
+			&.dealt {
+				.card-1 {
+					transform: rotate(15deg);
+				}
+				.card-2 {
+					transform: rotate(30deg);
+				}
+				.card-3 {
+					transform: rotate(45deg);
 				}
 			}
 		}
