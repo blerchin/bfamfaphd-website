@@ -17161,6 +17161,9 @@
 	
 	var _ = __webpack_require__(135);
 	var Cards = function Cards(attr) {
+		var _this = this;
+	
+		var instance = this;
 		this.el = attr.el;
 		this.$el = $(this.el);
 		this.cards = attr.cards;
@@ -17168,32 +17171,49 @@
 		this.drawSize = this.$el.find('.card').length;
 		this.$el.on('collapse:in', this.draw.bind(this));
 		this.$el.find('#refreshButton').click(this.draw.bind(this));
+		this.$el.find('.card').click(function () {
+			instance.onCardClicked(this);
+		});
+		this.$el.find('.deck').click(function () {
+			_this.draw();
+		});
+	
 		this.draw();
 		$(window).on('resize', this.draw.bind(this));
 	};
 	
+	Cards.prototype.onCardClicked = function (el) {
+		var $this = $(el);
+		var isOpen = $this.hasClass('open');
+		this.$el.find('.card').removeClass('open');
+		if (isOpen) {
+			$this.removeClass('open');
+		} else {
+			$this.addClass('open');
+		}
+	};
+	
 	Cards.prototype.draw = function () {
+		var _this2 = this;
+	
+		this.$el.find('.cards').removeClass('dealt');
 		var cards = this.getCards();
 		var cardEls = this.$el.find('.card');
 		var cardFronts = this.$el.find('.card .img');
 		var cardBacks = this.$el.find('.card .back');
 		cardEls.removeClass('flipped');
-	
-		var _loop = function _loop(i) {
+		for (var i = 0; i < cards.length; i++) {
 			var card = cards[i];
 			var $cardEl = $(cardEls[i]);
 			var $front = $(cardFronts[i]);
 			$front.css('background-image', 'url(' + card.imageSrc + ')');
 			var $back = $(cardBacks[i]);
 			$back.css('background-image', 'url(' + card.backImageSrc + ')');
-			setTimeout(function () {
-				$cardEl.addClass('flipped');
-			}, (i + 1) * 1000);
-		};
-	
-		for (var i = 0; i < cards.length; i++) {
-			_loop(i);
 		}
+		setTimeout(function () {
+			_this2.$el.find('.cards').addClass('dealt');
+		}, 1000);
+	
 		this.drawStory(cards);
 		this.$el.find('.cardsWrapper').scrollLeft(0);
 	};
@@ -17233,43 +17253,43 @@
 	};
 	
 	Cards.prototype.sortByCategory = function (arr) {
-		var _this = this;
+		var _this3 = this;
 	
 		return _.sortBy(arr, function (item) {
-			return _this.order.indexOf(item.category);
+			return _this3.order.indexOf(item.category);
 		});
 	};
 	
 	Cards.prototype.dedupe = function (generator) {
-		var _this2 = this;
+		var _this4 = this;
 	
 		return function () {
-			var results = generator.apply(_this2);
+			var results = generator.apply(_this4);
 			var tries = 0;
-			while (_this2.hasDupes(results)) {
+			while (_this4.hasDupes(results)) {
 				if (++tries > 100) {
 					break;
 				}
-				results = generator.apply(_this2);
+				results = generator.apply(_this4);
 			}
 			return results;
 		};
 	};
 	
 	Cards.prototype.getRandomCards = function () {
-		var _this3 = this;
+		var _this5 = this;
 	
 		return this.getRandomIndices().map(function (i) {
-			return _this3.cards[i];
+			return _this5.cards[i];
 		});
 	};
 	
 	Cards.prototype.getRandomIndices = function () {
-		var _this4 = this;
+		var _this6 = this;
 	
 		var indices = Array.apply(null, Array(this.drawSize));
 		return indices.map(function () {
-			return _this4.getRandomIndex();
+			return _this6.getRandomIndex();
 		});
 	};
 	

@@ -1129,36 +1129,18 @@ article.item-half .more-link {
 }
 
 #game #drawCardsContainer .cards {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  padding: 5vw;
   -webkit-perspective: 2000px;
           perspective: 2000px;
 }
 
-#game #drawCardsContainer .cards .card {
-  position: relative;
-  float: left;
-  width: 33%;
-  height: 100%;
+#game #drawCardsContainer .cards .card, #game #drawCardsContainer .cards .deck {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -96px;
+  margin-top: -150px;
+  height: 300px;
+  width: 189px;
   max-height: 100%;
   padding-left: 15px;
   padding-right: 15px;
@@ -1168,25 +1150,22 @@ article.item-half .more-link {
   transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+  -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
 }
 
-#game #drawCardsContainer .cards .card.flipped {
-  -webkit-transform: rotateY(180deg) translateX(0);
-          transform: rotateY(180deg) translateX(0);
-}
-
-#game #drawCardsContainer .cards .card .back {
+#game #drawCardsContainer .cards .card .back, #game #drawCardsContainer .cards .deck .back {
   -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
 }
 
-#game #drawCardsContainer .cards .card .img {
+#game #drawCardsContainer .cards .card .img, #game #drawCardsContainer .cards .deck .img {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   z-index: 2;
 }
 
-#game #drawCardsContainer .cards .card .img, #game #drawCardsContainer .cards .card .back {
+#game #drawCardsContainer .cards .card .img, #game #drawCardsContainer .cards .card .back, #game #drawCardsContainer .cards .deck .img, #game #drawCardsContainer .cards .deck .back {
   top: 0;
   left: 0;
   width: 100%;
@@ -1197,6 +1176,27 @@ article.item-half .more-link {
   background-repeat: no-repeat;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+}
+
+#game #drawCardsContainer .cards .card.open {
+  z-index: 100;
+  -webkit-transform: scale(1.5) rotateY(180deg) translateX(150px) !important;
+          transform: scale(1.5) rotateY(180deg) translateX(150px) !important;
+}
+
+#game #drawCardsContainer .cards.dealt .card-1 {
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+
+#game #drawCardsContainer .cards.dealt .card-2 {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+#game #drawCardsContainer .cards.dealt .card-3 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 #game #drawCardsContainer #refreshButton {
