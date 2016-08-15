@@ -45,23 +45,27 @@
 			position: relative;
 			width: 100%;
 		}
-		$card-height: 300px;
+		$card-height: 40vh;
+		$card-width: .636 * $card-height;
 		.cards {
 			perspective: 2000px;
 			.card, .deck {
 				position: absolute;
 				left: 50%;
 				top: 50%;
-				margin-left: -.32 * $card-height;
 				margin-top: -.5 * $card-height;
+				margin-left: -.5 * $card-width;
 				height: $card-height;
-				width: .63 * $card-height;
+				width: $card-width;
 				max-height: 100%;
 				padding-left: 15px;
 				padding-right: 15px;
 				transition: transform 500ms ease-in-out;
 				transform-style: preserve-3d;
 				transform-origin: right bottom;
+				cursor: pointer;
+				border-radius: 2.05vh;
+				border-width: 0px;
 				.back {
 					transform: rotateY(0deg);
 				}
@@ -82,18 +86,31 @@
 				}
 			}
 			.card.open {
-				z-index: 100;
-				transform: scale(1.5) rotateY(180deg) translateX(.5 * $card-height) !important;
+				z-index: 100 !important;
+				transform: scale(1.5) rotateY(180deg) translate(13/16 * $card-width, 10vh) !important;
+			}
+			.deck {
+				box-shadow: -3px 5px 10px 1px rgba(0,0,0,.25);
 			}
 			&.dealt {
+				.card {
+					box-shadow: -3px 5px 10px 1px rgba(0,0,0,.25);
+				}
+				.deck {
+					transform: rotate(-15deg);
+					z-index: 99;
+				}
 				.card-1 {
-					transform: rotate(15deg);
+					transform: rotate(0deg);
+					z-index: 98;
 				}
 				.card-2 {
-					transform: rotate(30deg);
+					transform: rotate(15deg);
+					z-index: 97;
 				}
 				.card-3 {
-					transform: rotate(45deg);
+					transform: rotate(30deg);
+					z-index: 96;
 				}
 			}
 		}
@@ -236,16 +253,6 @@
 			height: 40px;
 			a {
 				border-width: 0;
-			}
-		}
-		.cardsWrapper {
-			overflow-x: scroll;
-			width: 100%;
-			.cards {
-				width: 220%;
-				.card {
-					height: 100%;
-				}
 			}
 		}
 	}

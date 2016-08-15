@@ -1137,10 +1137,10 @@ article.item-half .more-link {
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -96px;
-  margin-top: -150px;
-  height: 300px;
-  width: 189px;
+  margin-top: -20vh;
+  margin-left: -12.72vh;
+  height: 40vh;
+  width: 25.44vh;
   max-height: 100%;
   padding-left: 15px;
   padding-right: 15px;
@@ -1152,6 +1152,9 @@ article.item-half .more-link {
           transform-style: preserve-3d;
   -webkit-transform-origin: right bottom;
           transform-origin: right bottom;
+  cursor: pointer;
+  border-radius: 2.05vh;
+  border-width: 0px;
 }
 
 #game #drawCardsContainer .cards .card .back, #game #drawCardsContainer .cards .deck .back {
@@ -1179,24 +1182,41 @@ article.item-half .more-link {
 }
 
 #game #drawCardsContainer .cards .card.open {
-  z-index: 100;
-  -webkit-transform: scale(1.5) rotateY(180deg) translateX(150px) !important;
-          transform: scale(1.5) rotateY(180deg) translateX(150px) !important;
+  z-index: 100 !important;
+  -webkit-transform: scale(1.5) rotateY(180deg) translate(20.67vh, 10vh) !important;
+          transform: scale(1.5) rotateY(180deg) translate(20.67vh, 10vh) !important;
+}
+
+#game #drawCardsContainer .cards .deck {
+  box-shadow: -3px 5px 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+#game #drawCardsContainer .cards.dealt .card {
+  box-shadow: -3px 5px 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+#game #drawCardsContainer .cards.dealt .deck {
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  z-index: 99;
 }
 
 #game #drawCardsContainer .cards.dealt .card-1 {
-  -webkit-transform: rotate(15deg);
-          transform: rotate(15deg);
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  z-index: 98;
 }
 
 #game #drawCardsContainer .cards.dealt .card-2 {
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+  z-index: 97;
 }
 
 #game #drawCardsContainer .cards.dealt .card-3 {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  z-index: 96;
 }
 
 #game #drawCardsContainer #refreshButton {
@@ -1376,19 +1396,6 @@ article.item-half .more-link {
 
   #game #drawCardsContainer #instructionsButton a {
     border-width: 0;
-  }
-
-  #game #drawCardsContainer .cardsWrapper {
-    overflow-x: scroll;
-    width: 100%;
-  }
-
-  #game #drawCardsContainer .cardsWrapper .cards {
-    width: 220%;
-  }
-
-  #game #drawCardsContainer .cardsWrapper .cards .card {
-    height: 100%;
   }
 }
 

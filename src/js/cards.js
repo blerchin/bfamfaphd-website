@@ -30,7 +30,10 @@ Cards.prototype.onCardClicked = function(el){
 };
 
 Cards.prototype.draw = function(){
-	this.$el.find('.cards').removeClass('dealt');
+	if(this.$el.find('.cards').hasClass('dealt')) {
+		this.$el.find('.cards').removeClass('dealt');
+		return;
+	}
 	let cards = this.getCards();
 	let cardEls = this.$el.find('.card');
 	let cardFronts = this.$el.find('.card .img');
@@ -45,9 +48,9 @@ Cards.prototype.draw = function(){
 	}
 	setTimeout(()=>{
 		this.$el.find('.cards').addClass('dealt');
-	}, 1000)
+		this.drawStory(cards);
+	}, 500);
 
-	this.drawStory(cards);
 	this.$el.find('.cardsWrapper').scrollLeft(0);
 };
 

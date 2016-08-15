@@ -13,7 +13,7 @@ $cards_in = $SHOW_CIRCLE ? '' : 'in';
 			<div id="drawCardsContainer" class="slide <?php echo $cards_in; ?>">
 				<div class="cardsWrapper">
 					<div class="cards">
-						<div class="card card-3">
+						<div class="card card-1">
 							<div class="img"></div>
 							<div class="back"></div>
 						</div>
@@ -21,7 +21,7 @@ $cards_in = $SHOW_CIRCLE ? '' : 'in';
 							<div class="img"></div>
 							<div class="back"></div>
 						</div>
-						<div class="card card-1">
+						<div class="card card-3">
 							<div class="img"></div>
 							<div class="back"></div>
 						</div>

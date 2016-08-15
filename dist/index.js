@@ -17195,7 +17195,10 @@
 	Cards.prototype.draw = function () {
 		var _this2 = this;
 	
-		this.$el.find('.cards').removeClass('dealt');
+		if (this.$el.find('.cards').hasClass('dealt')) {
+			this.$el.find('.cards').removeClass('dealt');
+			return;
+		}
 		var cards = this.getCards();
 		var cardEls = this.$el.find('.card');
 		var cardFronts = this.$el.find('.card .img');
@@ -17210,9 +17213,9 @@
 		}
 		setTimeout(function () {
 			_this2.$el.find('.cards').addClass('dealt');
-		}, 1000);
+			_this2.drawStory(cards);
+		}, 500);
 	
-		this.drawStory(cards);
 		this.$el.find('.cardsWrapper').scrollLeft(0);
 	};
 	
