@@ -14,8 +14,7 @@ const Cards = function(attr){
 	this.$el.find('.deck').click(()=>{
 	  this.draw();
 	})
-
-	this.draw();
+	this.sizeCards('70');
 	$(window).on('resize', this.draw.bind(this));
 };
 
@@ -36,7 +35,6 @@ Cards.prototype.draw = function(){
 	let cardEls = this.$el.find('.card');
 	let cardFronts = this.$el.find('.card .img');
 	let cardBacks = this.$el.find('.card .back');
-	cardEls.removeClass('flipped');
 	for(let i=0; i<cards.length; i++){
 		let card = cards[i];
 		let $cardEl = $(cardEls[i]);

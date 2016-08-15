@@ -17177,8 +17177,7 @@
 		this.$el.find('.deck').click(function () {
 			_this.draw();
 		});
-	
-		this.draw();
+		this.sizeCards('70');
 		$(window).on('resize', this.draw.bind(this));
 	};
 	
@@ -17201,7 +17200,6 @@
 		var cardEls = this.$el.find('.card');
 		var cardFronts = this.$el.find('.card .img');
 		var cardBacks = this.$el.find('.card .back');
-		cardEls.removeClass('flipped');
 		for (var i = 0; i < cards.length; i++) {
 			var card = cards[i];
 			var $cardEl = $(cardEls[i]);
