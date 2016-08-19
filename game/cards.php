@@ -26,9 +26,9 @@ $cards_in = $SHOW_CIRCLE ? '' : 'in';
 							<div class="back"></div>
 						</div>
 						<div class="deck">
-							<div class="img" style="background-image: url(http://bfamfaphd.local/wp-content/uploads/2016/06/Cards-V.4-Backs-41.png);">
+							<div class="img" style="background-image: url(/wp-content/uploads/2016/06/Cards-V.4-Backs-41.png);">
 							</div>
-							<div class="back" style="background-image: url(http://bfamfaphd.local/wp-content/uploads/2016/06/Cards-V.4-Backs-41.png);">
+							<div class="back" style="background-image: url(/wp-content/uploads/2016/06/Cards-V.4-Backs-41.png);">
 							</div>
 						</div>
 					</div>
