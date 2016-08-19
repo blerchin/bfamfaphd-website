@@ -87,7 +87,7 @@
 			}
 			.card.open {
 				z-index: 100 !important;
-				transform: scale(1.5) rotateY(180deg) translate(13/16 * $card-width, 10vh) !important;
+				transform: scale(1.5) rotateY(180deg) translate3d(13/16 * $card-width, 10vh, -100px) !important;
 			}
 			.deck {
 				box-shadow: -3px 5px 10px 1px rgba(0,0,0,.25);
