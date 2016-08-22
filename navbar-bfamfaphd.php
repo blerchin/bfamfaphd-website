@@ -19,7 +19,7 @@
 			<div class="nav navbar-nav">
 				<?php while( $nav->have_posts() ): $nav->the_post() ?>
 					<?php global $post; $slug = $post->post_name; ?>
-					<li class="menu-item"><a href="#topic-<?php echo $slug; ?>"><?php the_title() ?></a></li>
+					<li class="menu-item"><a href="/#topic-<?php echo $slug; ?>"><?php the_title() ?></a></li>
 				<?php endwhile; ?>
 			</div>
       <?php wp_nav_menu( array(

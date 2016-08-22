@@ -14,17 +14,41 @@ $cards_in = $SHOW_CIRCLE ? '' : 'in';
 				<div class="cardsWrapper">
 					<div class="cards">
 						<div class="card card-1">
-							<div class="img"></div>
+							<div class="img">
+								<img />
+							</div>
+							<div class="back">
+								<img />
+							</div>
 						</div>
 						<div class="card card-2">
-							<div class="img"></div>
+							<div class="img">
+								<img />
+							</div>
+							<div class="back">
+								<img />
+							</div>
 						</div>
 						<div class="card card-3">
-							<div class="img"></div>
+							<div class="img">
+								<img />
+							</div>
+							<div class="back">
+								<img />
+							</div>
+						</div>
+						<div class="deck">
+							<div class="img">
+								<img src="/wp-content/uploads/2016/06/Cards-V.4-Backs-41.png" />
+							</div>
+							<div class="back">
+								<img src="/wp-content/uploads/2016/06/Cards-V.4-Backs-41.png" />
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="story">
+					<p>Click the deck to generate project ideas.</p>
 				</div>
 				<div id="refreshButton">
 				</div>

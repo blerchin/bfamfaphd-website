@@ -17,15 +17,15 @@ function supply_chain_render_cards($category){
       }
     ?>
 
-  	<div class="article-media">
+  	<div class="article-media row">
   		<div class="article-card">
-  			<img src="<?php echo get_the_post_thumbnail_url($card->ID, 'medium'); ?>" />
+				<img src="<?php echo get_the_post_thumbnail_url($card->ID, 'medium'); ?>" />
   		</div>
-  		<div class="article-secondary-image-wrapper">
-  			<div class="article-secondary-image"
+  		<div class="article-card-image-wrapper">
+  			<div class="article-card-image"
   				style="background-image: url('<?php echo $card_image; ?>');">
   			</div>
-  			<div class="article-secondary-image-caption">
+  			<div class="article-card-image-caption">
   				<?php echo $card_caption; ?>
   			</div>
   		</div>

@@ -15,7 +15,7 @@ article {
       font-size: 20px;
     }
   }
-  .article-body {
+  .article-body, .article-header {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -124,54 +124,6 @@ article.item-full {
       height: auto;
     }
   }
-  .article-cards-wrapper {
-    overflow-x: scroll;
-    margin-right: 0;
-    position: relative;
-  }
-  .article-cards {
-    max-height: 500px;
-    width: 800vw;
-    overflow: hidden;
-  }
-  .article-media {
-    margin: 0px 0;
-    float: left;
-    .article-card {
-      width: 190px;
-      height: 300px;
-      margin: 40px auto;
-      border-radius: 15px;
-      overflow: hidden;
-      img {
-        max-width: 100%;
-        max-height: 100%;
-      }
-    }
-  }
-  .article-secondary-image-wrapper {
-    height: 340px;
-  }
-  .article-secondary-image-caption {
-    margin: 10px 0;
-  }
-  .article-secondary-image {
-    position: relative;
-    margin: 0px auto;
-    height: 300px;
-    width: auto;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    img {
-      display: block;
-      margin: 0px auto;
-      width: auto;
-      height: 100%;
-      max-width: 100%;
-      max-height: 100%;
-    }
-  }
   ul {
     margin-left: 0px;
     padding-left: 0px;
@@ -198,37 +150,6 @@ article.item-full {
       a {
         font-weight: bold;
         border-bottom: 0px;
-      }
-    }
-  }
-  @media screen and (min-width: 769px) {
-    .article-media {
-      margin: 40px 80px 40px 0;
-      overflow-y: hidden;
-      .article-card {
-        float: left;
-      }
-      .article-secondary-image-wrapper {
-        img {
-          margin: 0px 0px;
-        }
-      }
-      .article-secondary-image-wrapper {
-        position: relative;
-        float: left;
-        height: 300px;
-        margin-top: 40px;
-        margin-left: 40px;
-        max-width: 100%;
-        width: 390px;
-      }
-    }
-  }
-  @media screen and (min-width: 1024px) {
-    .article-cards-wrapper {
-      margin-left: -100px;
-      .article-secondary-image-wrapper {
-        width: 540px;
       }
     }
   }
@@ -294,4 +215,47 @@ article.item-half {
   margin-right: 0;
   min-width: 600px;
   height: 422px;
+}
+
+.article-cards {
+  position: relative;
+  outline: none;
+
+  button.next,
+  button.previous {
+    border: 0px;
+    background: transparent;
+    width: 22px;
+  }
+  .flickity-slider {
+    height: 100%;
+  }
+  .flickity-viewport {
+    overflow: hidden;
+  }
+  .article-media {
+    width: 100%;
+    position: relative;
+    margin: 0px 20px;
+    .article-card {
+      float: left;
+      width: 25%;
+      height: auto;
+    }
+    .article-card-image-wrapper {
+      position: absolute;
+      left: 25%;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      padding-left: 45px;
+      .article-card-image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
 }

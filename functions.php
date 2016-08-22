@@ -25,6 +25,7 @@ function get_posts_json($post_type){
 		$posts[$key]->meta_color = get_post_meta( $post->ID, 'color', true);
 		$thumb_id = get_post_thumbnail_id($post->ID);
 		$posts[$key]->post_thumbnail_uri = wp_get_attachment_url( $thumb_id);
+		$posts[$key]->card_back_image_uri = get_field('card_back', $post->ID);
 		$cats = get_the_category($post->ID);
 		if(count($cats) > 0){
 			$cat = $cats[0]->cat_name;

@@ -1,5 +1,6 @@
 const _ = require('lodash');
 const Cards = function(attr){
+	const instance = this;
 	this.el = attr.el;
 	this.$el = $(this.el);
 	this.cards = attr.cards;
@@ -7,19 +8,49 @@ const Cards = function(attr){
 	this.drawSize = this.$el.find('.card').length;
 	this.$el.on('collapse:in', this.draw.bind(this));
 	this.$el.find('#refreshButton').click(this.draw.bind(this));
-	this.draw();
+	this.$el.find('.card img').click(function(){
+		instance.onCardClicked(this);
+	});
+	this.$el.find('.deck img').click(()=>{
+	  this.draw();
+	})
+	this.sizeCards('70');
 	$(window).on('resize', this.draw.bind(this));
 };
 
+Cards.prototype.onCardClicked = function(el){
+		const $this = $(el).parent().parent();
+		const isOpen = $this.hasClass('open');
+		this.$el.find('.card').removeClass('open');
+		if(isOpen){
+			$this.removeClass('open');
+		} else {
+			$this.addClass('open');
+		}
+};
+
 Cards.prototype.draw = function(){
+	if(this.$el.find('.cards').hasClass('dealt')) {
+		this.$el.find('.cards').removeClass('dealt');
+		return;
+	}
 	let cards = this.getCards();
-	let cardEls = this.$el.find('.card .img'); 
+	let cardEls = this.$el.find('.card');
+	let cardFronts = this.$el.find('.card .img img');
+	let cardBacks = this.$el.find('.card .back img');
 	for(let i=0; i<cards.length; i++){
 		let card = cards[i];
-		let $el = $(cardEls[i]);
-		$el.css('background-image', `url(${card.imageSrc})`);
+		let $cardEl = $(cardEls[i]);
+		let $front = $(cardFronts[i]);
+		$front.attr('src', card.imageSrc);
+		let $back = $(cardBacks[i]);
+		$back.attr('src', card.backImageSrc);
 	}
-	this.drawStory(cards);
+	setTimeout(()=>{
+		this.$el.find('.cards').addClass('dealt');
+		this.drawStory(cards);
+	}, 500);
+
 	this.$el.find('.cardsWrapper').scrollLeft(0);
 };
 
