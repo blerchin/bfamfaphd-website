@@ -9,7 +9,6 @@ const Cards = function(attr){
 	this.$el.on('collapse:in', this.draw.bind(this));
 	this.$el.find('#refreshButton').click(this.draw.bind(this));
 	this.$el.find('.card img').click(function(){
-		console.log('click');
 		instance.onCardClicked(this);
 	});
 	this.$el.find('.deck img').click(()=>{

@@ -1133,17 +1133,13 @@ article.item-half .more-link {
   position: relative;
   -webkit-perspective: 2000px;
           perspective: 2000px;
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
-}
-
-#game #drawCardsContainer .cards * {
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+  -webkit-transition: -webkit-transform 750ms ease-in-out;
+  transition: -webkit-transform 750ms ease-in-out;
+  transition: transform 750ms ease-in-out;
+  transition: transform 750ms ease-in-out, -webkit-transform 750ms ease-in-out;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #game #drawCardsContainer .cards .card, #game #drawCardsContainer .cards .deck {
@@ -1153,6 +1149,7 @@ article.item-half .more-link {
   height: 150%;
   width: 100%;
   max-width: 400px;
+  margin-top: 10%;
   padding: 30px 0;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
@@ -1162,6 +1159,32 @@ article.item-half .more-link {
   border-width: 0px;
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
+  -webkit-transition: -webkit-transform 750ms ease-in-out;
+  transition: -webkit-transform 750ms ease-in-out;
+  transition: transform 750ms ease-in-out;
+  transition: transform 750ms ease-in-out, -webkit-transform 750ms ease-in-out;
+}
+
+#game #drawCardsContainer .cards .card.open, #game #drawCardsContainer .cards .deck.open {
+  z-index: 100 !important;
+  -webkit-transform: scale(0.9) rotateY(180deg) translate3d(0, 0, -100px) !important;
+          transform: scale(0.9) rotateY(180deg) translate3d(0, 0, -100px) !important;
+  margin-top: 0%;
+}
+
+#game #drawCardsContainer .cards .card.open img, #game #drawCardsContainer .cards .deck.open img {
+  -webkit-transform: rotate(0) !important;
+          transform: rotate(0) !important;
+}
+
+@media screen and (min-width: 400px) {
+  #game #drawCardsContainer .cards .card, #game #drawCardsContainer .cards .deck {
+    margin-top: 45%;
+  }
+
+  #game #drawCardsContainer .cards .card.open, #game #drawCardsContainer .cards .deck.open {
+    margin-top: 10%;
+  }
 }
 
 #game #drawCardsContainer .cards .card .back, #game #drawCardsContainer .cards .deck .back {
@@ -1180,29 +1203,31 @@ article.item-half .more-link {
   position: absolute;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 750ms ease-in-out;
+  transition: -webkit-transform 750ms ease-in-out;
+  transition: transform 750ms ease-in-out;
+  transition: transform 750ms ease-in-out, -webkit-transform 750ms ease-in-out;
 }
 
 #game #drawCardsContainer .cards .card .img img, #game #drawCardsContainer .cards .card .back img, #game #drawCardsContainer .cards .deck .img img, #game #drawCardsContainer .cards .deck .back img {
   width: 100%;
   height: auto;
-  border-radius: 4.14vh;
+  border-radius: 28px;
   -webkit-transform-origin: bottom center;
           transform-origin: bottom center;
-}
-
-#game #drawCardsContainer .cards .card.open {
-  z-index: 100 !important;
-  -webkit-transform: scale(0.9) rotateY(180deg) translate3d(0, 0, -100px) !important;
-          transform: scale(0.9) rotateY(180deg) translate3d(0, 0, -100px) !important;
-}
-
-#game #drawCardsContainer .cards .card.open img {
-  -webkit-transform: rotate(0) !important;
-          transform: rotate(0) !important;
+  -webkit-transition: -webkit-transform 750ms ease-in-out;
+  transition: -webkit-transform 750ms ease-in-out;
+  transition: transform 750ms ease-in-out;
+  transition: transform 750ms ease-in-out, -webkit-transform 750ms ease-in-out;
 }
 
 #game #drawCardsContainer .cards .deck img {
   box-shadow: -3px 5px 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+#game #drawCardsContainer .cards.dealt {
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 #game #drawCardsContainer .cards.dealt .card img {
@@ -1233,20 +1258,13 @@ article.item-half .more-link {
   z-index: 96;
 }
 
-@media screen and (max-width: 480px) {
-  #game #drawCardsContainer .cards.dealt {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
+#game #drawCardsContainer .cards.dealt .card.open {
+  -webkit-transform: scale(0.9) rotateY(180deg) translate3d(-50%, 0, -100px) !important;
+          transform: scale(0.9) rotateY(180deg) translate3d(-50%, 0, -100px) !important;
+}
 
-  #game #drawCardsContainer .cards.dealt .card.open {
-    -webkit-transform: scale(0.9) rotateY(180deg) translate3d(-50%, 0, -100px) !important;
-            transform: scale(0.9) rotateY(180deg) translate3d(-50%, 0, -100px) !important;
-  }
-
-  #game #drawCardsContainer .cards.dealt .card.open .img {
-    padding-left: 15px;
-  }
+#game #drawCardsContainer .cards.dealt .card.open .img {
+  padding-left: 15px;
 }
 
 #game #drawCardsContainer #refreshButton {

@@ -55,10 +55,10 @@
 		.cards {
 			position: relative;
 			perspective: 2000px;
-			transition: transform 500ms ease-in-out;
-			* {
-				transition: transform 500ms ease-in-out;
-			}
+			transition: transform 750ms ease-in-out;
+			width: 350px;
+			margin-left: auto;
+			margin-right: auto;
 			.card, .deck {
 				position: absolute;
 				top: 0;
@@ -66,12 +66,29 @@
 				height: 150%;
 				width: 100%;
 				max-width: 400px;
+				margin-top: 10%;
 				padding: 30px 0;
 				transform-style: preserve-3d;
 				transform-origin: top center;
 				cursor: pointer;
 				border-width: 0px;
 				transform: scale(1 / $card-open-scale);
+				transition: transform 750ms ease-in-out;
+				&.open {
+					z-index: 100 !important;
+					transform: scale(.90) rotateY(180deg) translate3d(0, 0, -100px) !important;
+					margin-top: 0%;
+					img {
+						transform: rotate(0) !important;
+					}
+				}
+				@media screen and (min-width: 400px) {
+					margin-top: 45%;
+					&.open {
+						margin-top: 10%;
+
+					}
+				}
 				.back {
 					transform: rotateY(0deg);
 				}
@@ -83,25 +100,21 @@
 					margin: 0;
 					position: absolute;
 					backface-visibility: hidden;
+					transition: transform 750ms ease-in-out;
 					img {
 						width: 100%;
 						height: auto;
-						border-radius: 2.07vh * $card-open-scale;
+						border-radius: 28px;
 						transform-origin: bottom center;
+						transition: transform 750ms ease-in-out;
 					}
-				}
-			}
-			.card.open {
-				z-index: 100 !important;
-				transform: scale(.90) rotateY(180deg) translate3d(0, 0, -100px) !important;
-				img {
-					transform: rotate(0) !important;
 				}
 			}
 			.deck img{
 				box-shadow: -3px 5px 10px 1px rgba(0,0,0,.25);
 			}
 			&.dealt {
+				transform: translateX(-50%);
 				.card img {
 					box-shadow: -3px 5px 10px 1px rgba(0,0,0,.25);
 					pointer-events: all;
@@ -121,14 +134,11 @@
 					transform: translateX(125%) rotate(15deg);
 					z-index: 96;
 				}
-				@media screen and (max-width: 480px) {
-					transform: translateX(-50%);
-					.card.open {
-						.img {
-							padding-left: 15px;
-						}
-						transform: scale(.9) rotateY(180deg) translate3d(-50%, 0, -100px) !important;
+				.card.open {
+					.img {
+						padding-left: 15px;
 					}
+					transform: scale(.9) rotateY(180deg) translate3d(-50%, 0, -100px) !important;
 				}
 			}
 		}
