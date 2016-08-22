@@ -41,6 +41,7 @@
 		background-color: $gray-overlay;
 		display: flex;
 		flex-direction: column;
+		z-index: 100;
 		.cardsWrapper {
 			position: relative;
 			width: 100%;
@@ -56,7 +57,7 @@
 			position: relative;
 			perspective: 2000px;
 			transition: transform 750ms ease-in-out;
-			width: 350px;
+			width: 300px;
 			margin-left: auto;
 			margin-right: auto;
 			.card, .deck {
@@ -86,7 +87,6 @@
 					margin-top: 45%;
 					&.open {
 						margin-top: 10%;
-
 					}
 				}
 				.back {
@@ -109,6 +109,10 @@
 						transition: transform 750ms ease-in-out;
 					}
 				}
+				.back img {
+					border: 2px solid $white;
+
+				}
 			}
 			.deck img{
 				box-shadow: -3px 5px 10px 1px rgba(0,0,0,.25);
@@ -121,18 +125,25 @@
 				}
 				.deck {
 					transform: scale(1 / $card-open-scale) translateX(-30%);
+					z-index: 99;
 				}
-				.card-1 img {
-					transform: translateX(125%) rotate(-15deg);
+				.card-1 {
 					z-index: 98;
+					img {
+						transform: translateX(125%) rotate(-15deg);
+					}
 				}
-				.card-2 img {
-					transform: translateX(125%) rotate(0deg);
+				.card-2 {
 					z-index: 97;
+					img {
+						transform: translateX(125%) rotate(0deg);
+					}
 				}
-				.card-3 img {
-					transform: translateX(125%) rotate(15deg);
+				.card-3 {
 					z-index: 96;
+					img {
+						transform: translateX(125%) rotate(15deg);
+					}
 				}
 				.card.open {
 					.img {
@@ -152,6 +163,7 @@
 			background-image: url(../assets/images/refresh.svg);
 			background-repeat: no-repeat;
 			background-size: contain;
+			z-index: 99;
 		}
 		#instructionsButton {
 			position: absolute;
@@ -163,6 +175,7 @@
 			background-image: url(../assets/images/instructions.svg);
 			background-repeat: no-repeat;
 			background-size: contain;
+			z-index: 99;
 			a {
 				display: block;
 				height: 100%;
