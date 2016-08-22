@@ -17171,10 +17171,11 @@
 		this.drawSize = this.$el.find('.card').length;
 		this.$el.on('collapse:in', this.draw.bind(this));
 		this.$el.find('#refreshButton').click(this.draw.bind(this));
-		this.$el.find('.card').click(function () {
+		this.$el.find('.card img').click(function () {
+			console.log('click');
 			instance.onCardClicked(this);
 		});
-		this.$el.find('.deck').click(function () {
+		this.$el.find('.deck img').click(function () {
 			_this.draw();
 		});
 		this.sizeCards('70');
@@ -17182,7 +17183,7 @@
 	};
 	
 	Cards.prototype.onCardClicked = function (el) {
-		var $this = $(el);
+		var $this = $(el).parent().parent();
 		var isOpen = $this.hasClass('open');
 		this.$el.find('.card').removeClass('open');
 		if (isOpen) {
@@ -17201,15 +17202,15 @@
 		}
 		var cards = this.getCards();
 		var cardEls = this.$el.find('.card');
-		var cardFronts = this.$el.find('.card .img');
-		var cardBacks = this.$el.find('.card .back');
+		var cardFronts = this.$el.find('.card .img img');
+		var cardBacks = this.$el.find('.card .back img');
 		for (var i = 0; i < cards.length; i++) {
 			var card = cards[i];
 			var $cardEl = $(cardEls[i]);
 			var $front = $(cardFronts[i]);
-			$front.css('background-image', 'url(' + card.imageSrc + ')');
+			$front.attr('src', card.imageSrc);
 			var $back = $(cardBacks[i]);
-			$back.css('background-image', 'url(' + card.backImageSrc + ')');
+			$back.attr('src', card.backImageSrc);
 		}
 		setTimeout(function () {
 			_this2.$el.find('.cards').addClass('dealt');

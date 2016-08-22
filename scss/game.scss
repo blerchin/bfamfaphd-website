@@ -44,28 +44,34 @@
 		.cardsWrapper {
 			position: relative;
 			width: 100%;
+			height: 100%;
 		}
-		$card-height: 40vh;
-		$card-width: .636 * $card-height;
+		//start scaled down so the card will be full res when opened
+		$card-open-scale: 2;
+		$card-height: 100%;
+		$card-width: 100%;
+		$card-height-scaled: $card-open-scale * $card-height;
+		$card-width-scaled: $card-open-scale * $card-width;
 		.cards {
+			position: relative;
 			perspective: 2000px;
+			transition: transform 500ms ease-in-out;
+			* {
+				transition: transform 500ms ease-in-out;
+			}
 			.card, .deck {
 				position: absolute;
-				left: 50%;
-				top: 50%;
-				margin-top: -.5 * $card-height;
-				margin-left: -.5 * $card-width;
-				height: $card-height;
-				width: $card-width;
-				max-height: 100%;
-				padding-left: 15px;
-				padding-right: 15px;
-				transition: transform 500ms ease-in-out;
+				top: 0;
+				left: 0;
+				height: 150%;
+				width: 100%;
+				max-width: 400px;
+				padding: 30px 0;
 				transform-style: preserve-3d;
-				transform-origin: right bottom;
+				transform-origin: top center;
 				cursor: pointer;
-				border-radius: 2.05vh;
 				border-width: 0px;
+				transform: scale(1 / $card-open-scale);
 				.back {
 					transform: rotateY(0deg);
 				}
@@ -74,43 +80,55 @@
 					z-index: 2;
 				}
 				.img, .back {
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
+					margin: 0;
 					position: absolute;
-					background-size: contain;
-					background-position: center;
-					background-repeat: no-repeat;
 					backface-visibility: hidden;
+					img {
+						width: 100%;
+						height: auto;
+						border-radius: 2.07vh * $card-open-scale;
+						transform-origin: bottom center;
+					}
 				}
 			}
 			.card.open {
 				z-index: 100 !important;
-				transform: scale(1.5) rotateY(180deg) translate3d(13/16 * $card-width, 10vh, -100px) !important;
+				transform: scale(.90) rotateY(180deg) translate3d(0, 0, -100px) !important;
+				img {
+					transform: rotate(0) !important;
+				}
 			}
-			.deck {
+			.deck img{
 				box-shadow: -3px 5px 10px 1px rgba(0,0,0,.25);
 			}
 			&.dealt {
-				.card {
+				.card img {
 					box-shadow: -3px 5px 10px 1px rgba(0,0,0,.25);
+					pointer-events: all;
 				}
 				.deck {
-					transform: rotate(-15deg);
-					z-index: 99;
+					transform: scale(1 / $card-open-scale) translateX(-30%);
 				}
-				.card-1 {
-					transform: rotate(0deg);
+				.card-1 img {
+					transform: translateX(125%) rotate(-15deg);
 					z-index: 98;
 				}
-				.card-2 {
-					transform: rotate(15deg);
+				.card-2 img {
+					transform: translateX(125%) rotate(0deg);
 					z-index: 97;
 				}
-				.card-3 {
-					transform: rotate(30deg);
+				.card-3 img {
+					transform: translateX(125%) rotate(15deg);
 					z-index: 96;
+				}
+				@media screen and (max-width: 480px) {
+					transform: translateX(-50%);
+					.card.open {
+						.img {
+							padding-left: 15px;
+						}
+						transform: scale(.9) rotateY(180deg) translate3d(-50%, 0, -100px) !important;
+					}
 				}
 			}
 		}
