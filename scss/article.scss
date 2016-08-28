@@ -217,6 +217,10 @@ article.item-half {
   height: 422px;
 }
 
+.article-cards-wrapper {
+  height: 340px;
+  overflow: hidden;
+}
 .article-cards {
   position: relative;
   outline: none;
@@ -226,6 +230,7 @@ article.item-half {
     border: 0px;
     background: transparent;
     width: 22px;
+    margin-top: 10px;
   }
   .flickity-slider {
     height: 100%;
@@ -257,5 +262,10 @@ article.item-half {
         width: 100%;
       }
     }
+  }
+}
+@media (max-width: 768px) {
+  .article-cards .article-media .article-card-image-wrapper {
+    display:none;
   }
 }
