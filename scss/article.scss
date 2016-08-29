@@ -229,7 +229,7 @@ article.item-half {
 }
 
 .article-cards-wrapper {
-  height: 380px;
+  height: 400px;
   overflow: hidden;
 }
 .article-cards {
@@ -276,7 +276,16 @@ article.item-half {
   }
 }
 @media (max-width: 768px) {
-  .article-cards .article-media .article-card-image-wrapper {
-    display:none;
+  .article-cards .article-media {
+    .article-card {
+      visibility: hidden;
+    }
+    .article-card-image-wrapper {
+      left: 0;
+      padding-left: 0;
+    }
+    .article-card-image-caption {
+      margin-top: 35px;
+    }
   }
 }

@@ -11,6 +11,7 @@ function supply_chain_render_cards($category){
   <?php foreach ($cards as $card) {?>
     <?php
       $card_photo = get_field('card_photo', $card->ID);
+      $card_caption = '';
       if(!empty($card_photo)){
         $card_caption = $card_photo['caption'];
         $card_photo = $card_photo['sizes']['large'];
