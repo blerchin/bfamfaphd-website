@@ -229,7 +229,7 @@ article.item-half {
 }
 
 .article-cards-wrapper {
-  height: 340px;
+  height: 380px;
   overflow: hidden;
 }
 .article-cards {
@@ -245,9 +245,6 @@ article.item-half {
   }
   .flickity-slider {
     height: 100%;
-  }
-  .flickity-viewport {
-    overflow: hidden;
   }
   .article-media {
     width: 100%;
@@ -272,6 +269,9 @@ article.item-half {
         height: 100%;
         width: 100%;
       }
+    }
+    .article-card-image-caption {
+      margin-top: 10px;
     }
   }
 }
