@@ -9,8 +9,8 @@ article {
     clear: both;
   }
   header.article-header {
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 14px;
+    margin-bottom: 10px;
     h3 {
       font-size: 20px;
     }
@@ -54,6 +54,9 @@ article.type-project {
       font-style: italic;
       .thumb {
         height: 100px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
       }
 
     }
@@ -119,9 +122,21 @@ article.item-full {
     width: auto;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    p {
+      margin-bottom: 0;
+    }
     img {
       max-width: 100%;
+      max-height: 100%;
       height: auto;
+    }
+    .feature-image {
+      height: 400px;
+      width: 100%;
+      background-size: contain;
+      background-position: left;
+      background-repeat: no-repeat;
     }
   }
   ul {
@@ -168,7 +183,6 @@ article.item-half {
     clear: left;
   }
   header.article-header {
-    margin-bottom: 20px;
     margin-top: 0px;
   }
   .article-body {
@@ -217,6 +231,10 @@ article.item-half {
   height: 422px;
 }
 
+.article-cards-wrapper {
+  height: 400px;
+  overflow: hidden;
+}
 .article-cards {
   position: relative;
   outline: none;
@@ -226,12 +244,10 @@ article.item-half {
     border: 0px;
     background: transparent;
     width: 22px;
+    margin-top: 10px;
   }
   .flickity-slider {
     height: 100%;
-  }
-  .flickity-viewport {
-    overflow: hidden;
   }
   .article-media {
     width: 100%;
@@ -256,6 +272,23 @@ article.item-half {
         height: 100%;
         width: 100%;
       }
+    }
+    .article-card-image-caption {
+      margin-top: 10px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .article-cards .article-media {
+    .article-card {
+      visibility: hidden;
+    }
+    .article-card-image-wrapper {
+      left: 0;
+      padding-left: 0;
+    }
+    .article-card-image-caption {
+      margin-top: 35px;
     }
   }
 }

@@ -10,10 +10,11 @@ function supply_chain_render_cards($category){
   <div class="article-cards">
   <?php foreach ($cards as $card) {?>
     <?php
-      $card_image = get_field('card_image', $card->ID);
-      $card_caption = $card_image['caption'];
-      if(!empty($card_image)){
-        $card_image = $card_image['sizes']['large'];
+      $card_photo = get_field('card_photo', $card->ID);
+      $card_caption = '';
+      if(!empty($card_photo)){
+        $card_caption = $card_photo['caption'];
+        $card_photo = $card_photo['sizes']['large'];
       }
     ?>
 
@@ -23,7 +24,7 @@ function supply_chain_render_cards($category){
   		</div>
   		<div class="article-card-image-wrapper">
   			<div class="article-card-image"
-  				style="background-image: url('<?php echo $card_image; ?>');">
+  				style="background-image: url('<?php echo $card_photo; ?>');">
   			</div>
   			<div class="article-card-image-caption">
   				<?php echo $card_caption; ?>

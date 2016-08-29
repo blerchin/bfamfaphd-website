@@ -47,11 +47,27 @@ $(document).ready(function(){
       order: window.g.supplyChains.map((c)=> c.post_title)
     })
   }
-	$(window).resize(resizeIframe)
+  $(window).resize(function(){
+    resizeIframe()
+    resizeFeature();
+  })
 	resizeIframe()
+  resizeFeature();
 	cardsCarousel()
 
 });
+
+function resizeFeature(){
+  const featureImgs = $('.feature.image');
+  const ratio = 4/3;
+  let img, w;
+	for (let i=0; i<featureImgs.length; i++) {
+    img = $(featureImgs[i]);
+    w = img.closest('.feature-wrapper').width();
+    img.css('width', w + 'px');
+    img.css('height', (w / ratio) + 'px');
+  }
+}
 
 function resizeIframe(){
 	var iframes = document.getElementsByTagName('iframe');
@@ -67,22 +83,10 @@ function resizeIframe(){
 
 function cardsCarousel(){
 	const cards = document.getElementsByClassName('article-cards');
-	if(cards.length){
-		const flk = new Flickity(cards[0], {
+  for(let i=0; i<cards.length; i++){
+		const flk = new Flickity(cards[i], {
 			adaptiveHeight: true,
 			pageDots: false
 		})
-	}
-	/*
-	if(cards.length){
-		for(let i=0; i<cards.length; i++){
-			let width = 0;
-			for(let j=0; j<cards[i].children.length; j++){
-				width += cards[i].children[j].offsetWidth;
-			}
-			cards[i].style.width = width + 'px';
-		}
-	}
-	*/
-
+  }
 }

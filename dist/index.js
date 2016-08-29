@@ -97,10 +97,27 @@
 				})
 			});
 		}
-		$(window).resize(resizeIframe);
+		$(window).resize(function () {
+			resizeIframe();
+			resizeFeature();
+		});
 		resizeIframe();
+		resizeFeature();
 		cardsCarousel();
 	});
+	
+	function resizeFeature() {
+		var featureImgs = $('.feature.image');
+		var ratio = 4 / 3;
+		var img = void 0,
+		    w = void 0;
+		for (var i = 0; i < featureImgs.length; i++) {
+			img = $(featureImgs[i]);
+			w = img.closest('.feature-wrapper').width();
+			img.css('width', w + 'px');
+			img.css('height', w / ratio + 'px');
+		}
+	}
 	
 	function resizeIframe() {
 		var iframes = document.getElementsByTagName('iframe');
@@ -116,23 +133,12 @@
 	
 	function cardsCarousel() {
 		var cards = document.getElementsByClassName('article-cards');
-		if (cards.length) {
-			var flk = new Flickity(cards[0], {
+		for (var i = 0; i < cards.length; i++) {
+			var flk = new Flickity(cards[i], {
 				adaptiveHeight: true,
 				pageDots: false
 			});
 		}
-		/*
-	 if(cards.length){
-	 	for(let i=0; i<cards.length; i++){
-	 		let width = 0;
-	 		for(let j=0; j<cards[i].children.length; j++){
-	 			width += cards[i].children[j].offsetWidth;
-	 		}
-	 		cards[i].style.width = width + 'px';
-	 	}
-	 }
-	 */
 	}
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(70)))
 

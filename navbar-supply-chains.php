@@ -2,7 +2,7 @@
 function supply_chains_menu($ul_class){
 	global $post;
 	?>
-	<?php $supplyChains = new WP_Query('post_type=supply_chain'); ?>
+	<?php $supplyChains = new WP_Query('post_type=supply_chain&order=ASC&orderby=menu_order'); ?>
 	<?php if($supplyChains->have_posts()): ?>
 		<ul id="menu-supply-chains-menu" class="<?php echo $ul_class; ?>">
 		<?php while($supplyChains->have_posts()): $supplyChains->the_post(); ?>
@@ -42,15 +42,7 @@ function supply_chains_menu($ul_class){
       ))?>
       <?php
 				supply_chains_menu('nav navbar-nav visible-xs');
-			/*wp_nav_menu( array(
-        'theme-location' 	=> 'supply-chains-menu',
-        'menu'						=> 'supply-chains-menu',
-        'menu_id'					=> '',
-        'menu_class' 			=> 'nav navbar-nav visible-xs',
-        'container' 			=> '',
-        'fallback_cb'			=> 'wp_bootstrap_navwalker::fallback',
-        'walker'					=> new wp_bootstrap_navwalker()
-      ))*/?>
+      ?>
     </div>
     <a class="navbar-logo col-sm-1">
       <span class="dots-logo visible-xs"
