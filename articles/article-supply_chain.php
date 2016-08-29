@@ -37,7 +37,8 @@
 					<?php if(!empty($lead_video)): ?>
 						<?php echo $lead_video; ?>
 					<?php else: ?>
-						<img src="<?php echo $lead_image; ?>"/>
+						<div class="feature-image" style="background-image: url('<?php echo $lead_image; ?>');">
+            </div>
 					<?php endif; ?>
 				</div>
 			</div>
