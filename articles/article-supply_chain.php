@@ -33,14 +33,14 @@
 				style="background-color: <?php echo $post_color;?>">
 		<div class="article-body">
 			<div class="feature-wrapper">
-				<div class="feature">
-					<?php if(!empty($lead_video)): ?>
-						<?php echo $lead_video; ?>
-					<?php else: ?>
-						<div class="feature-image" style="background-image: url('<?php echo $lead_image; ?>');">
-            </div>
-					<?php endif; ?>
-				</div>
+        <?php if(!empty($lead_video)): ?>
+          <div class="feature">
+          <?php echo $lead_video; ?>
+          </div>
+        <?php else: ?>
+          <div class="feature image" style="background-image: url('<?php echo $lead_image; ?>');">
+          </div>
+        <?php endif; ?>
 			</div>
 			<header class="article-header">
 				<h3><?php the_title() ?></h3>

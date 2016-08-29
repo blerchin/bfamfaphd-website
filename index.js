@@ -58,9 +58,8 @@ $(document).ready(function(){
 });
 
 function resizeFeature(){
-  const featureImgs = document.getElementsByClassName('feature-image');
+  const featureImgs = $('.feature.image');
   const ratio = 4/3;
-  console.log(featureImgs)
   let img, w;
 	for (let i=0; i<featureImgs.length; i++) {
     img = $(featureImgs[i]);

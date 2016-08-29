@@ -1,4 +1,9 @@
 .section-supply-chains {
+  .feature {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   .supply-chain-list {
     overflow: hidden;
     margin-left: -15px;
@@ -12,11 +17,6 @@
       .feature {
         min-height: 260px;
         width: 100%;
-        .feature-image {
-          background-position: center;
-          background-size: cover;
-          background-repeat: no-repeat;
-        }
       }
 
     }
