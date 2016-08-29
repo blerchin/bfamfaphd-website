@@ -24,8 +24,11 @@
 					$out .= '<div class="article-body">';
 						$out .= '<div class="feature-wrapper">';
 							$out .= '<a href="/supply-chains-list/#' . $post->post_name . '">';
-								$out .= '<div class="feature" style="background-image: url(';
+                $out .= '<div class="feature">';
+								  $out .= '<div class="feature-image" style="background-image: url(';
 									$out .= $lead_image . ');">';
+                  $Out .= '</div>';
+
 								$out .= '</div>';
 							$out .= '</a>';
 						$out .= '</div>';

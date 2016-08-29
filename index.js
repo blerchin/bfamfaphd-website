@@ -47,11 +47,28 @@ $(document).ready(function(){
       order: window.g.supplyChains.map((c)=> c.post_title)
     })
   }
-	$(window).resize(resizeIframe)
+  $(window).resize(function(){
+    resizeIframe()
+    resizeFeature();
+  })
 	resizeIframe()
+  resizeFeature();
 	cardsCarousel()
 
 });
+
+function resizeFeature(){
+  const featureImgs = document.getElementsByClassName('feature-image');
+  const ratio = 4/3;
+  console.log(featureImgs)
+  let img, w;
+	for (let i=0; i<featureImgs.length; i++) {
+    img = $(featureImgs[i]);
+    w = img.closest('.feature-wrapper').width();
+    img.css('width', w + 'px');
+    img.css('height', (w / ratio) + 'px');
+  }
+}
 
 function resizeIframe(){
 	var iframes = document.getElementsByTagName('iframe');
