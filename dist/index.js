@@ -97,10 +97,27 @@
 				})
 			});
 		}
-		$(window).resize(resizeIframe);
+		$(window).resize(function () {
+			resizeIframe();
+			resizeFeature();
+		});
 		resizeIframe();
+		resizeFeature();
 		cardsCarousel();
 	});
+	
+	function resizeFeature() {
+		var featureImgs = $('.feature.image');
+		var ratio = 4 / 3;
+		var img = void 0,
+		    w = void 0;
+		for (var i = 0; i < featureImgs.length; i++) {
+			img = $(featureImgs[i]);
+			w = img.closest('.feature-wrapper').width();
+			img.css('width', w + 'px');
+			img.css('height', w / ratio + 'px');
+		}
+	}
 	
 	function resizeIframe() {
 		var iframes = document.getElementsByTagName('iframe');
