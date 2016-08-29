@@ -666,6 +666,15 @@ input.form-control:focus {
   margin-right: -15px;
 }
 
+.section-supply-chains .supply-chain-list article {
+  margin-top: 0;
+}
+
+.section-supply-chains .supply-chain-list article header {
+  padding-top: 6px;
+  padding-bottom: 10px;
+}
+
 .section-supply-chains .supply-chain-list article .feature {
   height: 260px;
   width: 100%;
@@ -761,6 +770,12 @@ input.form-control:focus {
   color: #000000 !important;
 }
 
+.section-supply-chains .mailchimp-form h3 {
+  color: #000000 !important;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
 .section-supply-chains .mailchimp-form h5, .section-supply-chains .mailchimp-form label.control-label, .section-supply-chains .mailchimp-form .btn {
   color: #000000;
 }
@@ -769,6 +784,10 @@ input.form-control:focus {
   background-color: whitesmoke;
   color: #000000;
   border-color: #000000;
+}
+
+.section-supply-chains .mailchimp-form input[type=submit] {
+  clear: both;
 }
 
 @media screen and (min-width: 1024px) {
@@ -792,8 +811,8 @@ article:first-child {
 }
 
 article header.article-header {
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-top: 14px;
+  margin-bottom: 10px;
 }
 
 article header.article-header h3 {
@@ -904,11 +923,25 @@ article.item-full .feature {
   width: auto;
   position: relative;
   overflow: hidden;
+  width: 100%;
+}
+
+article.item-full .feature p {
+  margin-bottom: 0;
 }
 
 article.item-full .feature img {
   max-width: 100%;
+  max-height: 100%;
   height: auto;
+}
+
+article.item-full .feature .feature-image {
+  height: 400px;
+  width: 100%;
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
 }
 
 article.item-full ul {
@@ -961,7 +994,6 @@ article.item-half:nth-child(odd) {
 }
 
 article.item-half header.article-header {
-  margin-bottom: 20px;
   margin-top: 0px;
 }
 
@@ -1012,6 +1044,11 @@ article.item-half .more-link {
   height: 422px;
 }
 
+.article-cards-wrapper {
+  height: 400px;
+  overflow: hidden;
+}
+
 .article-cards {
   position: relative;
   outline: none;
@@ -1021,14 +1058,11 @@ article.item-half .more-link {
   border: 0px;
   background: transparent;
   width: 22px;
+  margin-top: 10px;
 }
 
 .article-cards .flickity-slider {
   height: 100%;
-}
-
-.article-cards .flickity-viewport {
-  overflow: hidden;
 }
 
 .article-cards .article-media {
@@ -1058,6 +1092,25 @@ article.item-half .more-link {
   background-position: center;
   height: 100%;
   width: 100%;
+}
+
+.article-cards .article-media .article-card-image-caption {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .article-cards .article-media .article-card {
+    visibility: hidden;
+  }
+
+  .article-cards .article-media .article-card-image-wrapper {
+    left: 0;
+    padding-left: 0;
+  }
+
+  .article-cards .article-media .article-card-image-caption {
+    margin-top: 35px;
+  }
 }
 
 #game {
@@ -1594,6 +1647,7 @@ article.item-half .more-link {
 }
 
 .mailchimp-form .form-group {
+  width: 100%;
   display: block;
   position: relative;
   float: left;
