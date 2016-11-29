@@ -1126,7 +1126,7 @@ article.item-half .more-link {
 
 #game #drawCardsToggle {
   position: absolute;
-  z-index: 99;
+  z-index: 110;
   right: -25px;
   top: 50%;
   -webkit-transform: rotate(-90deg);
@@ -1484,6 +1484,16 @@ article.item-half .more-link {
 
   #game #drawCardsContainer {
     margin-bottom: 40px;
+  }
+
+  #game #drawCardsContainer.slide {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+
+  #game #drawCardsContainer.slide.in {
+    -webkit-transform: none;
+            transform: none;
   }
 }
 

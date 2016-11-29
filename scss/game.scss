@@ -266,6 +266,12 @@
 	}
 	#game #drawCardsContainer {
 		margin-bottom: 40px;
+		&.slide {
+			transform: translateY(100%);
+			&.in {
+				transform: none;
+			}
+		}
 	}
 }
 @media screen and (max-width: 481px){
