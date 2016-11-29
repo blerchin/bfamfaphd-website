@@ -28,7 +28,7 @@ function supply_chain_collapse($atts, $content){
   $out = '';
   $out .= '<div class="supply-chain-collapse-wrap">';
     $out .= '<header data-toggle="supply-chain">';
-      $out .= '<h4>' . $a['title'] . '</h4>';
+      $out .= '<h5>' . $a['title'] . '</h5>';
     $out .= '</header>';
     $out .= '<div class="body-content supply-chain-collapse"';
       $out .= 'style="max-height:' . $a['height'] .'px;">';
