@@ -46,9 +46,9 @@ $cards_in = $SHOW_CIRCLE ? '' : 'in';
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="story">
-					<p>Click the deck to generate project ideas.</p>
+					<div class="story">
+						<p>Click the deck to generate project ideas.</p>
+					</div>
 				</div>
 				<div id="refreshButton">
 				</div>
