@@ -103,10 +103,8 @@ article.type-project {
 
 article.item-full {
   .article-body-wrapper {
-    padding-left: 40px;
-    padding-right: 40px;
-    /* margin-top: 30px; */
-    /* margin-bottom: 30px; */
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .article-summary p {
     max-width: 500px;
@@ -142,7 +140,7 @@ article.item-full {
   ul {
     margin-left: 0px;
     padding-left: 0px;
-    margin-bottom: 0;
+    margin-bottom: 3px;
     max-width: 600px;
     li {
       list-style: none;

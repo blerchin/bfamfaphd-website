@@ -20,7 +20,7 @@
     h3 a {
       color: $light-blue;
       border-bottom: 1px solid $light-blue;
-      padding-bottom: 6px;
+      padding-bottom: 3px;
       z-index: 3;
     }
   }
@@ -62,7 +62,7 @@
       }
     }
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     .projects {
       width: 130%;
       margin-left: -15%;
