@@ -64,8 +64,8 @@ html, body {
 }
 
 body {
-  font-size: 15px;
-  line-height: 22px;
+  font-size: 17px;
+  line-height: 24px;
   letter-spacing: 0.3px;
 }
 
@@ -120,7 +120,7 @@ body.scrollLocked .container {
 
 .btn {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 17px;
   margin-top: 20px;
   margin-bottom: 10px;
   margin-left: 0;
@@ -129,8 +129,15 @@ body.scrollLocked .container {
   padding-right: 0;
 }
 
-h4, label, h5 {
-  font-size: 15px;
+h4, h4.lead, label {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 400;
 }
 
@@ -146,26 +153,19 @@ h4, label, h5 {
 }
 
 .section-bfamfaphd h3 {
-  font-size: 24px;
-  line-height: 33px;
+  font-size: 28px;
+  line-height: 40px;
   margin-top: 0;
   margin-bottom: 25px;
 }
 
-.section-bfamfaphd h3.lead {
+.section-bfamfaphd h4.lead {
   margin-top: 80px;
   margin-bottom: 20px;
 }
 
 .section-bfamfaphd h5:last-child {
   margin-bottom: 0;
-}
-
-@media screen and (max-width: 768px) {
-  .section-bfamfaphd h3 {
-    font-size: 20px;
-    line-height: 24px;
-  }
 }
 
 .section-bfamfaphd body p {
@@ -550,14 +550,14 @@ input.form-control:focus {
   height: 30vh;
 }
 
-.section-bfamfaphd .interstitial-module h3, .section-bfamfaphd .interstitial-module h3.lead, .section-bfamfaphd .interstitial-module a, .section-bfamfaphd .interstitial-module p {
+.section-bfamfaphd .interstitial-module h3, .section-bfamfaphd .interstitial-module h4.lead, .section-bfamfaphd .interstitial-module a, .section-bfamfaphd .interstitial-module p {
   max-width: 800px;
 }
 
 .section-bfamfaphd .interstitial-module h3 a {
   color: #3366ff;
   border-bottom: 1px solid #3366ff;
-  padding-bottom: 6px;
+  padding-bottom: 3px;
   z-index: 3;
 }
 
@@ -604,7 +604,7 @@ input.form-control:focus {
   margin-bottom: 10px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .section-bfamfaphd .projects {
     width: 130%;
     margin-left: -15%;
@@ -619,6 +619,11 @@ input.form-control:focus {
   max-width: 600px;
   /*550px*/
   color: #333366;
+}
+
+.section-bfamfaphd.page-past-events h3 {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .section-bfamfaphd ul.ecs-event-list {
@@ -647,17 +652,8 @@ input.form-control:focus {
   margin-bottom: 2px;
 }
 
-.section-bfamfaphd ul.ecs-event-list:nth-child(4n) li.ecs-event * {
-  color: #3366ff !important;
-  border-color: #3366ff;
-}
-
 .section-bfamfaphd #topic-events h3 {
   margin-top: 20px;
-}
-
-.section-bfamfaphd .article-content ul.ecs-event-list:nth-child(4n-2) + h3 {
-  color: #3366ff;
 }
 
 .section-supply-chains .feature {
@@ -689,7 +685,7 @@ input.form-control:focus {
 .section-supply-chains .supply-chain-section-wrap {
   width: 100%;
   background-color: whitesmoke;
-  padding: 60px;
+  padding: 20px;
   margin: 30px 0;
 }
 
@@ -717,7 +713,7 @@ input.form-control:focus {
 .section-supply-chains .supply-chain-collapse-wrap header:before {
   position: absolute;
   right: 0px;
-  top: -5px;
+  top: 5px;
   width: 20px;
   height: 20px;
   content: '\2193';
@@ -730,6 +726,10 @@ input.form-control:focus {
   transition: -webkit-transform 500ms ease-in-out;
   transition: transform 500ms ease-in-out;
   transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+}
+
+.section-supply-chains .supply-chain-collapse-wrap header h5 {
+  padding-right: 30px;
 }
 
 .section-supply-chains .supply-chain-collapse-wrap .supply-chain-collapse {
@@ -907,10 +907,8 @@ article.type-project .more-projects .project-item .thumb {
 }
 
 article.item-full .article-body-wrapper {
-  padding-left: 40px;
-  padding-right: 40px;
-  /* margin-top: 30px; */
-  /* margin-bottom: 30px; */
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 article.item-full .article-summary p {
@@ -953,7 +951,7 @@ article.item-full .feature .feature-image {
 article.item-full ul {
   margin-left: 0px;
   padding-left: 0px;
-  margin-bottom: 0;
+  margin-bottom: 3px;
   max-width: 600px;
 }
 
@@ -1479,7 +1477,7 @@ article.item-half .more-link {
     top: auto;
     left: 50%;
     margin: 0;
-    width: 145px;
+    width: 165px;
     margin-left: -73px;
     right: auto;
   }
