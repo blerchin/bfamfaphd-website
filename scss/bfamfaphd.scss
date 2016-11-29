@@ -14,7 +14,7 @@
       width: 30vh;
       height: 30vh;
     }
-    h3, h3.lead, a, p {
+    h3, h4.lead, a, p {
       max-width: 800px;
     }
     h3 a {
@@ -81,6 +81,12 @@
       color: $violet;
     }
   }
+  &.page-past-events {
+    h3 {
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+  }
   ul.ecs-event-list {
     margin: 20px 0 0 0;
     li.ecs-event {
@@ -101,19 +107,10 @@
 
       }
     }
-    &:nth-child(4n){
-      li.ecs-event * {
-        color: $light-blue !important;
-        border-color: $light-blue;
-      }
-    }
   }
   #topic-events {
     h3 {
       margin-top: 20px;
     }
-  }
-  .article-content ul.ecs-event-list:nth-child(4n-2) + h3 {
-    color: $light-blue;
   }
 }

@@ -81,3 +81,13 @@ function get_bfamfaphd_section_slug(){
 };
 
 add_action('init', 'setup_options');
+
+function add_body_class_for_pages( $classes ) {
+	if ( is_singular( 'page' ) ) {
+		global $post;
+		$classes[] = 'page-' . $post->post_name;
+	}
+
+	return $classes;
+}
+add_filter( 'body_class', 'add_body_class_for_pages');

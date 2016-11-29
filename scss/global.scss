@@ -75,9 +75,16 @@ body.scrollLocked {
   padding-right: 0;
 }
 h4,
-label,
-h5 {
+h4.lead,
+label {
   font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 20px;
   font-weight: 400;
 }
 
@@ -106,12 +113,12 @@ h5 {
     letter-spacing: 0.5px;
   }
   h3 {
-    font-size: 24px;
-    line-height: 33px;
+    font-size: 28px;
+    line-height: 40px;
     margin-top: 0;
     margin-bottom: 25px;
   }
-  h3.lead {
+  h4.lead {
     margin-top: 80px;
     margin-bottom: 20px;
   }
