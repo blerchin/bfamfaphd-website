@@ -5,7 +5,7 @@
 	margin-bottom: 30px;
 	#drawCardsToggle {
 		position: absolute;
-		z-index: 99;
+		z-index: 110;
 		right: -25px;
 		top: 50%;
 		transform: rotate(-90deg);
@@ -266,6 +266,12 @@
 	}
 	#game #drawCardsContainer {
 		margin-bottom: 40px;
+		&.slide {
+			transform: translateY(100%);
+			&.in {
+				transform: none;
+			}
+		}
 	}
 }
 @media screen and (max-width: 481px){
