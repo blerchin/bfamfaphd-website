@@ -54,6 +54,7 @@
          } else {
            echo bfamfaphd_mailchimp_form();
          }
+        ?>
       </div>
     </div>
   </article>
