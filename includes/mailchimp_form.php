@@ -59,7 +59,7 @@ function bfamfaphd_tenleaps_form(){
   </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
   <div style="position: absolute; left: -5000px;"><input type="text" name="b_86adc32179584ba8d5862e0de_a65c9b0ed6" tabindex="-1" value=""></div>
   <div class="form-group">
-    <label class="control-label" for="mc-embedded-subscribe" style="display: block;"></label>
+    <label class="control-label" for="mc-embedded-subscribe" style="display: block;">&nbsp;</label>
     <input type="submit" value="→ Sign Up" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-subscribe">
   </div>
   </form>
