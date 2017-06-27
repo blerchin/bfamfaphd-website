@@ -48,7 +48,12 @@
   <article <?php post_class('item item-full') ?> id="topic-form">
     <div class="article-body-wrapper">
       <div class="article-body">
-        <?php echo bfamfaphd_mailchimp_form(); ?>
+        <?php
+         if(get_post_meta($post->ID, 'formtype', true) == 'tenleaps') {
+           echo bfamfaphd_tenleaps_form();
+         } else {
+           echo bfamfaphd_mailchimp_form();
+         }
       </div>
     </div>
   </article>
