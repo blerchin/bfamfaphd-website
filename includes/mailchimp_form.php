@@ -43,11 +43,11 @@ function bfamfaphd_tenleaps_form(){
   return '
   <div id="mc_embed_signup" class="mailchimp-form tenleaps">
   <h3>Email me when <i>Ways of Being</i> is available online and in print from Punctum Books</h3>
-  <form action="http://bfamfaphd.us8.list-manage1.com/subscribe/post?u=86adc32179584ba8d5862e0de&amp;id=a65c9b0ed6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
+  <form action="http://bfamfaphd.us8.list-manage1.com/subscribe/post?u=86adc32179584ba8d5862e0de&amp;id=579e269fa0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
   <div class="form-group">
   <div class="form-group">
-    <label class="control-label" for="mce-MMERGE3">Name <span class="asterisk">*</span></label>
-    <input type="text" value="" name="MMERGE3" class="required form-control" id="mce-MMERGE3">
+    <label class="control-label" for="mce-MMERGE1">Name <span class="asterisk">*</span></label>
+    <input type="text" value="" name="MMERGE1" class="required form-control" id="mce-MMERGE1">
   </div>
     <label class="control-label" for="mce-EMAIL">Email<span class="asterisk">*</span>
     </label>
