@@ -42,7 +42,7 @@ function bfamfaphd_mailchimp_form(){
 function bfamfaphd_tenleaps_form(){
   return '
   <div id="mc_embed_signup" class="mailchimp-form tenleaps">
-  <h3>Email me when <i>Ways of Being</i> is available online and in print from Punctum Books</h3>
+  <h3>Add me to your mailing list:</h3>
   <form action="http://bfamfaphd.us8.list-manage1.com/subscribe/post?u=86adc32179584ba8d5862e0de&amp;id=579e269fa0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" novalidate>
   <div class="form-group">
     <label class="control-label" for="mce-MMERGE1">Name <span class="asterisk">*</span></label>

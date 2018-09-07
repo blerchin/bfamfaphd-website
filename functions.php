@@ -29,6 +29,10 @@ function get_posts_json($post_type){
 		$cats = get_the_category($post->ID);
 		if(count($cats) > 0){
 			$cat = $cats[0]->cat_name;
+			$parents = get_term_parents_list($cats[0]->term_taxonomy_id, 'category', array('link' => false));
+			if (strlen($parents) > 0) {
+				$cat = $parents;
+			}
 		}
 		$posts[$key]->post_category = $cat;
 		$posts[$key]->permalink = '/supply-chains-list#' . $post->post_name;
