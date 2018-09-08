@@ -1086,11 +1086,23 @@ article.item-half .more-link {
   }
 }
 
+#game-wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding: 30px 0;
+  height: 100%;
+}
+
 #game {
-  background-color: whitesmoke;
-  position: relative;
-  height: calc(100% - 80px);
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   margin-bottom: 30px;
+  position: relative;
+  width: 100%;
 }
 
 #game #drawCardsToggle {
@@ -1320,11 +1332,13 @@ article.item-half .more-link {
 }
 
 #game #cards {
-  position: relative;
+  bottom: 0;
+  position: absolute;
+  left: 0;
   max-width: 100%;
-  margin: 40px auto;
-  padding-bottom: 40px;
   height: 100%;
+  right: 0;
+  top: 0;
 }
 
 #game #cards #circle {
@@ -1443,6 +1457,16 @@ article.item-half .more-link {
 
 .hasNavbar #game {
   height: calc(100vh - 120px);
+}
+
+#notice {
+  background-color: whitesmoke;
+  color: #000000;
+  padding: 30px;
+}
+
+#notice p {
+  margin-bottom: 0;
 }
 
 #page-about {
