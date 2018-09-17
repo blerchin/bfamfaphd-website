@@ -218,18 +218,13 @@ h5 {
 }
 
 .slide {
-  -webkit-transition: opacity ease-in-out 500ms, height ease-in-out 500ms, -webkit-transform ease-in-out 500ms;
-  transition: opacity ease-in-out 500ms, height ease-in-out 500ms, -webkit-transform ease-in-out 500ms;
   transition: transform ease-in-out 500ms, opacity ease-in-out 500ms, height ease-in-out 500ms;
-  transition: transform ease-in-out 500ms, opacity ease-in-out 500ms, height ease-in-out 500ms, -webkit-transform ease-in-out 500ms;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  transform: translateX(100%);
   opacity: 0;
 }
 
 .slide.in, .slide.lg-in {
-  -webkit-transform: none;
-          transform: none;
+  transform: none;
   opacity: 1;
 }
 
@@ -318,19 +313,13 @@ input.form-control:focus {
 
 .navbar.navbar-supply-chains #bfa-nav-chain-menu.collapse {
   display: block;
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
+  transform: scaleY(0);
   transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
-  -webkit-transform-origin: top;
-          transform-origin: top;
+  transform-origin: top;
 }
 
 .navbar.navbar-supply-chains #bfa-nav-chain-menu.collapse.in {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
+  transform: scaleY(1);
 }
 
 .navbar.navbar-bfamfaphd {
@@ -420,20 +409,14 @@ input.form-control:focus {
     position: fixed;
     left: 0;
     width: 100%;
-    -webkit-transition: -webkit-transform 500ms ease-in-out;
-    transition: -webkit-transform 500ms ease-in-out;
     transition: transform 500ms ease-in-out;
-    transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
-    -webkit-transform: scaleY(0);
-            transform: scaleY(0);
-    -webkit-transform-origin: top;
-            transform-origin: top;
+    transform: scaleY(0);
+    transform-origin: top;
     text-align: center;
   }
 
   .navbar .navbar-menu.in {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 
   .navbar .navbar-menu .navbar-nav {
@@ -516,19 +499,13 @@ input.form-control:focus {
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTAwcHgiIGhlaWdodD0iMTAwcHgiIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMDAgMTAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxkZWZzPg0KCQk8cmVjdCBpZD0iU1ZHSURfMV8iIHg9IjIwLjc0IiB5PSIyNS4xNjgiIHdpZHRoPSI2MC43NjkiIGhlaWdodD0iNTMuODMyIi8+DQoJPC9kZWZzPg0KCTxjbGlwUGF0aCBpZD0iU1ZHSURfMl8iPg0KCQk8dXNlIHhsaW5rOmhyZWY9IiNTVkdJRF8xXyIgIG92ZXJmbG93PSJ2aXNpYmxlIi8+DQoJPC9jbGlwUGF0aD4NCgk8Y2lyY2xlIGNsaXAtcGF0aD0idXJsKCNTVkdJRF8yXykiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAxMDEwMSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBjeD0iNDIuNjg1IiBjeT0iNDQuODAxIiByPSI0LjI5OSIvPg0KCTxjaXJjbGUgY2xpcC1wYXRoPSJ1cmwoI1NWR0lEXzJfKSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDEwMTAxIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIGN4PSI1OS41NjMiIGN5PSI0NC44MDEiIHI9IjQuMjk4Ii8+DQoJPGNpcmNsZSBjbGlwLXBhdGg9InVybCgjU1ZHSURfMl8pIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMTAxMDEiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgY3g9IjM0LjI0NiIgY3k9IjU5LjM2NyIgcj0iNC4yOTkiLz4NCgk8Y2lyY2xlIGNsaXAtcGF0aD0idXJsKCNTVkdJRF8yXykiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAxMDEwMSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBjeD0iNTEuMTI0IiBjeT0iNTkuMzY3IiByPSI0LjI5OCIvPg0KCTxjaXJjbGUgY2xpcC1wYXRoPSJ1cmwoI1NWR0lEXzJfKSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDEwMTAxIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIGN4PSI2OC4wMDMiIGN5PSI1OS4zNjciIHI9IjQuMjk4Ii8+DQoJPGNpcmNsZSBjbGlwLXBhdGg9InVybCgjU1ZHSURfMl8pIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMTAxMDEiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgY3g9IjQyLjY4NSIgY3k9IjczLjkzNCIgcj0iNC4yOTkiLz4NCgk8Y2lyY2xlIGNsaXAtcGF0aD0idXJsKCNTVkdJRF8yXykiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAxMDEwMSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBjeD0iNTkuNTYzIiBjeT0iNzMuOTM0IiByPSI0LjI5OCIvPg0KCTxjaXJjbGUgY2xpcC1wYXRoPSJ1cmwoI1NWR0lEXzJfKSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDEwMTAxIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIGN4PSI1MS4wMDgiIGN5PSIzMC4yMzUiIHI9IjQuMjk4Ii8+DQoJPGNpcmNsZSBjbGlwLXBhdGg9InVybCgjU1ZHSURfMl8pIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMTAxMDEiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgY3g9IjI1LjgwNyIgY3k9IjczLjkzNCIgcj0iNC4yOTgiLz4NCgk8Y2lyY2xlIGNsaXAtcGF0aD0idXJsKCNTVkdJRF8yXykiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAxMDEwMSIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBjeD0iNzYuNDQyIiBjeT0iNzMuOTM0IiByPSI0LjI5OCIvPg0KPC9nPg0KPC9zdmc+DQo=);
   background-repeat: no-repeat;
   background-size: contain;
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
+  transform: rotate(0);
+  transform-origin: center;
   transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
 
 .navbar .dots-logo[aria-expanded=true] {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .section-bfamfaphd article#topic-home .article-body {
@@ -706,8 +683,7 @@ input.form-control:focus {
 }
 
 .section-supply-chains .supply-chain-collapse-wrap header[aria-expanded=true]:before {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .section-supply-chains .supply-chain-collapse-wrap header:before {
@@ -718,14 +694,9 @@ input.form-control:focus {
   height: 20px;
   content: '\2193';
   text-align: center;
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-  -webkit-transition: -webkit-transform 500ms ease-in-out;
-  transition: -webkit-transform 500ms ease-in-out;
+  transform: rotate(0deg);
+  transform-origin: 50% 50%;
   transition: transform 500ms ease-in-out;
-  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
 }
 
 .section-supply-chains .supply-chain-collapse-wrap header h5 {
@@ -736,7 +707,6 @@ input.form-control:focus {
   position: relative;
   max-height: 100px;
   overflow: hidden;
-  -webkit-transition: max-height 500ms ease-in-out;
   transition: max-height 500ms ease-in-out;
   z-index: 0;
   padding-bottom: 40px;
@@ -752,7 +722,6 @@ input.form-control:focus {
   left: 0;
   right: 0;
   height: 60px;
-  background: -webkit-linear-gradient(top, transparent 30%, whitesmoke);
   background: linear-gradient(to bottom, transparent 30%, whitesmoke);
   z-index: 2;
 }
@@ -1117,11 +1086,23 @@ article.item-half .more-link {
   }
 }
 
+#game-wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding: 30px 0;
+  height: 100%;
+}
+
 #game {
-  background-color: whitesmoke;
-  position: relative;
-  height: calc(100% - 80px);
+  -ms-flex-positive: 1;
+      flex-grow: 1;
   margin-bottom: 30px;
+  position: relative;
+  width: 100%;
 }
 
 #game #drawCardsToggle {
@@ -1129,8 +1110,7 @@ article.item-half .more-link {
   z-index: 110;
   right: -25px;
   top: 50%;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  transform: rotate(-90deg);
   cursor: pointer;
   background: none;
   border: 0px;
@@ -1151,15 +1131,11 @@ article.item-half .more-link {
   display: block;
   margin: 0px 5px;
   text-decoration: none;
-  -webkit-transition: -webkit-transform ease-in-out 500ms;
-  transition: -webkit-transform ease-in-out 500ms;
   transition: transform ease-in-out 500ms;
-  transition: transform ease-in-out 500ms, -webkit-transform ease-in-out 500ms;
 }
 
 #game #drawCardsToggle[aria-expanded=true] .arrow {
-  -webkit-transform: scaleY(-1);
-          transform: scaleY(-1);
+  transform: scaleY(-1);
 }
 
 #game #drawCardsContainer {
@@ -1169,15 +1145,10 @@ article.item-half .more-link {
   right: 0;
   left: 0;
   background-color: rgba(245, 245, 245, 0.9);
-  display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+      flex-direction: column;
   z-index: 100;
 }
 
@@ -1189,12 +1160,8 @@ article.item-half .more-link {
 
 #game #drawCardsContainer .cards {
   position: relative;
-  -webkit-perspective: 2000px;
-          perspective: 2000px;
-  -webkit-transition: -webkit-transform 750ms ease-in-out;
-  transition: -webkit-transform 750ms ease-in-out;
+  perspective: 2000px;
   transition: transform 750ms ease-in-out;
-  transition: transform 750ms ease-in-out, -webkit-transform 750ms ease-in-out;
   width: 300px;
   margin-left: auto;
   margin-right: auto;
@@ -1209,30 +1176,22 @@ article.item-half .more-link {
   max-width: 400px;
   margin-top: 10%;
   padding: 30px 0;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform-origin: top center;
-          transform-origin: top center;
+  transform-style: preserve-3d;
+  transform-origin: top center;
   cursor: pointer;
   border-width: 0px;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
-  -webkit-transition: -webkit-transform 750ms ease-in-out;
-  transition: -webkit-transform 750ms ease-in-out;
+  transform: scale(0.5);
   transition: transform 750ms ease-in-out;
-  transition: transform 750ms ease-in-out, -webkit-transform 750ms ease-in-out;
 }
 
 #game #drawCardsContainer .cards .card.open, #game #drawCardsContainer .cards .deck.open {
   z-index: 100 !important;
-  -webkit-transform: scale(0.9) rotateY(180deg) translate3d(0, 0, -100px) !important;
-          transform: scale(0.9) rotateY(180deg) translate3d(0, 0, -100px) !important;
+  transform: scale(0.9) rotateY(180deg) translate3d(0, 0, -100px) !important;
   margin-top: 0%;
 }
 
 #game #drawCardsContainer .cards .card.open img, #game #drawCardsContainer .cards .deck.open img {
-  -webkit-transform: rotate(0) !important;
-          transform: rotate(0) !important;
+  transform: rotate(0) !important;
 }
 
 @media screen and (min-width: 400px) {
@@ -1246,13 +1205,11 @@ article.item-half .more-link {
 }
 
 #game #drawCardsContainer .cards .card .back, #game #drawCardsContainer .cards .deck .back {
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 
 #game #drawCardsContainer .cards .card .img, #game #drawCardsContainer .cards .deck .img {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
   z-index: 2;
 }
 
@@ -1261,22 +1218,15 @@ article.item-half .more-link {
   position: absolute;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 750ms ease-in-out;
-  transition: -webkit-transform 750ms ease-in-out;
   transition: transform 750ms ease-in-out;
-  transition: transform 750ms ease-in-out, -webkit-transform 750ms ease-in-out;
 }
 
 #game #drawCardsContainer .cards .card .img img, #game #drawCardsContainer .cards .card .back img, #game #drawCardsContainer .cards .deck .img img, #game #drawCardsContainer .cards .deck .back img {
   width: 100%;
   height: auto;
   border-radius: 28px;
-  -webkit-transform-origin: bottom center;
-          transform-origin: bottom center;
-  -webkit-transition: -webkit-transform 750ms ease-in-out;
-  transition: -webkit-transform 750ms ease-in-out;
+  transform-origin: bottom center;
   transition: transform 750ms ease-in-out;
-  transition: transform 750ms ease-in-out, -webkit-transform 750ms ease-in-out;
 }
 
 #game #drawCardsContainer .cards .card .back img, #game #drawCardsContainer .cards .deck .back img {
@@ -1288,8 +1238,7 @@ article.item-half .more-link {
 }
 
 #game #drawCardsContainer .cards.dealt {
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 #game #drawCardsContainer .cards.dealt .card img {
@@ -1298,8 +1247,7 @@ article.item-half .more-link {
 }
 
 #game #drawCardsContainer .cards.dealt .deck {
-  -webkit-transform: scale(0.5) translateX(-30%);
-          transform: scale(0.5) translateX(-30%);
+  transform: scale(0.5) translateX(-30%);
   z-index: 99;
 }
 
@@ -1308,8 +1256,7 @@ article.item-half .more-link {
 }
 
 #game #drawCardsContainer .cards.dealt .card-1 img {
-  -webkit-transform: translateX(125%) rotate(-15deg);
-          transform: translateX(125%) rotate(-15deg);
+  transform: translateX(125%) rotate(-15deg);
 }
 
 #game #drawCardsContainer .cards.dealt .card-2 {
@@ -1317,8 +1264,7 @@ article.item-half .more-link {
 }
 
 #game #drawCardsContainer .cards.dealt .card-2 img {
-  -webkit-transform: translateX(125%) rotate(0deg);
-          transform: translateX(125%) rotate(0deg);
+  transform: translateX(125%) rotate(0deg);
 }
 
 #game #drawCardsContainer .cards.dealt .card-3 {
@@ -1326,13 +1272,11 @@ article.item-half .more-link {
 }
 
 #game #drawCardsContainer .cards.dealt .card-3 img {
-  -webkit-transform: translateX(125%) rotate(15deg);
-          transform: translateX(125%) rotate(15deg);
+  transform: translateX(125%) rotate(15deg);
 }
 
 #game #drawCardsContainer .cards.dealt .card.open {
-  -webkit-transform: scale(0.9) rotateY(180deg) translate3d(-50%, 0, -100px) !important;
-          transform: scale(0.9) rotateY(180deg) translate3d(-50%, 0, -100px) !important;
+  transform: scale(0.9) rotateY(180deg) translate3d(-50%, 0, -100px) !important;
 }
 
 #game #drawCardsContainer .cards.dealt .card.open .img {
@@ -1388,29 +1332,24 @@ article.item-half .more-link {
 }
 
 #game #cards {
-  position: relative;
+  bottom: 0;
+  position: absolute;
+  left: 0;
   max-width: 100%;
-  margin: 40px auto;
-  padding-bottom: 40px;
   height: 100%;
+  right: 0;
+  top: 0;
 }
 
 #game #cards #circle {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: center;
+      align-items: center;
 }
 
 #game #cards #circle svg {
@@ -1424,7 +1363,6 @@ article.item-half .more-link {
 
 #game #cards #circle svg #contentClickable {
   pointer-events: fill;
-  -webkit-transition: background ease-in-out 300ms;
   transition: background ease-in-out 300ms;
 }
 
@@ -1434,12 +1372,8 @@ article.item-half .more-link {
 }
 
 #game #cards #circle svg g#labelContainer {
-  -webkit-transition: -webkit-transform ease-in-out 1000ms;
-  transition: -webkit-transform ease-in-out 1000ms;
   transition: transform ease-in-out 1000ms;
-  transition: transform ease-in-out 1000ms, -webkit-transform ease-in-out 1000ms;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
 }
 
 #game #cards #circle svg g.label {
@@ -1449,17 +1383,12 @@ article.item-half .more-link {
 }
 
 #game #cards #circle svg g.label .arrow {
-  -webkit-transition: -webkit-transform ease-in-out 300ms;
-  transition: -webkit-transform ease-in-out 300ms;
   transition: transform ease-in-out 300ms;
-  transition: transform ease-in-out 300ms, -webkit-transform ease-in-out 300ms;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
+  transform: translateY(0px);
 }
 
 #game #cards #circle svg g.label:hover .arrow, #game #cards #circle svg g.label:focus .arrow, #game #cards #circle svg g.label:active .arrow, #game #cards #circle svg g.label.active .arrow {
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
+  transform: translateY(10px);
 }
 
 @media screen and (min-width: 481px) {
@@ -1471,8 +1400,7 @@ article.item-half .more-link {
 
 @media screen and (max-width: 1024px) {
   #game #drawCardsToggle {
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
     bottom: 20px;
     top: auto;
     left: 50%;
@@ -1487,13 +1415,11 @@ article.item-half .more-link {
   }
 
   #game #drawCardsContainer.slide {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    transform: translateY(100%);
   }
 
   #game #drawCardsContainer.slide.in {
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
   }
 }
 
@@ -1503,13 +1429,11 @@ article.item-half .more-link {
   }
 
   #game #cards #circle svg g.label .arrow {
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
+    transform: translateY(-5px);
   }
 
   #game #cards #circle svg g.label .arrow.active {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
   }
 
   #game #drawCardsContainer #refreshButton {
@@ -1533,6 +1457,16 @@ article.item-half .more-link {
 
 .hasNavbar #game {
   height: calc(100vh - 120px);
+}
+
+#notice {
+  background-color: whitesmoke;
+  color: #000000;
+  padding: 30px;
+}
+
+#notice p {
+  margin-bottom: 0;
 }
 
 #page-about {

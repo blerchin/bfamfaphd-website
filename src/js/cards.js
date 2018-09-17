@@ -1,4 +1,4 @@
-const _ = require('lodash');
+import { groupBy } from 'lodash';
 const Cards = function(attr){
 	const instance = this;
 	this.el = attr.el;
@@ -55,9 +55,11 @@ Cards.prototype.draw = function(){
 };
 
 Cards.prototype.getCards = function(){
-	return this.sortByCategory(
-		this.dedupe(this.getRandomCards)()
-	);
+	return [
+		this.getRandomByCategory(this.cards, 'Intention'),
+		this.getRandomByCategory(this.cards, 'Phase'),
+		this.getRandomByCategory(this.cards, '$upport')
+	];
 };
 
 Cards.prototype.drawStory = function(cards){
@@ -74,8 +76,8 @@ Cards.prototype.sizeCards = function(storyHeight){
 };
 
 Cards.prototype.getStory = function(cards){
-	return `Make a project by ${cards[0].excerpt}, ` +
-				 `${cards[1].excerpt}, and ${cards[2].excerpt}.`
+	return `Practice ${cards[0].excerpt} as ${cards[1].excerpt}. ` +
+				 `Don't forget ${cards[2].excerpt}.`
 };
 
 Cards.prototype.compare = function(card1, card2){
@@ -94,11 +96,20 @@ Cards.prototype.hasDupes = function(arr){
 		return false;
 };
 
-Cards.prototype.sortByCategory = function(arr){
-	return _.sortBy(arr, (item)=>{
-		return this.order.indexOf(item.category);
-	});
-};
+Cards.prototype.keyByCategory = function(arr) {
+	const getParentCategory = (item) => item.category.split('/')[0];
+	return groupBy(arr, (item) => getParentCategory(item));
+}
+
+Cards.prototype.getRandom = function(cards) {
+	const i = Math.floor(Math.random() * cards.length);
+	return cards[i];
+}
+
+Cards.prototype.getRandomByCategory = function(cards, category) {
+	const cats = this.keyByCategory(cards);
+	return this.getRandom(cats[category]);
+}
 
 Cards.prototype.dedupe = function(generator){
 	return ()=>{
@@ -112,21 +123,6 @@ Cards.prototype.dedupe = function(generator){
 		}
 		return results;
 	};
-};
-
-Cards.prototype.getRandomCards = function(){
-	return this.getRandomIndices().map((i)=>{
-		return this.cards[i];
-	});
-};
-
-Cards.prototype.getRandomIndices = function(){
-	let indices = Array.apply(null, Array(this.drawSize));
-	return indices.map(()=> this.getRandomIndex());
-};
-
-Cards.prototype.getRandomIndex = function(){
-	return Math.floor(Math.random() * this.cards.length);
 };
 
 module.exports = Cards;
