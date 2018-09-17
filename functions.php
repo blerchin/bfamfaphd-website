@@ -19,7 +19,7 @@ function get_posts_json($post_type){
 			'post_type' => $post_type,
 			'orderby' => 'menu_order',
 			'order' => 'ASC',
-			'posts_per_page' =>'100'
+			'posts_per_page' =>'200'
 	));
 	foreach( $posts as $key => $post){
 		$posts[$key]->meta_color = get_post_meta( $post->ID, 'color', true);
