@@ -1100,7 +1100,6 @@ article.item-half .more-link {
 #game {
   -ms-flex-positive: 1;
       flex-grow: 1;
-  margin-bottom: 30px;
   position: relative;
   width: 100%;
 }
@@ -1153,6 +1152,12 @@ article.item-half .more-link {
 }
 
 #game #drawCardsContainer .cardsWrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   position: relative;
   width: 100%;
   height: 100%;
@@ -1162,6 +1167,7 @@ article.item-half .more-link {
   position: relative;
   perspective: 2000px;
   transition: transform 750ms ease-in-out;
+  height: 300px;
   width: 300px;
   margin-left: auto;
   margin-right: auto;
@@ -1169,9 +1175,11 @@ article.item-half .more-link {
 
 #game #drawCardsContainer .cards .card, #game #drawCardsContainer .cards .deck {
   position: absolute;
+  bottom: 0;
   top: 0;
   left: 0;
-  height: 150%;
+  right: 0;
+  height: 100%;
   width: 100%;
   max-width: 400px;
   margin-top: 10%;
@@ -1192,16 +1200,6 @@ article.item-half .more-link {
 
 #game #drawCardsContainer .cards .card.open img, #game #drawCardsContainer .cards .deck.open img {
   transform: rotate(0) !important;
-}
-
-@media screen and (min-width: 400px) {
-  #game #drawCardsContainer .cards .card, #game #drawCardsContainer .cards .deck {
-    margin-top: 45%;
-  }
-
-  #game #drawCardsContainer .cards .card.open, #game #drawCardsContainer .cards .deck.open {
-    margin-top: 10%;
-  }
 }
 
 #game #drawCardsContainer .cards .card .back, #game #drawCardsContainer .cards .deck .back {
@@ -1463,6 +1461,13 @@ article.item-half .more-link {
   background-color: whitesmoke;
   color: #000000;
   padding: 30px;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 481px) {
+  #notice {
+    display: none;
+  }
 }
 
 #notice p {

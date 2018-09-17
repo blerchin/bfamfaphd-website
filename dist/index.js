@@ -17256,7 +17256,7 @@
 	Cards.prototype.sizeCards = function (storyHeight) {
 		var h = this.$el.height() - storyHeight;
 		var $cards = this.$el.find('.cards');
-		$cards.outerHeight(h);
+		//$cards.outerHeight(h);
 	};
 	
 	Cards.prototype.getStory = function (cards) {
