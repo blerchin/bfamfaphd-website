@@ -40,10 +40,10 @@ $cards_in = $SHOW_CIRCLE ? '' : 'in';
 							</div>
 							<div class="deck">
 								<div class="img">
-									<img src="/wp-content/uploads/2016/06/Cards-V.4-Backs-41.png" />
+									<img src="<?php echo get_template_directory_uri() ?>/assets/images/CardGameBack.png" />
 								</div>
 								<div class="back">
-									<img src="/wp-content/uploads/2016/06/Cards-V.4-Backs-41.png" />
+									<img src="<?php echo get_template_directory_uri() ?>/assets/images/CardGameBack.png" />
 								</div>
 							</div>
 						</div>
