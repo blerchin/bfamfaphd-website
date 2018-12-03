@@ -54,7 +54,7 @@ $cards_in = $SHOW_CIRCLE ? '' : 'in';
 					<div id="refreshButton">
 					</div>
 					<div id="instructionsButton">
-						<a href="<?php echo get_template_directory_uri()?>/assets/documents/Protocol.pdf"></a>
+						<a href="<?php echo get_template_directory_uri()?>/assets/documents/Protocol.pdf" target="_blank"></a>
 					</div>
 				</div>
 				<?php if($SHOW_CIRCLE == true): ?>
